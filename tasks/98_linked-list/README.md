@@ -7,7 +7,7 @@ Implement doubly linked list data structure without using Array. The class shoul
 * iterate;
 * insertAfter;
 * removeItem;
-and props
-* amount;
 
-Take a look at test for more details.
+and props:
+
+* amount;

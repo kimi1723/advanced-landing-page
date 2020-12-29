@@ -1,11 +1,11 @@
-// import { trimWhiteSpaces } from './remove-whitespaces';
+// import { removeWhitespaces } from './remove-whitespaces';
 
-xdescribe('remove-whitespaces', () => {
-    test('trimWhiteSpaces(‘I am travelling down the river’) should be equal to “Iamtravellingdowntheriver”', () => {
-        expect(trimWhiteSpaces('I am travelling down the river')).toBe('Iamtravellingdowntheriver');
-    });
+describe.skip('removeWhitespaces', () => {
+  it('removeWhitespaces("I am travelling down the river") should return “Iamtravellingdowntheriver”', () => {
+    expect(removeWhitespaces('I am travelling down the river')).toBe('Iamtravellingdowntheriver');
+  });
 
-    test('trimWhiteSpaces(‘  I  am  travelling  down  the  river  ’) should be equal to "Iamtravellingdowntheriver"', () => {
-        expect(trimWhiteSpaces('  I  am  travelling  down  the  river  ')).toBe('Iamtravellingdowntheriver');
-    });
+  it('removeWhitespaces("  I  am  travelling  down  the  river  ") should return "Iamtravellingdowntheriver"', () => {
+    expect(removeWhitespaces('  I  am  travelling  down  the  river  ')).toBe('Iamtravellingdowntheriver');
+  });
 });

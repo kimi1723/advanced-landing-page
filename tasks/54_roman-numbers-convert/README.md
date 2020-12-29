@@ -14,7 +14,7 @@ convertToRoman(36);
 
 ```
 
-Here are some helpful links:
+Helpful links:
 
 * [Roman Numerals](http://www.mathsisfun.com/roman-numerals.html)
 

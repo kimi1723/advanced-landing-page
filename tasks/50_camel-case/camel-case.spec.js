@@ -1,13 +1,11 @@
 // import './camel-case';
 
-xdescribe('Camel case', () => {
+describe.skip('camelCase', () => {
+  it('"hello case".camelCase() should return "HelloCase"', () => {
+    expect('hello case'.camelCase()).toBe('HelloCase');
+  });
 
-    test("'hello case'.camelCase() should return 'HelloCase'", () => {
-        expect('hello case'.camelCase()).toBe("HelloCase");
-    });
-
-    test("'camel case word'.camelCase() should return 'CamelCaseWord'", () => {
-        expect('camel case word'.camelCase()).toBe("CamelCaseWord");
-    });
-
+  it('"camel case word".camelCase() should return "CamelCaseWord"', () => {
+    expect('camel case word'.camelCase()).toBe('CamelCaseWord');
+  });
 });

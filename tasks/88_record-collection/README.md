@@ -2,7 +2,6 @@
 
 You are given a JSON object representing a part of your musical album collection. Each album has several properties and a unique id number as its key. Not all albums have complete information.
 
-
 Write a function which takes an album's *id* (like *2548*), a property prop (like *"artist"* or *"tracks"*), and a *value* to modify the data in this collection.
 
 If prop isn't *"tracks"* and value isn't empty (*""*), update or set the *value* for that record album's property.
@@ -18,7 +17,7 @@ If prop is *"tracks"* and value isn't empty (*""*), push the *value* onto the en
 If *value* is empty (*""*), delete the given prop property from the album.
 
 ```javascript
-var collection = {
+const collection = {
     "2548": {
       "album": "Slippery When Wet",
       "artist": "Bon Jovi",
@@ -44,7 +43,7 @@ var collection = {
     }
 };
 // Keep a copy of the collection for tests
-var collectionCopy = JSON.parse(JSON.stringify(collection));
+const collectionCopy = JSON.parse(JSON.stringify(collection));
 
 // Only change code below this line
 function updateRecords(id, prop, value) {
@@ -55,19 +54,4 @@ updateRecords(5439, "artist", "ABBA");
 ```
 
 Hints:
-
 	use bracket notation when accessing object properties with variables
-
-Test suits:
-
-After updateRecords(5439, "artist", "ABBA"), artist should be "ABBA"
-
-After updateRecords(5439, "tracks", "Take a Chance on Me"), tracks should have "Take a Chance on Me" as the last element.
-
-After updateRecords(2548, "artist", ""), artist should not be set
-
-After updateRecords(1245, "tracks", "Addicted to Love"), tracks should have "Addicted to Love" as the last element.
-
-After updateRecords(2468, "tracks", "Free"), tracks should have "1999" as the first element.
-
-After updateRecords(2548, "tracks", ""), tracks should not be set

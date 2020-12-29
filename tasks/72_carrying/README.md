@@ -5,12 +5,12 @@ For example, addTogether(2, 3) should return 5, and addTogether(2) should return
 Calling this returned function with a single argument will then return the sum:
 
 ```
-var sumTwoAnd = addTogether(2);
+const sumTwoAnd = addTogether(2);
 sumTwoAnd(3) returns 5.
 ```
 If either argument isn't a valid number, return undefined.
 
-Here are some helpful links:
+Helpful links:
 * [Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
 * [Arguments object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments)
 

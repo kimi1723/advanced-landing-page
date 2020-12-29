@@ -1,4 +1,4 @@
-### Three added Characters
+### Added Characters
 
 Given two strings, the first being a random string and the second being the same as the first, but with three added characters somewhere in the string (three same characters),
 Write a function that returns the added character

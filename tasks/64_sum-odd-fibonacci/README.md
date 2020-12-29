@@ -13,6 +13,6 @@ function sumFibs(num) {
 
 sumFibs(4);
 ```
-Here are some helpful links:
+Helpful links:
 
 * [Remainder](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder)

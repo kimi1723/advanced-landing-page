@@ -1,25 +1,23 @@
 // import { validBraces } from './valid-braces';
 
-xdescribe('Valid braces', () => {
+describe.skip('validBraces', () => {
+  it('validBraces("(){}[]") should return true', () => {
+    expect(validBraces('(){}[]')).toBe(true);
+  });
 
-    test('validBraces("(){}[]") should return true', () => {
-        expect(validBraces("(){}[]")).toBe(true);
-    });
+  it('validBraces("([{}])") should return true', () => {
+    expect(validBraces('([{}])')).toBe(true);
+  });
 
-    test('validBraces("([{}])") should return true', () => {
-        expect(validBraces("([{}])")).toBe(true);
-    });
+  it('validBraces("(}") should return false', () => {
+    expect(validBraces('(}')).toBe(false);
+  });
 
-    test('validBraces("(}") should return false', () => {
-        expect(validBraces("(}")).toBe(false);
-    });
+  it('validBraces("[(])") should return false', () => {
+    expect(validBraces('[(])')).toBe(false);
+  });
 
-    test('validBraces("[(])") should return false', () => {
-        expect(validBraces("[(])")).toBe(false);
-    });
-
-    test('validBraces("[({})](]") should return false', () => {
-        expect(validBraces("[({})](]")).toBe(false);
-    });
-
+  it('validBraces("[({})](]") should return false', () => {
+    expect(validBraces('[({})](]')).toBe(false);
+  });
 });

@@ -1,33 +1,34 @@
 // import { traverseTree } from './traverse-tree';
 
-xdescribe('Traverse tree function', () => {
-    test('Should call callback for every of tree nodes', () => {
-        const tree = {
-            value: 1,
-            children: [
-                {
-                    value: 2,
-                    children: []
-                }, {
-                    value: 99,
-                    children: [
-                        {
-                            value: 100,
-                            children: []
-                        }
-                    ]
-                }
-            ]
-        };
+describe.skip('traverseTree', () => {
+  it('should call callback for every of tree nodes', () => {
+    const tree = {
+      value: 1,
+      children: [
+        {
+          value: 2,
+          children: [],
+        },
+        {
+          value: 99,
+          children: [
+            {
+              value: 100,
+              children: [],
+            },
+          ],
+        },
+      ],
+    };
 
-        const resultArray = [];
+    const resultArray = [];
 
-        function callback(node) {
-            resultArray.push(node.value);
-        }
+    function callback(node) {
+      resultArray.push(node.value);
+    }
 
-        traverseTree(tree, callback);
+    traverseTree(tree, callback);
 
-        expect(resultArray.sort((a, b) => (a > b))).toEqual([1, 2, 99, 100]);
-    })
+    expect(resultArray.sort((a, b) => a > b)).toEqual([1, 2, 99, 100]);
+  });
 });

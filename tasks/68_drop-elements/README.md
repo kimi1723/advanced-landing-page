@@ -13,7 +13,7 @@ dropElements([1, 2, 3], function(n) {return n < 3; });
 ```
 
 
-Here are some helpful links:
+Helpful links:
 
 
 * [Arguments object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments)

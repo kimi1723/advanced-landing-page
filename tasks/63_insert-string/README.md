@@ -4,12 +4,11 @@ Write a JavaScript function to insert a string within a string at a particular p
 
 ```javascript
 
-function insert(str, insertable, position = 0) {
-return str;
+function insertString(str, insertable, position = 0) {
+  return str;
 }
 
-insert('We are doing some exercises.');
-insert('We are doing some exercises.','JavaScript');
-insert('We are doing some exercises.','JavaScript', 18);
-
+insertString('We are doing some exercises.');
+insertString('We are doing some exercises.','JavaScript');
+insertString('We are doing some exercises.','JavaScript', 18);
 ```

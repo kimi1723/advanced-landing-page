@@ -14,8 +14,6 @@ function sumPrimes(num) {
 sumPrimes(10);
 ```
 
-Here are some helpful links:
-
+Helpful links:
 * [For Loops](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for)
-
 * [Array.prototype.push()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push)

@@ -7,7 +7,7 @@ function deepClone(obj) {
     return obj;
 }
 
-var original = {a: 1, b:{c:10}};
+const original = {a: 1, b:{c:10}};
 
-var copy = deepClone(original);
+const copy = deepClone(original);
 ```

@@ -1,71 +1,71 @@
 // import { Stack } from './stack';
 
+describe.skip('Stack', () => {
+  let stack;
+  const firstNodeValue = 5;
+  const secondNodeValue = 6;
+  const thirdNodeValue = 7;
 
-xdescribe('Stack class', () => {
-    let stack;
+  beforeEach(() => {
+    stack = new Stack();
+  });
 
-    const firstNodeValue = 5;
-    const secondNodeValue = 6;
-    const thirdNodeValue = 7;
+  describe.skip('push method', () => {
+    it('should add nodes to empty stack', () => {
+      stack.push(firstNodeValue);
 
-    beforeEach(() => {
-        stack = new Stack();
+      expect(stack.last.value).toBe(firstNodeValue);
     });
 
-    xdescribe('push method', () => {
-        test('Should add nodes to empty stack', () => {
-            stack.push(firstNodeValue);
-            expect(stack.last.value).toBe(firstNodeValue);
-        });
+    it('should set correct prev link', () => {
+      stack.push(firstNodeValue);
+      stack.push(secondNodeValue);
 
-        test('Should set correct prev link', () => {
-            stack.push(firstNodeValue);
-            stack.push(secondNodeValue);
+      expect(stack.last.prev.value).toBe(firstNodeValue);
+    });
+  });
 
-            expect(stack.last.prev.value).toBe(firstNodeValue);
-        });
+  describe.skip('size prop', () => {
+    it('should return 0 for empty stack', () => {
+      expect(stack.size).toBe(0);
     });
 
-    xdescribe('size prop', () => {
-        test('Should return 0 for empty stack', () => {
-            expect(stack.size).toBe(0);
-        });
+    it('should return nodes amount for not empty stack', () => {
+      stack.push(firstNodeValue);
+      stack.push(secondNodeValue);
+      stack.push(thirdNodeValue);
 
-        test('Should return nodes amount for not empty stack', () => {
-            stack.push(firstNodeValue);
-            stack.push(secondNodeValue);
-            stack.push(thirdNodeValue);
+      expect(stack.size).toBe(3);
+    });
+  });
 
-            expect(stack.size).toBe(3);
-        })
+  describe.skip('pop method', () => {
+    it('should do nothing for empty list', () => {
+      const lastSnapshotBeforePop = JSON.stringify(stack.last);
+
+      stack.pop();
+
+      const lastSnapshotAfterPop = JSON.stringify(stack.last);
+
+      expect(lastSnapshotBeforePop).toBe(lastSnapshotAfterPop);
     });
 
-    xdescribe('pop method', () => {
-        test('Should do nothing for empty list', () => {
-            const lastSnapshotBeforePop = JSON.stringify(stack.last);
-            stack.pop();
-            const lastSnapshotAfterPop = JSON.stringify(stack.last);
+    it('should return last pushed value for non empty stack', () => {
+      stack.push(firstNodeValue);
+      stack.push(secondNodeValue);
+      stack.push(thirdNodeValue);
 
-            expect(lastSnapshotBeforePop).toBe(lastSnapshotAfterPop);
-        });
+      const resultOfPop = stack.pop();
 
-        test('Should return last pushed value for non empty stack', () => {
-            stack.push(firstNodeValue);
-            stack.push(secondNodeValue);
-            stack.push(thirdNodeValue);
-
-            const resultOfPop = stack.pop();
-
-            expect(resultOfPop).toBe(thirdNodeValue);
-        });
-
-        test('Should remove last value', () => {
-            stack.push(firstNodeValue);
-            stack.push(secondNodeValue);
-
-            stack.pop();
-
-            expect(stack.last.value).toBe(firstNodeValue);
-        });
+      expect(resultOfPop).toBe(thirdNodeValue);
     });
+
+    it('should remove last value', () => {
+      stack.push(firstNodeValue);
+      stack.push(secondNodeValue);
+      stack.pop();
+
+      expect(stack.last.value).toBe(firstNodeValue);
+    });
+  });
 });

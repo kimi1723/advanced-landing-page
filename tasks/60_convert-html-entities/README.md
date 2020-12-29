@@ -1,6 +1,6 @@
 ### Convert HTML entities
 
-Convert the characters *&*, *<*, *>*, *"* (double quote), and *'*(apostrophe), in a string to their corresponding HTML entities.
+Convert the characters *&*, *<*, *>*, *"* (double quote), and *'* (apostrophe), in a string to their corresponding HTML entities.
 
 
 ```javascript
@@ -14,7 +14,7 @@ convertHTML("Dolce & Gabbana");
 
 ```
 
-Here are some helpful links:
+Helpful links:
 
 * [RegExp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
 

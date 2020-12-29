@@ -1,21 +1,19 @@
-// import { findLetter } from './missed-letters';
+// import { missedLetters } from './missed-letters';
 
+describe.skip('missedLetters', () => {
+  it('missedLetters("abce") should return "d".', () => {
+    expect(missedLetters('abce')).toBe('d');
+  });
 
-xdescribe('Missed letter', () => {
+  it('missedLetters("abcdefghjklmno") should return "i".', () => {
+    expect(missedLetters('abcdefghjklmno')).toBe('i');
+  });
 
-    test('findLetter("abce") should return "d".', () => {
-        expect(findLetter("abce")).toBe("d");
-    });
+  it('missedLetters("bcd") should return undefined.', () => {
+    expect(missedLetters('bcd')).toBeUndefined();
+  });
 
-    test('findLetter("abcdefghjklmno") should return "i".', () => {
-        expect(findLetter("abcdefghjklmno")).toBe("i");
-    });
-
-    test('findLetter("bcd") should return undefined.', () => {
-        expect(findLetter("bcd")).toBe(undefined);
-    });
-
-    test('findLetter("yz") should return undefined.', () => {
-        expect(findLetter("yz")).toBe(undefined);
-    });
+  it('missedLetters("yz") should return undefined.', () => {
+    expect(missedLetters('yz')).toBeUndefined();
+  });
 });

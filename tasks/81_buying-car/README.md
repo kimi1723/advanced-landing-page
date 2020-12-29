@@ -11,7 +11,7 @@ Parameters and return of function:
 
 
 ```javascript
-function nbMonths(
+function buyingCar(
     startPriceOld,
     startPriceNew,
     savingsPerMonth,
@@ -20,9 +20,5 @@ function nbMonths(
     return [];
 }
 
-nbMonths(2000, 8000, 1000, 1.5) //return [6, 766];
+buyingCar(2000, 8000, 1000, 1.5) //return [6, 766];
 ```
-
-Test suits:
-nbMonths(2000, 8000, 1000, 1.5) should return [6, 766];
-nbMonths(12000, 8000, 1000, 1.5)  should return [0, 4000]; // 0 in case newCarPrice is less or equal to old one

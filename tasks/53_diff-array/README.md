@@ -4,14 +4,14 @@ Compare two arrays and return a new array with any items only found in one of th
 
 ```javascript
 function diffArray(arr1, arr2) {
-  var newArr = [];
+  let newArr = [];
   return newArr;
 }
 
 diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
 ```
 
-Here are some helpful links:
+Helpful links:
 
 * [Comparison Operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)
 

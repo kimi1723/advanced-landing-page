@@ -5,43 +5,43 @@ const students = [
     id: 1,
     name: 'Andrii',
     age: 22,
-    isWorkExperience: true
+    isWorkExperience: true,
   },
   {
     id: 2,
     name: 'Anna',
     age: 21,
-    isWorkExperience: false
+    isWorkExperience: false,
   },
   {
     id: 3,
     name: 'Marta',
     age: 23,
-    isWorkExperience: true
+    isWorkExperience: true,
   },
 ];
 
-xdescribe('populateTable', () => {
+describe.skip('populateTable', () => {
   afterEach(() => {
     document.body.innerHTML = '';
   });
 
-  test('should create a table', () => {
+  it('should create a table', () => {
     populateTable(students);
     expect(document.querySelector('table')).toBeDefined();
   });
 
-  test('should have 4 rows', () => {
+  it('should have 4 rows', () => {
     populateTable(students);
     expect(document.querySelector('table').querySelectorAll('tr').length).toBe(4);
   });
 
-  test('should have 4 columns', () => {
+  it('should have 4 columns', () => {
     populateTable(students);
     expect(document.querySelector('tr').children.length).toBe(4);
   });
 
-  test('should build cells with correct data', () => {
+  it('should build cells with correct data', () => {
     populateTable(students);
 
     const $rows = document.querySelectorAll('tr');

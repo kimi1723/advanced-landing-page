@@ -12,7 +12,7 @@ then you must return the third object from the array (the first argument), becau
 ```javascript
 
 function whatIsInAName(collection, source) {
-  var arr = [];
+  const arr = [];
 
   return arr;
 }
@@ -21,7 +21,7 @@ whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: 
 
 ```
 
-Here are some helpful links:
+Helpful links:
 
 * [Global Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
 

@@ -1,23 +1,23 @@
-// import { addTogether } from './carrying';
+// import { carrying } from './carrying';
 
-xdescribe('carrying', () => {
-    test('addTogether(2, 3) should return 5', () => {
-        expect(addTogether(2, 3)).toBe(5);
-    });
+describe.skip('carrying', () => {
+  it('carrying(2, 3) should return 5', () => {
+    expect(carrying(2, 3)).toBe(5);
+  });
 
-    test(`addTogether(2)(3) should return 5`, () => {
-        expect(addTogether(2)(3)).toBe(5);
-    });
+  it('carrying(2)(3) should return 5', () => {
+    expect(carrying(2)(3)).toBe(5);
+  });
 
-    test(`addTogether("https://www.youtube.com/watch?v=dQw4w9WgXcQ") should return undefined`, () => {
-        expect(addTogether("https://www.youtube.com/watch?v=dQw4w9WgXcQ")).toBe(undefined);
-    });
+  it('carrying("https://www.youtube.com/watch?v=dQw4w9WgXcQ") should return undefined', () => {
+    expect(carrying('https://www.youtube.com/watch?v=dQw4w9WgXcQ')).toBeUndefined();
+  });
 
-    test(`addTogether(2, "3") should return undefined`, () => {
-        expect(addTogether(2, "3")).toBe(undefined);
-    });
+  it('carrying(2, "3") should return undefined', () => {
+    expect(carrying(2, '3')).toBeUndefined();
+  });
 
-    test(`addTogether(2)([3]) should return undefined`, () => {
-        expect(addTogether(2)([3])).toBe(undefined);
-    });
+  it('carrying(2)([3]) should return undefined', () => {
+    expect(carrying(2)([3])).toBeUndefined();
+  });
 });

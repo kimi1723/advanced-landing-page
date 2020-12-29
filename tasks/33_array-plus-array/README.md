@@ -1,6 +1,6 @@
 ### Array plus Array
 
-Sum up the array values by indices. If pair value is missed, consider as 0
+Sum up the array values by indices. If pair value is missed, consider as 0.
 
 Examples: 
 

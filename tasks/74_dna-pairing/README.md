@@ -18,7 +18,7 @@ function pairElement(str) {
 pairElement("GCG");
 ```
 
-Here are some helpful links:
+Helpful links:
 * [Array.prototype.push()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
 
 * [String.prototype.split()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split)

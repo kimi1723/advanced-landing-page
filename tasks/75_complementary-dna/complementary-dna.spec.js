@@ -1,16 +1,15 @@
-// import { DNAStrand } from './complementary-dna';
+// import { complementaryDNA } from './complementary-dna';
 
-xdescribe('Complementary DNA ', () => {
+describe.skip('complementaryDNA', () => {
+  it('complementaryDNA("ATTGC") should return TAACG', () => {
+    expect(complementaryDNA('ATTGC')).toBe('TAACG');
+  });
 
-    test('DNAStrand("ATTGC") should return TAACG', () => {
-        expect(DNAStrand("ATTGC")).toBe('TAACG');
-    });
+  it('complementaryDNA("GTAT") should return CATA', () => {
+    expect(complementaryDNA('GTAT')).toBe('CATA');
+  });
 
-    test('DNAStrand("GTAT") should return CATA', () => {
-        expect(DNAStrand("GTAT")).toBe('CATA');
-    });
-
-    test('DNAStrand("AAAA") should return TTTT', () => {
-        expect(DNAStrand("AAAA")).toBe('TTTT');
-    });
+  it('complementaryDNA("AAAA") should return TTTT', () => {
+    expect(complementaryDNA('AAAA')).toBe('TTTT');
+  });
 });

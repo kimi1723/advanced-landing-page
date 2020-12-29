@@ -4,8 +4,8 @@ Implement stack data structure without using Array. The class should support fol
 
 * push;
 * pop;
-and props
+
+and props:
+
 * isEmpty;
 * size;
-
-Take a look at test for more details.

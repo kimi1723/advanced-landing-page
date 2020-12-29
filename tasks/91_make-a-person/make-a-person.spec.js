@@ -1,59 +1,58 @@
 // import { Person } from './make-a-person';
 
-xdescribe('Make a person', () => {
-    let bob;
+describe.skip('Person', () => {
+  let bob;
 
-    beforeEach(() => {
-        bob = new Person('Bob Ross');
-    });
+  beforeEach(() => {
+    bob = new Person('Bob Ross');
+  });
 
-    test('bob instanceof Person', () => {
-        expect(bob instanceof Person).toBe(true);
-    });
+  it('bob is an instance of Person', () => {
+    expect(bob instanceof Person).toBe(true);
+  });
 
-    test('bob.firstName should return undefined', () => {
-        expect(bob.firstName).toBe(undefined);
-    });
+  it('bob.firstName should return undefined', () => {
+    expect(bob.firstName).toBeUndefined();
+  });
 
-    test('bob.lastName should return undefined', () => {
-        expect(bob.lastName).toBe(undefined);
-    });
+  it('bob.lastName should return undefined', () => {
+    expect(bob.lastName).toBeUndefined();
+  });
 
-    test('bob.getFirstName() should return "Bob"', () => {
-        expect(bob.getFirstName()).toBe('Bob');
-    });
+  it('bob.getFirstName() should return "Bob"', () => {
+    expect(bob.getFirstName()).toBe('Bob');
+  });
 
-    test('bob.getLastName() should return "Ross"', () => {
-        expect(bob.getLastName()).toBe('Ross');
-    });
+  it('bob.getLastName() should return "Ross"', () => {
+    expect(bob.getLastName()).toBe('Ross');
+  });
 
-    test('bob.getFullName() should return "Bob Ross"', () => {
-        expect(bob.getFullName()).toBe('Bob Ross');
-    });
+  it('bob.getFullName() should return "Bob Ross"', () => {
+    expect(bob.getFullName()).toBe('Bob Ross');
+  });
 
-    test('bob.getFullName() should return "Haskell Ross" after bob.setFirstName("Haskell")', () => {
-        bob.setFirstName('Haskell');
-        expect(bob.getFullName()).toBe('Haskell Ross');
-    });
+  it('bob.getFullName() should return "Haskell Ross" after bob.setFirstName("Haskell")', () => {
+    bob.setFirstName('Haskell');
+    expect(bob.getFullName()).toBe('Haskell Ross');
+  });
 
-    test('bob.getFullName() should return "Haskell Curry" after bob.setLastName("Curry")', () => {
-        bob.setLastName('Curry');
-        expect(bob.getFullName()).toBe('Haskell Curry');
-    });
+  it('bob.getFullName() should return "Haskell Curry" after bob.setLastName("Curry")', () => {
+    bob.setLastName('Curry');
+    expect(bob.getFullName()).toBe('Haskell Curry');
+  });
 
-    test('bob.getFullName() should return "Haskell Curry" after bob.setFullName("Haskell Curry")', () => {
-        bob.setFullName('Haskell Curry')
-        expect(bob.getFullName()).toBe('Haskell Curry');
-    });
+  it('bob.getFullName() should return "Haskell Curry" after bob.setFullName("Haskell Curry")', () => {
+    bob.setFullName('Haskell Curry');
+    expect(bob.getFullName()).toBe('Haskell Curry');
+  });
 
-    test('bob.getFirstName() should return "Haskell" after bob.setFullName("Haskell Curry")', () => {
-        bob.setFullName('Haskell Curry')
-        expect(bob.getFirstName()).toBe('Haskell');
-    });
+  it('bob.getFirstName() should return "Haskell" after bob.setFullName("Haskell Curry")', () => {
+    bob.setFullName('Haskell Curry');
+    expect(bob.getFirstName()).toBe('Haskell');
+  });
 
-    test('bob.getLastName() should return "Curry" after bob.setFullName("Haskell Curry")', () => {
-        bob.setFullName('Haskell Curry')
-        expect(bob.getLastName()).toBe('Curry');
-    });
-
+  it('bob.getLastName() should return "Curry" after bob.setFullName("Haskell Curry")', () => {
+    bob.setFullName('Haskell Curry');
+    expect(bob.getLastName()).toBe('Curry');
+  });
 });

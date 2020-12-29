@@ -1,24 +1,23 @@
-// import { translatePigLatin } from './pig-latin';
+// import { pigLatin } from './pig-latin';
 
-xdescribe('Pig Latin', () => {
+describe.skip('pigLatin', () => {
+  it('pigLatin("california") should return "aliforniacay"', () => {
+    expect(pigLatin('california')).toBe('aliforniacay');
+  });
 
-    test('translatePigLatin("california") should return "aliforniacay"', () => {
-        expect(translatePigLatin("california")).toBe("aliforniacay");
-    });
+  it('pigLatin("paragraphs") should return "aragraphspay"', () => {
+    expect(pigLatin('paragraphs')).toBe('aragraphspay');
+  });
 
-    test('translatePigLatin("paragraphs") should return "aragraphspay"', () => {
-        expect(translatePigLatin("paragraphs")).toBe("aragraphspay");
-    });
+  it('pigLatin("glove") should return "oveglay"', () => {
+    expect(pigLatin('glove')).toBe('oveglay');
+  });
 
-    test('translatePigLatin("glove") should return "oveglay"', () => {
-        expect(translatePigLatin("glove")).toBe("oveglay");
-    });
+  it('pigLatin("algorithm") should return "algorithmway"', () => {
+    expect(pigLatin('algorithm')).toBe('algorithmway');
+  });
 
-    test('translatePigLatin("algorithm") should return "algorithmway"', () => {
-        expect(translatePigLatin("algorithm")).toBe("algorithmway");
-    });
-
-    test('translatePigLatin("eight") should return "eightway"', () => {
-        expect(translatePigLatin("eight")).toBe("eightway");
-    });
+  it('pigLatin("eight") should return "eightway"', () => {
+    expect(pigLatin('eight')).toBe('eightway');
+  });
 });

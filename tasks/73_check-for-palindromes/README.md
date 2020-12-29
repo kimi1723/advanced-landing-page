@@ -19,7 +19,7 @@ palindrome("eye");
 
 ```
 
-Here are some helpful links:
+Helpful links:
 
 * [String.prototype.replace()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace)
 

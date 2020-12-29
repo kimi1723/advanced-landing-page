@@ -12,6 +12,6 @@ unpackArray([1, [2], [3, [[4]]]]);
 
 ```
 
-Here are some helpful links:
+Helpful links:
 
 * [Array.isArray()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray)

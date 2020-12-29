@@ -1,4 +1,4 @@
-###Bouncing Balls
+### Bouncing Balls
 
 A child plays with a ball on the nth floor of a big building. The height of this floor is known. (float parameter "h" in meters. Condition 1) : h > 0)
 He lets out the ball. The ball bounces for example to two-thirds of its height.
@@ -17,7 +17,7 @@ Example:
 `h = 3, bounce = 1, window = 1.5, result is -1 (Condition 2) not fulfilled).`
 
 ```javascript
-function bouncingBall(h,  bounce,  window) {
+function bouncingBalls(h,  bounce,  window) {
   // your code here
 }
 ```

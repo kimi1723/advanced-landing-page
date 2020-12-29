@@ -14,7 +14,7 @@ function uniteUnique(arr) {
 uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
 ```
 
-Here are some helpful links:
+Helpful links:
 
 * [Arguments object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments)
 

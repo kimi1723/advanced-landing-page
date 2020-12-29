@@ -1,3 +1,3 @@
 ### Remove whitespaces
 
-Remove white spaces in the string
+Remove white spaces in the string.

@@ -10,7 +10,7 @@ function spinalCase(str) {
 spinalCase('This Is Spinal Tap');
 ```
 
-Here are some helpful links:
+Helpful links:
 
 * [RegExp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
 

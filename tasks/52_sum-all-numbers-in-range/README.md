@@ -13,7 +13,7 @@ function sumAll(arr) {
 sumAll([1, 4]);
 ```
 
-Here are some helpful links:
+Helpful links:
 
 * [Math.max()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max)
 

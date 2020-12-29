@@ -1,13 +1,11 @@
-// import { findElement } from './find-elements';
+// import { findElements } from './find-elements';
 
-xdescribe('Find element', () => {
+describe.skip('findElements', () => {
+  it('findElements([1, 3, 5, 8, 9, 10], function(num) { return num % 2 === 0; }) should return 8', () => {
+    expect(findElements([1, 3, 5, 8, 9, 10], (num) => num % 2 === 0)).toBe(8);
+  });
 
-    test('findElement([1, 3, 5, 8, 9, 10], function(num) { return num % 2 === 0; }) should return 8', () => {
-        expect(findElement([1, 3, 5, 8, 9, 10], function(num) { return num % 2 === 0; })).toBe(8);
-    });
-
-    test('findElement([1, 3, 5, 9], function(num) { return num % 2 === 0; }) should return undefined', () => {
-        expect(findElement([1, 3, 5, 9], function(num) { return num % 2 === 0; })).toBe(undefined);
-    });
-
+  it('findElements([1, 3, 5, 9], function(num) { return num % 2 === 0; }) should return undefined', () => {
+    expect(findElements([1, 3, 5, 9], (num) => num % 2 === 0)).toBeUndefined();
+  });
 });

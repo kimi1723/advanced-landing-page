@@ -1,30 +1,27 @@
-// import { convertHTML } from './convert-html-entities';
+// import { convertHTMLEntities } from './convert-html-entities';
 
+describe.skip('convertHTMLEntities', () => {
+  it('convertHTMLEntities("Dolce & Gabbana") should return "Dolce &amp; Gabbana"', () => {
+    expect(convertHTMLEntities('Dolce & Gabbana')).toBe('Dolce &amp; Gabbana');
+  });
 
-xdescribe('Convert HTML entities', () => {
+  it('convertHTMLEntities("Hamburgers < Pizza < Tacos") should return "Hamburgers &lt; Pizza &lt; Tacos"', () => {
+    expect(convertHTMLEntities('Hamburgers < Pizza < Tacos')).toBe('Hamburgers &lt; Pizza &lt; Tacos');
+  });
 
-    test('convertHTML("Dolce & Gabbana") should return Dolce &​amp; Gabbana', () => {
-        expect(convertHTML("Dolce & Gabbana")).toBe('Dolce &amp; Gabbana');
-    });
+  it('convertHTMLEntities("Sixty > twelve") should return "Sixty &gt; twelve"', () => {
+    expect(convertHTMLEntities('Sixty > twelve')).toBe('Sixty &gt; twelve');
+  });
 
-    test('convertHTML("Hamburgers < Pizza < Tacos") should return Hamburgers &​lt; Pizza &​lt; Tacos', () => {
-        expect(convertHTML("Hamburgers < Pizza < Tacos")).toBe('Hamburgers &lt; Pizza &lt; Tacos');
-    });
+  it('convertHTMLEntities(\'Stuff in "quotation marks"\') should return "Stuff in &quot;quotation marks&quot;"', () => {
+    expect(convertHTMLEntities('Stuff in "quotation marks"')).toBe('Stuff in &quot;quotation marks&quot;');
+  });
 
-    test('convertHTML("Sixty > twelve") should return Sixty &​gt; twelve', () => {
-        expect(convertHTML("Sixty > twelve")).toBe('Sixty &gt; twelve');
-    });
+  it('convertHTMLEntities("Shindler\'s List") should return "Shindler&apos;s List"', () => {
+    expect(convertHTMLEntities("Shindler's List")).toBe('Shindler&apos;s List');
+  });
 
-    test(`convertHTML('Stuff in "quotation marks"') should return Stuff in &​quot;quotation marks&​quot;`, () => {
-        expect(convertHTML('Stuff in "quotation marks"')).toBe('Stuff in &quot;quotation marks&quot;');
-    });
-
-    test(`convertHTML('Shindler's List') should return Shindler&​apos;s List`, () => {
-        expect(convertHTML("Shindler's List")).toBe('Shindler&apos;s List');
-    });
-
-    test(`convertHTML('<>') should return &​lt;&​gt;`, () => {
-        expect(convertHTML("<>")).toBe('&lt;&gt;');
-    });
-
+  it('convertHTMLEntities("<>") should return "&lt;&gt;"', () => {
+    expect(convertHTMLEntities('<>')).toBe('&lt;&gt;');
+  });
 });

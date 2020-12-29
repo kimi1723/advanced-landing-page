@@ -1,21 +1,19 @@
-// import { unpackArray } from './unpack-elements';
+// import { unpackElements } from './unpack-elements';
 
-xdescribe('Unpack array', () => {
+describe.skip('unpackElements', () => {
+  it('unpackElements([[["a"]], [["b"]]]) should return ["a", "b"]', () => {
+    expect(JSON.stringify(unpackElements([[['a']], [['b']]]))).toBe('["a","b"]');
+  });
 
-    test('unpackArray([[["a"]], [["b"]]]) should return ["a", "b"]', () => {
-        expect(JSON.stringify(unpackArray([[["a"]], [["b"]]]))).toBe('["a","b"]');
-    });
+  it('unpackElements([1, [2], [3, [[4]]]])', () => {
+    expect(JSON.stringify(unpackElements([1, [2], [3, [[4]]]]))).toBe('[1,2,3,4]');
+  });
 
-    test('unpackArray([1, [2], [3, [[4]]]])', () => {
-        expect(JSON.stringify(unpackArray([1, [2], [3, [[4]]]]))).toBe('[1,2,3,4]');
-    });
+  it('unpackElements([1, [], [3, [[4]]]])', () => {
+    expect(JSON.stringify(unpackElements([1, [], [3, [[4]]]]))).toBe('[1,3,4]');
+  });
 
-    test('unpackArray([1, [], [3, [[4]]]])', () => {
-        expect(JSON.stringify(unpackArray([1, [], [3, [[4]]]]))).toBe('[1,3,4]');
-    });
-
-    test('unpackArray([1, {}, [3, [[4]]]]) should return [1, {}, 3, 4]', () => {
-        expect(JSON.stringify(unpackArray([1, {}, [3, [[4]]]]))).toBe('[1,{},3,4]');
-    });
-
+  it('unpackElements([1, {}, [3, [[4]]]]) should return [1, {}, 3, 4]', () => {
+    expect(JSON.stringify(unpackElements([1, {}, [3, [[4]]]]))).toBe('[1,{},3,4]');
+  });
 });

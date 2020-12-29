@@ -11,7 +11,7 @@ function findLetter(str) {
 findLetter("abce");
 ```
 
-Here are some helpful links:
+Helpful links:
 
 * [String.charCodeAt()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charCodeAt)
 

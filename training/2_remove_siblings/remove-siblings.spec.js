@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 // import { removeSiblings } from './remove-siblings';
 
-xdescribe('removeSiblings', () => {
+describe.skip('removeSiblings', () => {
   beforeAll(() => {
     const dest = path.join(__dirname, './mock.html');
     const html = fs.readFileSync(dest).toString();
@@ -10,7 +10,7 @@ xdescribe('removeSiblings', () => {
     document.body.innerHTML = html;
   });
 
-  test('should remove all siblings', () => {
+  it('should remove all siblings', () => {
     const $node = document.querySelector('.target');
 
     removeSiblings($node);

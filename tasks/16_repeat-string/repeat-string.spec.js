@@ -1,27 +1,27 @@
-// import { repeatStringNumTimes } from './repeat-string';
+// import { repeatString } from './repeat-string';
 
-xdescribe('repeat-string', () => {
-    test('repeatStringNumTimes("*", 3) should return "***"', () => {
-        expect(repeatStringNumTimes("*", 3)).toBe('***');
-    });
+describe.skip('repeatString', () => {
+  it('repeatString("*", 3) should return "***"', () => {
+    expect(repeatString('*', 3)).toBe('***');
+  });
 
-    test('repeatStringNumTimes("abc", 3) should return "abcabcabc"', () => {
-        expect(repeatStringNumTimes("abc", 3)).toBe('abcabcabc');
-    });
+  it('repeatString("abc", 3) should return "abcabcabc"', () => {
+    expect(repeatString('abc', 3)).toBe('abcabcabc');
+  });
 
-    test('repeatStringNumTimes("abc", 4) should return "abcabcabcabc"', () => {
-        expect(repeatStringNumTimes('abc', 4)).toBe('abcabcabcabc');
-    });
+  it('repeatString("abc", 4) should return "abcabcabcabc"', () => {
+    expect(repeatString('abc', 4)).toBe('abcabcabcabc');
+  });
 
-    test('repeatStringNumTimes("abc", 1) should return "abc".', () => {
-        expect(repeatStringNumTimes("abc", 1)).toBe('abc');
-    });
+  it('repeatString("abc", 1) should return "abc".', () => {
+    expect(repeatString('abc', 1)).toBe('abc');
+  });
 
-    test('repeatStringNumTimes("*", 8) should return "********"', () => {
-        expect(repeatStringNumTimes("*", 8)).toBe('********');
-    });
+  it('repeatString("*", 8) should return "********"', () => {
+    expect(repeatString('*', 8)).toBe('********');
+  });
 
-    test('repeatStringNumTimes("abc", -2) should return ""', () => {
-        expect(repeatStringNumTimes("abc", -2)).toBe('');
-    });
+  it('repeatString("abc", -2) should return ""', () => {
+    expect(repeatString('abc', -2)).toBe('');
+  });
 });

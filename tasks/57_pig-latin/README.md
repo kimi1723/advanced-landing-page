@@ -11,7 +11,7 @@ function translatePigLatin(str) {
 translatePigLatin("consonant");
 ```
 
-Here are some helpful links:
+Helpful links:
 
 * [Array.prototype.indexOf()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
 
