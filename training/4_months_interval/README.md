@@ -1,6 +1,6 @@
 ### Get the months between two dates
 
-> difficalty: `hard`
+> difficulty: `hard`
 
 Create a function that, given 2 dates, returns the names of the months that are present between them (inclusive).
 
@@ -25,7 +25,7 @@ monthsInterval(date1, date2);
 const date1 = new Date(2017, 11, 1);
 const date2 = new Date(2018, 0, 1);
 
-monthsInterval(date1, date2)
+monthsInterval(date1, date2);
 ```
 
 #### Output
@@ -40,7 +40,7 @@ monthsInterval(date1, date2)
 const date1 = new Date(2017, 0, 1);
 const date2 = new Date(2018, 0, 1);
 
-monthsInterval(date1, date2)
+monthsInterval(date1, date2);
 ```
 
 #### Output

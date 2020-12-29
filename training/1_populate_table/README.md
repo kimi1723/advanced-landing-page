@@ -1,6 +1,6 @@
-### Dynamicaly create the table
+### Dynamically create the table
 
-> difficalty: `medium`
+> difficulty: `medium`
 
 Create a function that takes array of objects and builds the table.
 

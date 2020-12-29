@@ -1,6 +1,6 @@
 ### Remove siblings for the node
 
-> difficalty: `medium`
+> difficulty: `medium`
 
 Create a function that takes HTML element adn removes all siblings
 

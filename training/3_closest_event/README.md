@@ -1,6 +1,6 @@
 ### What's the closest event?
 
-> difficalty: `hard`
+> difficulty: `hard`
 
 Create a function that takes array of objects containing some events and return the name of the event that is closest to that date.
 
