@@ -1,11 +1,11 @@
 // import { complementaryDNA } from './complementary-dna';
 
 describe.skip('complementaryDNA', () => {
-  it('complementaryDNA("ATTGC") should return TAACG', () => {
+  it('complementaryDNA("ATTGC") should return "TAACG"', () => {
     expect(complementaryDNA('ATTGC')).toBe('TAACG');
   });
 
-  it('complementaryDNA("GTAT") should return CATA', () => {
+  it('complementaryDNA("GTAT") should return "CATA"', () => {
     expect(complementaryDNA('GTAT')).toBe('CATA');
   });
 

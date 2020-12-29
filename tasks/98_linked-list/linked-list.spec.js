@@ -13,7 +13,9 @@ describe.skip('LinkedList', () => {
 
   it('should be able to push cells', () => {
     expect(list.head).toBeNull();
+
     list.push(5);
+
     expect(list.head.value).toBe(5);
   });
 

@@ -10,14 +10,16 @@ Notes:
 
 Examples:
 
-`minNumberToPrime([3, 1, 2]); // return 1`
+```javascript
+minNumberToPrime([3, 1, 2]); // returns 1
+```
 
 Explanation:
-
 Since the sum of the array's elements is equal to 6, the minimum number to be inserted to transform the sum to prime number is 1, which will make the sum of the array equal the closest prime number 7.
 
-`minNumberToPrime([2, 12, 8, 4, 6]); // return 5`
+```javascript
+minNumberToPrime([2, 12, 8, 4, 6]); // returns 5
+```
 
 Explanation:
-
 Since the sum of the array's elements is equal to 32, the minimum number to be inserted to transform the sum to prime number is 5, which will make the sum of the array equal the closest prime number 37.

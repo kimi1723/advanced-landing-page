@@ -14,15 +14,9 @@ The radius of the earth is 6367.4447 kilometers, and the GM value of earth is 39
 const GM = 398600.4418;
 const EARTH_RADIUS = 6367.4447;
 
-function calculateOrbitalPeriod(arr) {
-  return arr;
-}
-
-calculateOrbitalPeriod([{ name : "sputnik", avgAlt : 35873.5553 }]);
+calculateOrbitalPeriod([{ name : "sputnik", avgAlt : 35873.5553 }]); // returns [{ name: 'sputnik', orbitalPeriod: 86400 }]
 ```
 
 Helpful links:
-
 * [Math.pow()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow)
-
 * [Math.sqrt()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt)

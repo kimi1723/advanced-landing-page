@@ -7,11 +7,7 @@ A prime number is defined as a number greater than one and having only two divis
 The provided number may not be a prime.
 
 ```javascript
-function sumPrimes(num) {
-  return num;
-}
-
-sumPrimes(10);
+sumPrimes(10); // returns 17
 ```
 
 Helpful links:

@@ -9,12 +9,9 @@ If prop isn't *"tracks"* and value isn't empty (*""*), update or set the *value*
 Your function must always return the entire collection object.
 
 There are several rules for handling incomplete data:
-
-If *prop* is *"tracks"* but the album doesn't have a *"tracks"* property, create an empty array before adding the new value to the album's corresponding property.
-
-If prop is *"tracks"* and value isn't empty (*""*), push the *value* onto the end of the album's existing *tracks* array.
-
-If *value* is empty (*""*), delete the given prop property from the album.
+* If *prop* is *"tracks"* but the album doesn't have a *"tracks"* property, create an empty array before adding the new value to the album's corresponding property.
+* If prop is *"tracks"* and value isn't empty (*""*), push the *value* onto the end of the album's existing *tracks* array.
+* If *value* is empty (*""*), delete the given prop property from the album.
 
 ```javascript
 const collection = {
@@ -42,16 +39,11 @@ const collection = {
       "album": "ABBA Gold"
     }
 };
+
 // Keep a copy of the collection for tests
 const collectionCopy = JSON.parse(JSON.stringify(collection));
 
-// Only change code below this line
-function updateRecords(id, prop, value) {
-  return collection;
-}
-
-updateRecords(5439, "artist", "ABBA");
+updateRecords(5439, 'artist', 'ABBA'); // should set artist's name in 5439 item
 ```
 
-Hints:
-	use bracket notation when accessing object properties with variables
+*Hint: use bracket notation when accessing object properties with variables.*

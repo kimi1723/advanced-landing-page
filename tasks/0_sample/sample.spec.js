@@ -1,4 +1,4 @@
-import { binarySearch } from './_sample';
+import { binarySearch } from './sample';
 
 describe('binarySearch', () => {
   let arr;

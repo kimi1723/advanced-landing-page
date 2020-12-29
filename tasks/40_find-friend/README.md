@@ -6,6 +6,8 @@ Your friend has told you that he will be wearing a RED mask, and has TWO other f
 
 Input to the function will be an array of strings, each representing a colored mask. For example:
 
-`const line = ['blue', 'blue', 'red', 'red', 'blue', 'green'];`
-
 The output of the function should be the number of people who could possibly be your friend.
+
+```javascript
+findFriend(['blue', 'blue', 'red', 'red', 'blue', 'green']); // returns 1
+```

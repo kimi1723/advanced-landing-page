@@ -5,13 +5,8 @@ Find the least common multiple of the provided parameters that can be evenly div
 The range will be an array of two numbers that will not necessarily be in numerical order. e.g. for 1 and 3 - find the least common multiple of both 1 and 3 that is evenly divisible by all numbers between 1 and 3.
 
 ```javascript
-function leastCommonMultipleInRange(arr) {
-  return arr;
-}
-
-leastCommonMultipleInRange([1,5]);
+leastCommonMultipleInRange([1, 5]); // returns 60
 ```
 
 Helpful links:
-
 * [Least Common Multiple](https://www.mathsisfun.com/least-common-multiple.html)

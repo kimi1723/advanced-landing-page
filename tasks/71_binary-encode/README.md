@@ -1,6 +1,7 @@
 ### Binary Encode
 
-Return an binary string of passed English sentance.
+Return a binary string of passed English sentence.
+
 The binary string will be space separated.
 
 Helpful links:

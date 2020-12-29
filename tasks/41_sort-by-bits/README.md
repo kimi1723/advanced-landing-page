@@ -21,4 +21,6 @@ Your task is to write the function that takes an array of integers and sort them
 
 Note: Your function should modify the input rather than creating a new array.
 
-`sortByBits([3, 8, 3, 6, 5, 7, 9, 1]) // => [1, 8, 3, 3, 5, 6, 9, 7]`
+```javascript
+sortByBits([3, 8, 3, 6, 5, 7, 9, 1]); // modifies the array to [1, 8, 3, 3, 5, 6, 9, 7]
+```

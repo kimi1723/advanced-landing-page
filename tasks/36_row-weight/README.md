@@ -9,6 +9,6 @@ Notes:
 * Array size is at least 1.
 * All numbers will be positive.
 
-Example:
-
-`rowWeights([13, 27, 49]); // return [62, 27]`
+```javascript
+rowWeights([13, 27, 49]); // returns [62, 27]
+```

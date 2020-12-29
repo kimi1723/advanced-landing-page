@@ -2,7 +2,7 @@
 
 Remove all falsy values from an array.
 
-Falsy values in JavaScript are false, null, 0, "", undefined, and NaN.
+Falsy values in JavaScript are `false`, `null`, `0`, `""`, `undefined`, and `NaN`.
 
 Helpful links:
 * [Boolean Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)

@@ -6,7 +6,9 @@ If the integer is represented with the letter `n`, a factorial is the product of
 
 Factorials are often represented with the shorthand notation `n!`.
 
-For example: `5! = 1 * 2 * 3 * 4 * 5 = 120`
+```javascript
+factorialize(5); // returns 120, 5! = 1 * 2 * 3 * 4 * 5 = 120
+```
 
 Helpful links:
 * [Arithmetic Operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators)
