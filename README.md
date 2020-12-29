@@ -10,6 +10,15 @@ To install dependencies run:
 
 ```npm run test``` - to execute unit tests
 
+### Branching strategy for interns
+1. Create a fork from the repo under your GitHub user.
+2. Go to the fork you just created. Open "Settings" -> "Manage access". Provide a read access to your fork to all mentors (you may need to request their Github logins). Make sure that there is no access for the group `griddynamics/ui-internship-spb-rw`, if there is access for this group, then remove it from the list. There should only be mentors.
+3. Inside your fork, create a branch named like `iteration_1/[ldap]`, where `[ldap]` - your username in Grid Dynamics system. This will be your main branch with all your changes.
+4. Before each new task, you must create a new branch from `iteration_1/[ldap]` and name it like `iteration_1/[ldap]/[task_description]`.
+5. After the task on which you worked is completed, you must create a Pull Request from the branch `iteration_1/[ldap]/[task_description]` to `iteration_1/[ldap]`.
+6. Mentors review your changes.
+7. When review is over and you have received approval from the mentor, you have to merge the branch `iteration_1/[ldap]/[task_description]` to `iteration_1/[ldap]`.
+
 ### How to update your fork from upstream
 
 First in your forked repo add this repository as an upstream (upstream is just an alias):
