@@ -1,5 +1,4 @@
-# uiinternship
-IT-32899
+# UI internship
 
 ### Project installation
 
@@ -13,8 +12,8 @@ To install dependencies run:
 
 ### How to update your fork from upstream
 
-First in your forked repo add this repositiry as an upstream (upstream is just an alias):
-```git remote add upstream https://github.com/griddynamics/ui-internship-lwo2```
+First in your forked repo add this repository as an upstream (upstream is just an alias):
+```git remote add upstream https://github.com/griddynamics/ui-internship-spb```
 
 Then on your master branch run:
 
@@ -26,12 +25,12 @@ Then on your master branch run:
 
 Then you master branch will be up-to-date with upstream
 
-***To update specific branch:***
+***To update a specific branch:***
 
 1. Checkout your branch
 
-2. git fetch upstream
+2. ```git fetch upstream```
 
-3. git rebase upstream/master or git merge upstream/master
+3. ```git rebase upstream/master``` or ```git merge upstream/master```
 
-4. git push
+4. ```git push```
