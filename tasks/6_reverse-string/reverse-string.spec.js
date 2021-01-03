@@ -17,7 +17,7 @@ describe.skip('reverseString', () => {
     expect(reverseString('Greetings from Earth')).toBe('htraE morf sgniteerG');
   });
 
-  it('reverseString("foo bañana mañana") should return "anañam anañb oof"', () => {
+  it('reverseString("foo bañana mañana") should return "anañam anañab oof"', () => {
     expect(reverseString('foo bañana mañana')).toBe('anañam anañab oof');
   });
 });
