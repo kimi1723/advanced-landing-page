@@ -17,7 +17,7 @@ describe.skip('lookupProfile', () => {
     expect(lookupProfile('Bob', 'number')).toBe('No such contact');
   });
 
-  it('lookupProfile("Akira", "address") should return "No such contact"', () => {
+  it('lookupProfile("Akira", "address") should return "No such property"', () => {
     expect(lookupProfile('Akira', 'address')).toBe('No such property');
   });
 });
