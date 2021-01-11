@@ -2,7 +2,7 @@
 
 describe.skip('sortByBits', () => {
   it('sortByBits([3, 8, 3, 6, 5, 7, 9, 1]) should return [1, 8, 3, 3, 5, 6, 9, 7]', () => {
-    const array = [9, 4, 5, 3, 5, 7, 2, 56, 8, 2, 6, 8, 0];
+    const array = [3, 8, 3, 6, 5, 7, 9, 1];
 
     sortByBits(array);
 
