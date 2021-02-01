@@ -1,7 +1,10 @@
 # Turn static markup into framework-based components
 Using ready markup, decompose it into smaller components and implement using each of the given frameworks: **React**, **Angular**, **Ember**.
 
-Add functionality in accordance with the following requirements:
+Add functionality in accordance with the following requirements.
+
+For the purposes of this task you should use as less external libraries as possible, try to use instruments provided by the framework and built-in into javascript environment by default.
+If you are not sure whether it is applicable to use some lib - clarify it with your mentor.
 
 ## 1. Forms validation
 There are two forms on the page: registration form, contact form. For both of them write forms validation logic following the next requirements to fields:
