@@ -1,4 +1,4 @@
-# React useful resources
+# Angular useful resources
 
 - [Official Website](https://angular.io/docs)
 - [Angular tutorial](https://angular.io/tutorial)
