@@ -1,4 +1,6 @@
-# Angular useful resources
+# Angular
+
+## Angular useful resources
 
 - [Official Website](https://angular.io/docs)
 - [Angular tutorial](https://angular.io/tutorial)
@@ -9,7 +11,15 @@
 - [RxJs guide](https://rxjs-dev.firebaseapp.com/guide/overview)
 - [RxJs operators](https://rxmarbles.com/)
 
-Notable libraries:
+## Guides
+
+- [Typescript course](https://www.youtube.com/watch?v=5QnZ9AyDW6c)
+- [Typescript course 2](https://www.youtube.com/watch?v=ROxTGcqj01I)
+- [Dependency injection](https://www.youtube.com/watch?v=u6gAVCEJjQ4)
+- [Comparison with React](https://www.toptal.com/front-end/angular-vs-react-for-web-development)
+- [Angular for React devs](https://itnext.io/angular-for-react-developers-63239f278158)
+
+## Notable libraries
 
 - [Angular Cli](https://cli.angular.io/)
 - [Router](https://angular.io/guide/router)
