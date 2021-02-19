@@ -22,7 +22,7 @@ State of the submit button should be disabled until form is valid.
 ```css
 .disabled {
   cursor: not-allowed;
-  opacity: 0.07;
+  opacity: 0.7;
 }
 ```
 
