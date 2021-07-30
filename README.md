@@ -10,6 +10,7 @@ When review is over and you have received approval from the mentor, you have to 
 
 
 How to update your fork from upstream
+
 First in your forked repo add this repository as an upstream (upstream is just an alias):
 git remote add upstream https://gitlab.griddynamics.net/ui-internship/project-template
 Then on your master branch run:
