@@ -3,7 +3,7 @@
 describe.skip('Person', () => {
   let bob;
 
-  beforeEach(() => {
+  beforeAll(() => {
     bob = new Person('Bob Ross');
   });
 

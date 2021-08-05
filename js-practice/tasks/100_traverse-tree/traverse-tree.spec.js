@@ -29,6 +29,6 @@ describe.skip('traverseTree', () => {
 
     traverseTree(tree, callback);
 
-    expect(resultArray.sort((a, b) => a > b)).toEqual([1, 2, 99, 100]);
+    expect(resultArray.sort((a, b) => a - b)).toEqual([1, 2, 99, 100]);
   });
 });

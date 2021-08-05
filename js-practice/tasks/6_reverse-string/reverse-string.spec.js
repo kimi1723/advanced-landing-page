@@ -18,6 +18,6 @@ describe.skip('reverseString', () => {
   });
 
   it('reverseString("foo bañana mañana") should return "anañam anañab oof"', () => {
-    expect(reverseString('foo bañana mañana')).toBe('anañam anañab oof');
+    expect(reverseString('foo bañana mañana')).toBe('anañam anañab oof');
   });
 });
