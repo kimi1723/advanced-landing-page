@@ -20,4 +20,12 @@ describe.skip('reverseStringInRange', () => {
   it('reverseStringInRange("abcdefghijklmnopqrstuvwxyz", [5, 20]) should return "abcdeutsrqponmlkjihgfvwxyz"', () => {
     expect(reverseStringInRange('abcdefghijklmnopqrstuvwxyz', [5, 20])).toBe('abcdeutsrqponmlkjihgfvwxyz');
   });
+
+  it('reverseStringInRange("hippopotamus", [3, 4]) should return "hipoppotamus"', () => {
+    expect(reverseStringInRange('hippopotamus', [3, 4])).toBe('hipoppotamus');
+  });
+
+  it('reverseStringInRange("vivisection", [2, 3]) should return "viivsection"', () => {
+    expect(reverseStringInRange('vivisection', [2, 3])).toBe('viivsection');
+  });
 });

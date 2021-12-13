@@ -20,4 +20,8 @@ describe.skip('stringExpansion', () => {
   it('stringExpansion("") should return ""', () => {
     expect(stringExpansion('')).toBe('');
   });
+
+  it('stringExpansion("3d332f2xyZ") should return "dddffxxyyZZ"', () => {
+    expect(stringExpansion('3d332f2xyZ')).toBe('dddffxxyyZZ');
+  });
 });

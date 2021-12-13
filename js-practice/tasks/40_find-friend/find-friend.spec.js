@@ -32,4 +32,8 @@ describe.skip('findFriend', () => {
   it('findFriend(["blue", "red", "blue", "red", "red", "blue", "red"]) should return 1', () => {
     expect(findFriend(['blue', 'red', 'blue', 'red', 'red', 'blue', 'red'])).toBe(1);
   });
+
+  it('findFriend(["blue", "red", "blue", "blue"]) should return 1', () => {
+    expect(findFriend(['blue', 'red', 'blue', 'blue'])).toBe(1);
+  });
 });
