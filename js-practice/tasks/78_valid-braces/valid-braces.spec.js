@@ -28,4 +28,8 @@ describe.skip('validBraces', () => {
   it('validBraces("[}]]") should return false', () => {
     expect(validBraces('[}]]')).toBe(false);
   });
+
+  it('validBraces("[({])}") should return false', () => {
+    expect(validBraces('[({])}')).toBe(false);
+  });
 });
