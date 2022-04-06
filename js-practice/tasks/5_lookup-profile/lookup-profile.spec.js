@@ -1,15 +1,15 @@
 // import { lookupProfile } from './lookup-profile';
 
 describe.skip('lookupProfile', () => {
-  it('lookupProfiles("Kristian", "lastName") should return "Vos"', () => {
+  it('lookupProfile("Kristian", "lastName") should return "Vos"', () => {
     expect(lookupProfile('Kristian', 'lastName')).toBe('Vos');
   });
 
-  it('lookupProfiles("Sherlock", "likes") should return ["Intriguing Cases", "Violin"]', () => {
+  it('lookupProfile("Sherlock", "likes") should return ["Intriguing Cases", "Violin"]', () => {
     expect(lookupProfile('Sherlock', 'likes')).toEqual(['Intriguing Cases', 'Violin']);
   });
 
-  it('lookupProfiles("Harry", "likes") should return an array', () => {
+  it('lookupProfile("Harry", "likes") should return an array', () => {
     expect(Array.isArray(lookupProfile('Harry', 'likes'))).toBe(true);
   });
 
