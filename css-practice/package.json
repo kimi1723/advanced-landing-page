@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Goal of the project is to provide the platform to get markup knowledge",
   "scripts": {
-    "watch:sass": "node-sass -w task/scss/ -o task/css/",
-    "compile:sass": "node-sass task/scss/ -o task/css/"
+    "watch:sass": "node-sass -w tasks -o tasks",
+    "compile:sass": "node-sass tasks -o tasks"
   },
   "keywords": [],
   "author": "",
