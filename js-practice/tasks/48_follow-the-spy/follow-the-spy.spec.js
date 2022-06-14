@@ -22,4 +22,15 @@ describe.skip('followTheSpy', () => {
       ])
     ).toBe('USA, BRA, UAE, JPN, PHL');
   });
+
+  it('followTheSpy([["JPN", "PHL"], ["USA", "BRA"], ["UAE", "JPN"], ["BRA", "UAE"]]) should return "USA, BRA, UAE, JPN, PHL"', () => {
+    expect(
+      followTheSpy([
+        ['JPN', 'PHL'],
+        ['USA', 'BRA'],
+        ['UAE', 'JPN'],
+        ['BRA', 'UAE'],
+      ])
+    ).toBe('USA, BRA, UAE, JPN, PHL');
+  });
 });
