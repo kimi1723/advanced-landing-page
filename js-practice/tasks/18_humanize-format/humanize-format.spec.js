@@ -26,14 +26,14 @@ describe.skip('humanizeFormat', () => {
   });
 
   it('humanizeFormat(11) should return "11th"', () => {
-    expect(humanizeFormat(503)).toBe('11th');
+    expect(humanizeFormat(11)).toBe('11th');
   });
 
   it('humanizeFormat(12) should return "12th"', () => {
-    expect(humanizeFormat(503)).toBe('12th');
+    expect(humanizeFormat(12)).toBe('12th');
   });
 
   it('humanizeFormat(13) should return "13th"', () => {
-    expect(humanizeFormat(503)).toBe('13th');
+    expect(humanizeFormat(13)).toBe('13th');
   });
 });
