@@ -27,4 +27,8 @@ describe.skip('truncateString', () => {
   it('truncateString("Absolutely Longer", 2) should return "Ab..."', () => {
     expect(truncateString('Absolutely Longer', 2)).toBe('Ab...');
   });
+
+  it('truncateString("A-", 2) should return "A-"', () => {
+    expect(truncateString('A-', 2)).toBe('A-');
+  });
 });
