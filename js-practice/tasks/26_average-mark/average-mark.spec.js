@@ -12,4 +12,8 @@ describe.skip('averageMark', () => {
   it('averageMark([1, 1, 1, 1, 1, 1, 1, 2]) should return 1', () => {
     expect(averageMark([1, 1, 1, 1, 1, 1, 1, 2])).toBe(1);
   });
+
+  it('averageMark([1, 3, 7]) should return 3', () => {
+    expect(averageMark([1, 3, 7])).toBe(3);
+  });
 });
