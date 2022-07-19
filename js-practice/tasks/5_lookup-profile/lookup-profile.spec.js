@@ -20,4 +20,8 @@ describe.skip('lookupProfile', () => {
   it('lookupProfile("Akira", "address") should return "No such property"', () => {
     expect(lookupProfile('Akira', 'address')).toBe('No such property');
   });
+
+  it('lookupProfile("Harry", "points") should return 0', () => {
+    expect(lookupProfile('Harry', 'points')).toBe(0);
+  });
 });

@@ -14,7 +14,8 @@ const contacts = [
     "firstName": "Harry",
     "lastName": "Potter",
     "number": "0994372684",
-    "likes": ["Hogwarts", "Magic", "Hagrid"]
+    "likes": ["Hogwarts", "Magic", "Hagrid"],
+    "points": 0
   },
   {
     "firstName": "Sherlock",
