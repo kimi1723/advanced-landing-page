@@ -14,7 +14,7 @@ describe.skip('validateBet', () => {
   });
 
   it('validateBet "5 , 3, 1  4, 1" with non-unique bets should return null', () => {
-    expect(validateBet([5, 90], '5 , 3, 1  4,2').join(',')).toBeNull();
+    expect(validateBet([5, 90], '5 , 3, 1  4, 1')).toBeNull();
   });
 
   it('validateBet "1, 2; 3, 4, 5" should return null', () => {
