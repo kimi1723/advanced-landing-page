@@ -1,8 +1,8 @@
 // import { maxTripletSum } from './max-triplet-sum';
 
 describe.skip('maxTripletSum', () => {
-  it('maxTripletSum([-7,12,-7,29,-5,0,-7,0,0,29]) should return 41', () => {
-    expect(maxTripletSum([-7, 12, -7, 29, -5, 0, -7, 0, 0, 29])).toBe(41);
+  it('maxTripletSum([-7,12,-7,100,29,-5,0,-7,0,0,29,20]) should return 149', () => {
+    expect(maxTripletSum([-7, 12, -7, 100, 29, -5, 0, -7, 0, 0, 29, 20])).toBe(149);
   });
 
   it('maxTripletSum([2,1,8,0,6,4,8,6,2,4]) should return 18', () => {
