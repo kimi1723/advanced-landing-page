@@ -7,7 +7,7 @@ The second argument, func, is a function you'll use to test the first elements o
 Return the rest of the array, otherwise return an empty array.
 
 ```javascript
-dropElements([1, 2, 3], function (n) {return n < 3; }); // returns [3]
+dropElements([1, 2, 3], function (n) {return n > 3; }); // returns [3]
 ```
 
 
