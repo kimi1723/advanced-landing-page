@@ -6,7 +6,7 @@ describe.skip('findNumbers', () => {
   });
 
   it('findNumbers("Hell0, sh1ny, w0rld") should return [0, 1, 0]', () => {
-    expect(findNumbers('Hell0, fuck1ng, w0rld')).toEqual([0, 1, 0]);
+    expect(findNumbers('Hell0, sh1ny, w0rld')).toEqual([0, 1, 0]);
   });
 
   it('findNumbers("s123d") should return [123]', () => {
