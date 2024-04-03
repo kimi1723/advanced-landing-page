@@ -63,11 +63,7 @@ const INPUT_DATA2 = [
   },
 ];
 
-const OUTPUT_DATA2 = [
-  'MON: 10:00 - 23:00',
-  'FRI: 10:00 - 23:00',
-  'SUN: 11:00 - 23:00',
-];
+const OUTPUT_DATA2 = ['MON: 10:00 - 23:00', 'FRI: 10:00 - 23:00', 'SUN: 11:00 - 23:00'];
 
 describe.skip('workingHours', () => {
   it(`workingHours(${INPUT_DATA}) should return an array`, () => {

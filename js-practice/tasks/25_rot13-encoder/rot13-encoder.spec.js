@@ -14,6 +14,6 @@ describe.skip('rot13Encoder', () => {
   });
 
   it('rot13Encoder("Hello World!") should encode to "Uryyb Jbeyq!"', () => {
-    expect(rot13Encoder('LOVE?')).toBe('YBIR?');
+    expect(rot13Encoder('HELLO WORLD!')).toBe('URYYB JBEYQ!');
   });
 });
