@@ -1,0 +1,1 @@
+const findNumbers = str => str.match(/\d/g);
