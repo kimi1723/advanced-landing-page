@@ -1,1 +1,1 @@
-const removeWhitespaces = str => str.replaceAll(' ', '');
+export const removeWhitespaces = (str) => str.replaceAll(' ', '');
