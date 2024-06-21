@@ -1,5 +1,1 @@
-export const randomFraction = () => {
-  const randomNum = Math.random();
-
-  return randomNum ? randomNum : randomFraction();
-};
+export const randomFraction = () => Math.random() || randomFraction();
