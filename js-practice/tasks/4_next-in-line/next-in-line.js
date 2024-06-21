@@ -1,7 +1,7 @@
-const nextInLine = (arr, num) => {
-    arr.push(num);
+export const nextInLine = (arr, num) => {
+  arr.push(num);
 
-    const removedElement = arr.shift();
+  const removedElement = arr.shift();
 
-    return removedElement;
+  return removedElement;
 };
