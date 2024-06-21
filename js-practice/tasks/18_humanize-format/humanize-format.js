@@ -1,19 +1,26 @@
 export const humanizeFormat = (num) => {
   if (typeof num !== 'number') return '';
 
-  if (num === 11 || num === 12 || num === 13) return num + 'th';
-
   const numStringified = num.toString();
+
+  if (num === 11 || num === 12 || num === 13) return numStringified.concat('th');
+
   const lastChar = numStringified.charAt(numStringified.length - 1);
+  let suffix;
 
   switch (lastChar) {
     case '1':
-      return num + 'st';
+      suffix = 'st';
+      break;
     case '2':
-      return num + 'nd';
+      suffix = 'nd';
+      break;
     case '3':
-      return num + 'rd';
+      suffix = 'rd';
+      break;
     default:
-      return num + 'th';
+      suffix = 'th';
   }
+
+  return numStringified.concat(suffix);
 };
