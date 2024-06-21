@@ -1,1 +1,1 @@
-const cloneArr = (arr) => [...arr];
+export const cloneArr = (arr) => [...arr];
