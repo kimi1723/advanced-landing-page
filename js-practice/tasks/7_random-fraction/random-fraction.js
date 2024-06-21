@@ -1,7 +1,5 @@
-const randomFraction = () => {
-    const randomNum = Math.random();
+export const randomFraction = () => {
+  const randomNum = Math.random();
 
-    if(randomNum === 0) return randomFraction();
-
-    return randomNum;
+  return randomNum === 0 ? randomFraction() : randomNum;
 };
