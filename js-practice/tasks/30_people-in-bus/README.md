@@ -1,5 +1,7 @@
 ### People in bus
 
+#
+
 There is a bus moving in the city, and it takes and drop some people in each bus stop.
 
 You are provided with a list (or array) of integer arrays (or tuples). Each integer array has two items which represent number of people get into bus (the first item) and number of people get off the bus (the second item) in a bus stop.
