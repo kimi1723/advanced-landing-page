@@ -5,17 +5,9 @@ export class Human {
   }
 }
 
-export class Man extends Human {
-  constructor(name, sex) {
-    super(name, sex);
-  }
-}
+export class Man extends Human {}
 
-export class Woman extends Human {
-  constructor(name, sex) {
-    super(name, sex);
-  }
-}
+export class Woman extends Human {}
 
 export class God {
   static create() {
