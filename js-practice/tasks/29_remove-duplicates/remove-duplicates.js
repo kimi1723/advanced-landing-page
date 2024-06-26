@@ -1,7 +1,7 @@
 export const removeDuplicates = (arr) => {
-  const noDuplicates = [];
+  const noDuplicatesSet = new Set();
 
-  arr.forEach((el) => !noDuplicates.includes(el) && noDuplicates.push(el));
+  arr.forEach((el) => noDuplicatesSet.add(el));
 
-  return noDuplicates;
+  return Array.from(noDuplicatesSet);
 };
