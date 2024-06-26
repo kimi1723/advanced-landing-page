@@ -1,1 +1,1 @@
-export const removeFalsyValues = (arr) => arr.filter((el) => Boolean(el));
+export const removeFalsyValues = (arr) => arr.filter(Boolean);
