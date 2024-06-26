@@ -1,12 +1,15 @@
 ### Minimum Number to Prime
 
+#
+
 Given an array of n integers, find minimum number to be inserted in an array, so that sum of all elements of array should equal the closest prime number.
 
 Notes:
-* Array size is at least 2.
-* Array's numbers will be only positives (n > 0).
-* Repetition of numbers in the array could occur.
-* The newer array's sum should equal the closest prime number.
+
+- Array size is at least 2.
+- Array's numbers will be only positives (n > 0).
+- Repetition of numbers in the array could occur.
+- The newer array's sum should equal the closest prime number.
 
 Examples:
 
