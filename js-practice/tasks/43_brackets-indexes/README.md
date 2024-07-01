@@ -1,5 +1,7 @@
 ### Brackets indexes
 
+#
+
 You are given a string with brackets and an index of an opening bracket and your task is to return the index of the matching closing bracket. Return -1 if there is no answer.
 
 ```javascript

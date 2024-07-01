@@ -1,4 +1,4 @@
-### CamelCase
+camel-case### CamelCase
 
 Write simple .camelCase method for strings. All words must have their first letter capitalized without spaces.
 

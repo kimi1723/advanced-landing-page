@@ -1,5 +1,7 @@
 ### Time simulation
 
+#
+
 When developing a game, it's often useful to be able to control time. We could slow it down when a character dies, or speed it up to make things look flashy, or stop time altogether when the player pauses the game.
 
 Let's write an object we can use to simulate time and mess with it as we wish!
@@ -9,8 +11,8 @@ Let's write an object we can use to simulate time and mess with it as we wish!
 Creates a new TimeSimulation instance. Nothing special here. Once an instance has been created, we can use its methods to play with time, and get the current "simulated" time.
 
 ```javascript
- let sim = new TimeSimulation();
- sim.get();
+let sim = new TimeSimulation();
+sim.get();
 ```
 
 Returns the current time withing the simulation. This value will start at 0.
@@ -37,6 +39,6 @@ Real time only moves in one direction. So if `currentRealtime` doesn't make sens
 Assuming current speed is 1
 */
 
- sim.update(10);
- sim.get() === 10;
+sim.update(10);
+sim.get() === 10;
 ```
