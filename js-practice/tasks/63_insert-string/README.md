@@ -1,5 +1,7 @@
 ### Insert a string
 
+#
+
 Write a function to insert a string within a string at a particular position (default is 0).
 
 ```javascript

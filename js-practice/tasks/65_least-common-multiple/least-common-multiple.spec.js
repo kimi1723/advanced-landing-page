@@ -1,4 +1,4 @@
-// import { leastCommonMultiple } from './least-common-multiple';
+import { leastCommonMultiple } from './least-common-multiple';
 
 const cases = [
   { a: 6, b: 4, result: 12 },
@@ -7,7 +7,7 @@ const cases = [
   { a: 3, b: 7, result: 21 },
 ];
 
-describe.skip('Least common multiple function', () => {
+describe('Least common multiple function', () => {
   it('should return correct values for series of cases', () => {
     cases.forEach(({ a, b, result }) => {
       expect(leastCommonMultiple(a, b)).toBe(result);
