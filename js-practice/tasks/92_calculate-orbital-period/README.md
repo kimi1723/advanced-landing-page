@@ -1,5 +1,7 @@
 ### Calculate Orbital Period
 
+#
+
 Return a new array that transforms the element's average altitude into their orbital periods.
 
 The array will contain objects in the format `{name: 'name', avgAlt: avgAlt}`.
@@ -14,9 +16,10 @@ The radius of the earth is 6367.4447 kilometers, and the GM value of earth is 39
 const GM = 398600.4418;
 const EARTH_RADIUS = 6367.4447;
 
-calculateOrbitalPeriod([{ name : "sputnik", avgAlt : 35873.5553 }]); // returns [{ name: 'sputnik', orbitalPeriod: 86400 }]
+calculateOrbitalPeriod([{ name: 'sputnik', avgAlt: 35873.5553 }]); // returns [{ name: 'sputnik', orbitalPeriod: 86400 }]
 ```
 
 Helpful links:
-* [Math.pow()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow)
-* [Math.sqrt()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt)
+
+- [Math.pow()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow)
+- [Math.sqrt()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt)

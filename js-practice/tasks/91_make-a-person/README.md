@@ -1,5 +1,7 @@
 ### Make a Person
 
+#
+
 Write a class Person with the following methods below:
 
 ```javascript
@@ -24,4 +26,5 @@ bob.getFullName(); // returns 'Bob Ross'
 ```
 
 Helpful links:
-* [Details of the Object Model](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)
+
+- [Details of the Object Model](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)
