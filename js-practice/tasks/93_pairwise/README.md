@@ -1,5 +1,7 @@
 ### Pairwise
 
+#
+
 Given an array arr, find element pairs whose sum equal the second argument arg and return the sum of their indices.
 
 If multiple pairs are possible that have the same numeric elements but different indices, return the smallest sum of indices. Once an element has been used, it cannot be reused to pair with another.
@@ -13,11 +15,14 @@ Explanation:
 The pairs that sum to 20 are [7, 13] and [9, 11]. We can then write out the array with their indices and values.
 
 Index
-0  1  2   3   4
-___
+0 1 2 3 4
+
+---
+
 Value
-7  9  11  13  15
-___
+7 9 11 13 15
+
+---
 
 Below we'll take their corresponding indices and add them.
 
@@ -28,4 +33,5 @@ Below we'll take their corresponding indices and add them.
 ```
 
 Helpful links:
-* [Array.prototype.reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
+
+- [Array.prototype.reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
