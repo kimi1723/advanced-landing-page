@@ -1,11 +1,14 @@
 ### Calculate Primorial Of a Number
 
+#
+
 **Primorial Of a Number** is similar to factorial of a number. In primorial, not all the natural numbers get multiplied, only prime numbers are multiplied to calculate the primorial of a number. It's denoted with `P#`.
 
 Given a number N , calculate its primorial.
 
 Notes:
-* Only positive numbers will be passed (N > 0) .
+
+- Only positive numbers will be passed (N > 0) .
 
 Examples:
 
