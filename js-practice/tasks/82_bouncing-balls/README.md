@@ -1,6 +1,8 @@
 ### Bouncing Balls
 
-A child plays with a ball on the nth floor of a big building. The height of this floor is known. 
+#
+
+A child plays with a ball on the nth floor of a big building. The height of this floor is known.
 (float parameter "h" in meters. Condition 1) : h > 0)
 
 He lets out the ball. The ball bounces for example to two-thirds of its height.

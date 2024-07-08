@@ -1,4 +1,4 @@
-// import { workingHours } from './working-hours';
+import { workingHours } from './working-hours';
 
 const INPUT_DATA = [
   {
@@ -65,7 +65,7 @@ const INPUT_DATA2 = [
 
 const OUTPUT_DATA2 = ['MON: 10:00 - 23:00', 'FRI: 10:00 - 23:00', 'SUN: 11:00 - 23:00'];
 
-describe.skip('workingHours', () => {
+describe('workingHours', () => {
   it(`workingHours(${INPUT_DATA}) should return an array`, () => {
     expect(Array.isArray(workingHours(INPUT_DATA))).toBe(true);
   });
