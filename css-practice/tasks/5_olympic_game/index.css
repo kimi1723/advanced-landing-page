@@ -1,0 +1,82 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100svw;
+  height: 100svh; }
+
+.box {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 0.5fr;
+  column-gap: 1em; }
+
+.box > div {
+  aspect-ratio: 1/1;
+  width: 50px;
+  border-radius: 50%;
+  border-width: 5px;
+  border-style: solid; }
+
+.box > div:nth-child(odd) {
+  position: relative; }
+
+.box > div:nth-child(even) {
+  position: absolute; }
+
+.circle-1,
+.circle-1 + div {
+  border-color: #0081c8;
+  grid-column: 1/2; }
+
+.circle-1 {
+  z-index: 1; }
+
+.circle-1 + div {
+  border-bottom-color: transparent;
+  z-index: 2; }
+
+.circle-2,
+.circle-2 + div {
+  grid-row: 1;
+  grid-column: 2/3;
+  transform: translate(-65%, 33%);
+  border-color: #fcb131; }
+
+.circle-2 {
+  z-index: 1; }
+
+.circle-3,
+.circle-3 + div {
+  grid-row: 1;
+  grid-column: 2/3;
+  border-color: #000; }
+
+.circle-3 {
+  border-left-color: transparent;
+  z-index: 2; }
+
+.circle-4,
+.circle-4 + div {
+  grid-row: 1;
+  grid-column: 3/4;
+  transform: translate(-65%, 33%);
+  border-color: #00a651; }
+
+.circle-4 {
+  border-top-color: transparent;
+  z-index: 2; }
+
+.circle-4 + div {
+  z-index: 1; }
+
+.circle-5,
+.circle-5 + div {
+  grid-row: 1;
+  grid-column: 3/4;
+  border-color: #ee334e; }
+
+.circle-5 {
+  border-left-color: transparent;
+  z-index: 2; }

@@ -1,0 +1,83 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100svw;
+  height: 100svh; }
+
+.btn {
+  position: relative;
+  padding: 0.75em 1.5em;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #1515c2;
+  background-color: transparent;
+  border: 2px #1515c2 solid;
+  border-radius: 50px;
+  outline: none;
+  transition: background-color 0.2s;
+  cursor: pointer; }
+
+.btn::before {
+  content: "Yes!";
+  display: none;
+  position: absolute;
+  opacity: 0;
+  left: 50%;
+  color: #fff;
+  transform: translate(-50%, -50%);
+  animation: showElementFromTop 0.3s 2.8s forwards ease-in-out; }
+
+.btn:hover {
+  background-color: #1515c2; }
+
+.btn:hover::before,
+.btn:hover > .circle-1,
+.btn:hover > .circle-2,
+.btn:hover > .circle-3 {
+  display: block; }
+
+.circle-1,
+.circle-2,
+.circle-3 {
+  display: none;
+  opacity: 0;
+  position: absolute;
+  aspect-ratio: 1/1;
+  width: 12px;
+  background-color: #fff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: blinkingDots 0.8s 3 ease-in-out; }
+
+.circle-1 {
+  left: 40%; }
+
+.circle-2 {
+  left: 50%;
+  animation-delay: 0.2s; }
+
+.circle-3 {
+  left: 60%;
+  animation-delay: 0.4s; }
+
+@keyframes blinkingDots {
+  0% {
+    opacity: 0;
+    top: 40%; }
+  50% {
+    opacity: 1;
+    top: 50%; }
+  100% {
+    opacity: 0;
+    top: 45%; } }
+
+@keyframes showElementFromTop {
+  0% {
+    top: 40%;
+    opacity: 0; }
+  100% {
+    top: 50%;
+    opacity: 1; } }
