@@ -1,2 +1,14 @@
-.box {
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100svw;
+  min-height: 100svh;
+}
+
+.box::before {
+  content: "Hello world";
+  font-size: 5rem;
+  color: #fff;
+  -webkit-text-stroke: 1px #000;
 }

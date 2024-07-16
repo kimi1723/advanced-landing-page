@@ -1,2 +1,54 @@
-.box {
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100svw;
+  height: 100svh;
+}
+
+.cloud {
+  position: relative;
+}
+
+.left-top,
+.middle-top,
+.right-top {
+  position: absolute;
+}
+
+.left-top,
+.middle-top,
+.right-top,
+.bottom {
+  background-color: #7b5c00;
+}
+
+.left-top {
+  aspect-ratio: 1/1;
+  left: 20px;
+  top: -40px;
+  height: 75px;
+  border-radius: 53% 66% 0 63%;
+}
+
+.middle-top {
+  left: 70px;
+  top: -45px;
+  width: 150px;
+  height: 140px;
+  border-radius: 65% 65% 0 0;
+}
+
+.right-top {
+  aspect-ratio: 1/1;
+  top: -20px;
+  right: 0;
+  width: 120px;
+  border-radius: 75% 100% 100% 0;
+}
+
+.bottom {
+  width: 300px;
+  height: 100px;
+  border-radius: 100px 100px 150px 150px;
 }
