@@ -1,0 +1,19 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/functions" as f;
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: f.transformPx(12) f.transformPx(24);
+  font-size: f.transformPx(14);
+  font-weight: var.$fw-semibold;
+  border-radius: f.transformPx(100);
+  cursor: pointer;
+
+  &--primary {
+    color: #fff;
+    background-color: var.$c-primary;
+  }
+}

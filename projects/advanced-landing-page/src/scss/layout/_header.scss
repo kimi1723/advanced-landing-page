@@ -1,0 +1,30 @@
+@use "../abstracts/functions" as f;
+@use "../abstracts/variables" as var;
+
+.header {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  height: 100svh;
+
+  &__navbar {
+    position: fixed;
+    padding: f.transformPx(45) f.transformPx(124);
+  }
+
+  &__left {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: f.transformPx(32);
+    margin-left: f.transformPx(124);
+    max-width: f.transformPx(496);
+  }
+
+  &__heading {
+    padding-right: f.transformPx(20);
+  }
+
+  &__text {
+    color: var.$c-grey-3;
+  }
+}

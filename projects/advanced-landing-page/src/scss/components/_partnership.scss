@@ -1,0 +1,14 @@
+@use "../abstracts/functions" as f;
+@use "../abstracts/variables" as var;
+
+.partnership {
+  &__text {
+    color: var.$c-grey-2;
+  }
+
+  &__logos {
+    display: flex;
+    align-items: center;
+    gap: f.transformPx(32);
+  }
+}

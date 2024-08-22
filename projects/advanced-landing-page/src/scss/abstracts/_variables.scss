@@ -1,16 +1,26 @@
 @use "./functions" as f;
 
-$c-primary: #7eb693;
-$c-secondary: #ffa858;
-$c-body: #274c5b;
+$fw-light: 300;
+$fw-regular: 400;
+$fw-md: 500;
+$fw-semibold: 600;
+$fw-black: 900;
 
-$c-white: #fff;
-$c-grey-1: #f7f7f7;
-$c-grey-2: #f1f1f1;
-$c-grey-3: #d4d4d4;
-$c-grey-4: #b8b8b8;
-$c-grey-5: #525c60;
-$c-grey-6: #fcfcfc;
+$c-primary: #10b981;
+$c-primary-dark: #0b9567;
+$c-primary-light: #d1fae5;
+$c-secondary: #f59e0b;
+
+$c-black: #1b1c57;
+$c-white: #ccc;
+$c-grey-1: #e0e3eb;
+$c-grey-2: #888b97;
+$c-grey-3: #626687;
+
+$c-danger: #ef4444;
+$c-danger-light: #fee2e2;
+$c-info: #1d4ed8;
+$c-info-light: #dbeafe;
 
 $shadow-sm: 0 5px 10px rgba(#000, 0.5);
 $shadow-md: 0 10px 15px rgba(#000, 0.5);

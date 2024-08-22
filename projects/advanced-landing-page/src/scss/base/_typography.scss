@@ -1,0 +1,67 @@
+@use "../abstracts/functions" as f;
+@use "../abstracts/variables" as var;
+
+.app {
+  font-family: "Lexend", sans-serif;
+  font-size: f.getClamp(16, 24);
+  font-weight: var.$fw-light;
+}
+
+.text {
+  font-size: f.transformPx(16);
+  line-height: f.transformPx(24);
+
+  &--md {
+    font-weight: var.$fw-md;
+  }
+
+  &--semibold {
+    font-weight: var.$fw-semibold;
+  }
+
+  &--primary {
+    color: var.$c-primary;
+  }
+}
+
+.heading {
+  text-transform: capitalize;
+
+  &--primary {
+    font-size: f.transformPx(40);
+    font-weight: var.$fw-black;
+  }
+
+  &--secondary {
+    font-size: f.transformPx(32);
+    font-weight: var.$fw-semibold;
+  }
+
+  &--tertiary {
+    font-size: f.transformPx(24);
+    font-weight: var.$fw-md;
+  }
+
+  &--quaternary {
+    font-size: f.transformPx(20);
+    font-weight: var.$fw-semibold;
+  }
+}
+
+.subtitle {
+  font-size: f.transformPx(18);
+  font-weight: var.$fw-md;
+}
+
+.label {
+  font-size: f.transformPx(14);
+  font-weight: var.$fw-regular;
+
+  &--primary {
+    line-height: f.transformPx(24);
+  }
+
+  &--sm {
+    font-size: f.transformPx(12);
+  }
+}

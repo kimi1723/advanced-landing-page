@@ -6,7 +6,12 @@
   @return $calculatedRem + $unit;
 }
 
-@function getClamp($px-1, $px-2, $scale: calc($px-2 / 14.4) + svw, $unit: rem) {
+@function getClamp(
+  $px-1,
+  $px-2: $px-1,
+  $scale: calc($px-2 / 14.4) + svw,
+  $unit: rem
+) {
   $firstValue: transformPx($px-1, $unit);
   $secondValue: transformPx($px-2, $unit);
   $clamped: clamp($firstValue, $scale, $secondValue);
