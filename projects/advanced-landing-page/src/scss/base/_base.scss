@@ -19,8 +19,9 @@
   color: inherit;
 }
 
-body {
-  // background-color: var.$c-white;
+.app {
+  margin: 0 auto;
+  max-width: f.transformPx(1440);
 }
 
 ul {
@@ -40,4 +41,3 @@ button {
 img {
   display: block;
 }
-

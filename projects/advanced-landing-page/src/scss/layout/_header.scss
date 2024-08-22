@@ -6,6 +6,26 @@
   grid-template-columns: repeat(2, 50%);
   height: 100svh;
 
+  &__gradient {
+    position: absolute;
+    top: -30%;
+    left: -25%;
+    translate: 50% 60%;
+    width: 568px;
+    height: 361px;
+    background: radial-gradient(
+      circle at left top,
+      rgba(130, 247, 255, 0.6),
+      rgba(130, 247, 255, 0.4),
+      rgba(130, 255, 210, 0.4),
+      rgba(130, 255, 210, 0.2),
+      transparent
+    );
+    filter: blur(30px);
+    border-bottom-right-radius: 50%;
+    z-index: -1;
+  }
+
   &__navbar {
     position: fixed;
     padding: f.transformPx(45) f.transformPx(124);
