@@ -1,0 +1,27 @@
+@use "./functions" as f;
+
+$c-primary: #7eb693;
+$c-secondary: #ffa858;
+$c-body: #274c5b;
+
+$c-white: #fff;
+$c-grey-1: #f7f7f7;
+$c-grey-2: #f1f1f1;
+$c-grey-3: #d4d4d4;
+$c-grey-4: #b8b8b8;
+$c-grey-5: #525c60;
+$c-grey-6: #fcfcfc;
+
+$shadow-sm: 0 5px 10px rgba(#000, 0.5);
+$shadow-md: 0 10px 15px rgba(#000, 0.5);
+$shadow-lg: 16px 24px 52px -8px #00000026;
+
+$default-letter-spacing: 0.36px;
+$default-section-padding: f.getClamp(16, 40);
+
+$card-radius: 32px;
+$card-clamped-radius: f.getClamp(24, 32);
+
+$bp-lg: 62em;
+$bp-md: 48em;
+$bp-sm: 35.5em;
