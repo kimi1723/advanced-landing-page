@@ -4,7 +4,7 @@
 .header {
   display: grid;
   grid-template-columns: repeat(2, 50%);
-  height: 100svh;
+  min-height: f.transformPx(720);
 
   &__gradient {
     position: absolute;
@@ -46,5 +46,16 @@
 
   &__text {
     color: var.$c-grey-3;
+  }
+
+  &__right {
+    display: flex;
+    align-items: flex-end;
+    background-image: url("../../../public/img/header/background.png");
+  }
+
+  &__slider {
+    display: flex;
+    margin-bottom: f.transformPx(48);
   }
 }

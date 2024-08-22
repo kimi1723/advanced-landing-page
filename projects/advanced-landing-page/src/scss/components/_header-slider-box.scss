@@ -1,0 +1,23 @@
+@use "../abstracts/functions" as f;
+
+.header__slider-box {
+  display: flex;
+  align-items: center;
+  margin-right: f.transformPx(16);
+  gap: f.transformPx(16);
+  padding: f.transformPx(24);
+  background-color: #fff;
+  border-radius: 32px;
+}
+
+.header__slider {
+  &-img {
+    aspect-ratio: 1 / 1;
+    width: f.transformPx(56);
+    border-radius: 50%;
+  }
+
+  &-text-box {
+    width: max-content;
+  }
+}

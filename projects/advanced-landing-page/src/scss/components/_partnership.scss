@@ -6,9 +6,11 @@
     color: var.$c-grey-2;
   }
 
-  &__logos {
-    display: flex;
-    align-items: center;
-    gap: f.transformPx(32);
+  &__logos-box {
+    width: max-content;
+  }
+
+  &__logo {
+    margin-right: f.transformPx(32);
   }
 }
