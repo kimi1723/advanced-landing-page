@@ -9,13 +9,17 @@
 
   &--left {
     margin-right: f.transformPx(16);
+
+    & .icon {
+      rotate: 180deg;
+    }
   }
 
   & .icon {
     display: block;
   }
 
-  & .icon:last-child {
+  & .icon:last-of-type {
     display: none;
   }
 
@@ -31,11 +35,11 @@
   &--active {
     background-color: var.$c-primary;
 
-    & .icon:first-child {
+    & .icon:first-of-type {
       display: none;
     }
 
-    & .icon:last-child {
+    & .icon:last-of-type {
       display: block;
     }
 

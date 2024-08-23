@@ -5,9 +5,28 @@
   display: flex;
   flex-direction: column;
   gap: f.transformPx(24);
+  transition: translate 0.3s;
+
+  &:first-child {
+    translate: 0;
+    width: max-content;
+  }
+
+  &:not(:first-child) {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  @for $i from 1 through 4 {
+    &:nth-child(#{$i}) {
+      translate: calc(100% * ($i - 1));
+    }
+  }
 
   &__img-block {
     position: relative;
+    margin-right: f.transformPx(32);
   }
 
   &__img {
@@ -51,3 +70,5 @@
     color: var.$c-grey-3;
   }
 }
+
+// TODO: ADD HOVER/FOCUS ON PROPERTY, SLIDER

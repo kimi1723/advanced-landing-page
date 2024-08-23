@@ -21,8 +21,7 @@
   }
 
   &__properties {
-    display: flex;
-    gap: f.transformPx(32);
+    position: relative;
     margin-top: f.transformPx(36);
   }
 }
