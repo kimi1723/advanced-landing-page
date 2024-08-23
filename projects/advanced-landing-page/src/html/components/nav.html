@@ -1,1 +1,32 @@
-<nav class="nav"></nav>
+<nav class="nav">
+  <ul class="nav__list">
+    <li class="nav__item"><a href="#">About Us</a></li>
+    <li class="nav__item"><a href="#">Article</a></li>
+    <li class="nav__item nav__item-btn">
+      <button class="nav__show-property-btn">
+        Property
+        <svg class="nav__show-property-btn-icon icon icon--xsm">
+          <use xlink:href="../../../public/img/sprite.svg#arrow-down"></use>
+        </svg>
+      </button>
+
+      <ul class="property-list property-list--hidden hidden">
+        <li class="property-list__item">
+          <a href="#" class="property-list__link">Roselands House</a>
+        </li>
+        <li class="property-list__item">
+          <a href="#" class="property-list__link">Woodlandside</a>
+        </li>
+        <li class="property-list__item">
+          <a href="#" class="property-list__link">Lighthouse</a>
+        </li>
+        <li class="property-list__item">
+          <a href="#" class="property-list__link">Cosmo's House</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <load src="./btn-link.html" text="Sign Up" type="primary-dark" />
+    </li>
+  </ul>
+</nav>

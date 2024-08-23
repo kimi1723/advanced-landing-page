@@ -28,7 +28,15 @@
 
   &__navbar {
     position: fixed;
+    display: flex;
     padding: f.transformPx(45) f.transformPx(124);
+    width: 100%;
+    z-index: 1000;
+
+    img {
+      // flex: 0 0 min-content;
+      height: 100%;
+    }
   }
 
   &__left {

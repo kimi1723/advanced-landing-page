@@ -8,9 +8,13 @@
     margin-right: f.transformPx(16);
     gap: f.transformPx(16);
     padding: f.transformPx(24);
-    background-color: #fff;
+    background-color: var.$c-white;
     border-radius: 32px;
     box-shadow: var.$shadow-md;
+
+    &:first-of-type {
+      margin-left: f.transformPx(32);
+    }
 
     &--grouped {
       display: flex;
@@ -22,7 +26,7 @@
     aspect-ratio: 1 / 1;
     width: f.transformPx(56);
     border-radius: 50%;
-    border: 3px solid #fff;
+    border: 3px solid var.$c-white;
     box-shadow: var.$shadow-sm;
 
     &--grouped:nth-of-type(2) {

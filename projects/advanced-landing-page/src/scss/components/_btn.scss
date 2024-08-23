@@ -12,7 +12,32 @@
   border-radius: f.transformPx(100);
 
   &--primary {
-    color: #fff;
+    color: var.$c-white;
     background-color: var.$c-primary;
+    transition: background-color 0.3s;
+
+    &:hover,
+    &:focus {
+      background-color: var.$c-primary-dark;
+    }
+  }
+
+  &--primary-dark {
+    color: var.$c-primary-dark;
+    background-color: var.$c-primary-light;
+    border: var.$c-primary-dark 1px solid;
+    transition-property: color, background-color, border-color, translate;
+    transition-duration: 0.3s;
+
+    &:hover,
+    &:focus {
+      color: var.$c-primary-light;
+      background-color: var.$c-primary-dark;
+      border-color: var.$c-primary-light;
+    }
+  }
+
+  &:active {
+    translate: 0 3px;
   }
 }
