@@ -2,10 +2,14 @@
 @use "../abstracts/variables" as var;
 
 .property {
-  display: flex;
-  flex-direction: column;
-  gap: f.transformPx(24);
+  display: block;
   transition: translate 0.3s, scale 0.3s;
+
+  &-article {
+    display: flex;
+    flex-direction: column;
+    gap: f.transformPx(24);
+  }
 
   &:hover,
   &:focus {
@@ -13,7 +17,6 @@
   }
 
   &:first-child {
-    translate: 0;
     width: max-content;
   }
 
