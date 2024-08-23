@@ -38,7 +38,7 @@
   }
 
   &:not(:has(.property-list--hidden)) &__show-property-btn-icon {
-    rotate: 180deg;
+    rotate: -180deg;
   }
 
   &__item &__show-property-btn {
