@@ -2,6 +2,7 @@
 @use "../abstracts/variables" as var;
 
 .header {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(2, 50%);
   min-height: f.transformPx(720);
@@ -27,14 +28,13 @@
   }
 
   &__navbar {
-    position: fixed;
+    position: absolute;
     display: flex;
     padding: f.transformPx(45) f.transformPx(124);
     width: 100%;
     z-index: 1000;
 
-    img {
-      // flex: 0 0 min-content;
+    &-logo {
       height: 100%;
     }
   }

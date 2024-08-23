@@ -28,12 +28,31 @@
     border: var.$c-primary-dark 1px solid;
     transition-property: color, background-color, border-color, translate;
     transition-duration: 0.3s;
+  }
+
+  &--primary-light {
+    color: var.$c-primary-dark;
+    border: 1px solid var.$c-primary-dark;
+  }
+
+  &--primary-light,
+  &--primary-dark {
+    transition-property: color, background-color, border-color, translate;
+    transition-duration: 0.3s;
 
     &:hover,
     &:focus {
       color: var.$c-primary-light;
       background-color: var.$c-primary-dark;
       border-color: var.$c-primary-light;
+    }
+  }
+
+  &--icon-before {
+    display: flex;
+
+    svg {
+      order: -1;
     }
   }
 

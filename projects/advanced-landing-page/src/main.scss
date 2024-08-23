@@ -1,7 +1,9 @@
 @use "./scss/base/base";
 @use "./scss/base/typography";
+@use "./scss/base/utils";
 
 @use "./scss/layout/header";
+@use "./scss/layout/recommendations";
 
 @use "./scss/components/nav";
 @use "./scss/components/partnership";
@@ -9,4 +11,5 @@
 @use "./scss/components/btn";
 @use "./scss/components/auto-slider";
 @use "./scss/components/header-slider-box";
-@use "./scss/base/utils";
+@use "./scss/components/annotation";
+@use "./scss/components/arrow-btn";

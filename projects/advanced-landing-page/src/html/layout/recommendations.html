@@ -1,0 +1,51 @@
+<section class="recommendations">
+  <load
+    src="../components/annotation.html"
+    text="Our Recommendation"
+    type="inline"
+  />
+
+  <div class="recommendations__content">
+    <div class="recommendations__options">
+      <h2 class="heading heading--secondary recommendations__heading">
+        Featured house
+      </h2>
+
+      <div class="recommendations__filters">
+        <load
+          src="../components/btn.html"
+          text="House"
+          type="primary-dark"
+          svgSrc="../../../public/img/sprite.svg#house"
+          svgClass="icon icon--sm"
+          icon-placement="before"
+        />
+
+        <load
+          src="../components/btn.html"
+          text="Villa"
+          type="primary-light"
+          svgSrc="../../../public/img/sprite.svg#villa"
+          svgClass="icon icon--sm"
+          icon-placement="before"
+        />
+
+        <load
+          src="../components/btn.html"
+          text="Apartment"
+          type="primary-light"
+          svgSrc="../../../public/img/sprite.svg#apartment"
+          svgClass="icon icon--sm"
+          icon-placement="before"
+        />
+      </div>
+
+      <div class="recommendations__arrows">
+        <load src="../components/arrow-btn.html" type="left" />
+        <load src="../components/arrow-btn.html" type="right" active="active" />
+      </div>
+    </div>
+
+    <div class="recommendations__properties"></div>
+  </div>
+</section>
