@@ -5,7 +5,12 @@
   display: flex;
   flex-direction: column;
   gap: f.transformPx(24);
-  transition: translate 0.3s;
+  transition: translate 0.3s, scale 0.3s;
+
+  &:hover,
+  &:focus {
+    scale: 1.05;
+  }
 
   &:first-child {
     translate: 0;
