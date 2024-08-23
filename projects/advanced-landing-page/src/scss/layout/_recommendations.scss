@@ -3,13 +3,14 @@
 
 .recommendations {
   padding: f.transformPx(120) f.transformPx(83);
+  overflow: hidden;
 
   &__content {
     margin-top: f.transformPx(8);
     margin-left: f.transformPx(41);
   }
 
-  &__options {
+  &__header {
     display: flex;
     justify-content: space-between;
   }
@@ -17,5 +18,11 @@
   &__filters {
     display: flex;
     gap: f.transformPx(27);
+  }
+
+  &__properties {
+    display: flex;
+    gap: f.transformPx(32);
+    margin-top: f.transformPx(36);
   }
 }

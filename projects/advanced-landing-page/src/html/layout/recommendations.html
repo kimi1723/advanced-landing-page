@@ -6,36 +6,36 @@
   />
 
   <div class="recommendations__content">
-    <div class="recommendations__options">
+    <div class="recommendations__header">
       <h2 class="heading heading--secondary recommendations__heading">
         Featured house
       </h2>
 
       <div class="recommendations__filters">
         <load
-          src="../components/btn.html"
+          src="../components/btn-img.html"
           text="House"
           type="primary-dark"
-          svgSrc="../../../public/img/sprite.svg#house"
-          svgClass="icon icon--sm"
+          iconSrc="../../../public/img/svg/house-green.svg"
+          iconClass="icon icon--sm"
           icon-placement="before"
         />
 
         <load
-          src="../components/btn.html"
+          src="../components/btn-img.html"
           text="Villa"
           type="primary-light"
-          svgSrc="../../../public/img/sprite.svg#villa"
-          svgClass="icon icon--sm"
+          iconSrc="../../../public/img/svg/villa-green.svg"
+          iconClass="icon icon--sm"
           icon-placement="before"
         />
 
         <load
-          src="../components/btn.html"
+          src="../components/btn-img.html"
           text="Apartment"
           type="primary-light"
-          svgSrc="../../../public/img/sprite.svg#apartment"
-          svgClass="icon icon--sm"
+          iconSrc="../../../public/img/svg/apartment-green.svg"
+          iconClass="icon icon--sm"
           icon-placement="before"
         />
       </div>
@@ -46,6 +46,58 @@
       </div>
     </div>
 
-    <div class="recommendations__properties"></div>
+    <div class="recommendations__properties">
+      <load
+        src="../components/property.html"
+        imgSrc="../../../public/img/properties/1.png"
+        iconSrc="../../../public/img/svg/fire-danger.svg"
+        labelText="Popular"
+        labelType="danger"
+        title="Roselands House"
+        price="35.000.000"
+        authorImgSrc="../../../public/img/avatars/avatar-6.png"
+        authorTitle="Dianne Russell"
+        authorLocation="Manchester, Kentucky"
+      />
+
+      <load
+        src="../components/property.html"
+        imgSrc="../../../public/img/properties/2.png"
+        iconSrc="../../../public/img/svg/house-info.svg"
+        labelText="New house"
+        labelType="info"
+        title="Woodlandside"
+        price="20.000.000"
+        authorImgSrc="../../../public/img/avatars/avatar-7.png"
+        authorTitle="Robert Fox"
+        authorLocation="Dr. San Jose, South Dakota"
+      />
+
+      <load
+        src="../components/property.html"
+        imgSrc="../../../public/img/properties/3.png"
+        iconSrc="../../../public/img/svg/wallet-green.svg"
+        labelText="Best deals"
+        labelType="primary"
+        title="The Old Lighthouse"
+        price="44.000.000"
+        authorImgSrc="../../../public/img/avatars/avatar-8.png"
+        authorTitle="Ronald Richards"
+        authorLocation="Santa Ana, Illinois"
+      />
+
+      <load
+        src="../components/property.html"
+        imgSrc="../../../public/img/properties/4.png"
+        iconSrc="../../../public/img/svg/fire-danger.svg"
+        labelText="Popular"
+        labelType="danger"
+        title="Cosmo's House"
+        price="22.000.000"
+        authorImgSrc="../../../public/img/avatars/avatar-9.png"
+        authorTitle="Jenny Wilson"
+        authorLocation="Preston Rd. Inglewood, Maine 98380"
+      />
+    </div>
   </div>
 </section>
