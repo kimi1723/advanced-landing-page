@@ -1,0 +1,62 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/functions" as f;
+
+.tour {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: f.transformPx(144);
+  padding: f.transformPx(124);
+
+  &__annotation {
+    margin-left: f.transformPx(-40);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__heading {
+    margin-top: f.transformPx(12);
+  }
+
+  &__desc {
+    margin-top: f.transformPx(16);
+    max-width: f.transformPx(413);
+    color: var.$c-grey-2;
+  }
+
+  &__heading-detail {
+    margin: f.transformPx(24) 0;
+    font-size: f.transformPx(16);
+    font-weight: var.$fw-semibold;
+    color: var.$c-black;
+  }
+
+  &__details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: f.transformPx(32);
+  }
+
+  &__detail {
+    display: flex;
+    align-items: center;
+    gap: f.transformPx(16);
+  }
+
+  &__owner {
+    padding-top: f.transformPx(32);
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid var.$c-grey-1;
+  }
+
+  &__owner-icon {
+    width: 56px;
+  }
+
+  &__media {
+    background-color: red;
+  }
+}

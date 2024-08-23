@@ -2,9 +2,6 @@
 @use "./scss/base/typography";
 @use "./scss/base/utils";
 
-@use "./scss/layout/header";
-@use "./scss/layout/recommendations";
-
 @use "./scss/components/nav";
 @use "./scss/components/partnership";
 @use "./scss/components/search-location";
@@ -15,3 +12,7 @@
 @use "./scss/components/arrow-btn";
 @use "./scss/components/property";
 @use "./scss/components/author";
+
+@use "./scss/layout/header";
+@use "./scss/layout/recommendations";
+@use "./scss/layout/tour";

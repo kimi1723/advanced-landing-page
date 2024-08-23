@@ -3,7 +3,7 @@
 
 .app {
   font-family: "Lexend", sans-serif;
-  font-size: f.getClamp(16, 24);
+  font-size: f.transformPx(16);
   font-weight: var.$fw-light;
 }
 
