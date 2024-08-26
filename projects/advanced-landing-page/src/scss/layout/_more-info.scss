@@ -1,0 +1,20 @@
+@use "../abstracts/functions" as f;
+
+.more-info {
+  padding: f.transformPx(109) f.transformPx(124);
+
+  &__title {
+    margin: f.transformPx(6) 0 f.transformPx(16);
+    text-align: center;
+  }
+
+  &__btn {
+    margin: 0 auto f.transformPx(48);
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: f.transformPx(32);
+  }
+}

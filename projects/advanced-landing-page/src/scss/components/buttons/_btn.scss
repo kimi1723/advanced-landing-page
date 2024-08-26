@@ -1,5 +1,5 @@
-@use "../abstracts/variables" as var;
-@use "../abstracts/functions" as f;
+@use "../../abstracts/variables" as var;
+@use "../../abstracts/functions" as f;
 
 .btn {
   display: flex;
@@ -9,6 +9,7 @@
   padding: f.transformPx(12) f.transformPx(24);
   font-size: f.transformPx(14);
   font-weight: var.$fw-semibold;
+  line-height: f.transformPx(24);
   border-radius: f.transformPx(100);
 
   &--primary {

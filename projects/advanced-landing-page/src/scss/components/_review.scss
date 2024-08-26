@@ -15,7 +15,7 @@
 
   @for $i from 1 through 3 {
     &:nth-child(#{$i}) {
-      background-image: url("../../../public/img/reviews/#{$i}.png");
+      background-image: url("../../../img/reviews/#{$i}.png");
     }
   }
 

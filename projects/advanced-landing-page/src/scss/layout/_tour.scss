@@ -69,7 +69,7 @@
 
   &__media {
     position: relative;
-    padding-left: f.transfrompX(48);
+    padding-left: f.transformPx(48);
   }
 
   &:has(&__video-btn) &__video {
