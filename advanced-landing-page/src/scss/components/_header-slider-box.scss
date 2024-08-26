@@ -1,0 +1,44 @@
+@use "../abstracts/functions" as f;
+@use "../abstracts/variables" as var;
+
+.header__slider {
+  &-box {
+    display: flex;
+    align-items: center;
+    margin-right: f.transformPx(16);
+    gap: f.transformPx(16);
+    padding: f.transformPx(24);
+    background-color: var.$c-white;
+    border-radius: 32px;
+    box-shadow: var.$shadow-md;
+
+    &:first-of-type {
+      margin-left: f.transformPx(32);
+    }
+
+    &--grouped {
+      display: flex;
+      width: f.transformPx(112);
+    }
+  }
+
+  &-img {
+    aspect-ratio: 1 / 1;
+    width: f.transformPx(56);
+    border-radius: 50%;
+    border: 3px solid var.$c-white;
+    box-shadow: var.$shadow-sm;
+
+    &--grouped:nth-of-type(2) {
+      translate: -50%;
+    }
+
+    &--grouped:nth-of-type(3) {
+      translate: -100%;
+    }
+  }
+
+  &-text-box {
+    width: max-content;
+  }
+}

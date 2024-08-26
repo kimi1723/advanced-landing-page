@@ -1,0 +1,25 @@
+@use "../abstracts/functions" as f;
+
+.icon {
+  aspect-ratio: 1 / 1;
+
+  &--xsm {
+    width: f.transformPx(16);
+  }
+
+  &--sm {
+    width: f.transformPx(24);
+  }
+
+  &--md {
+    width: f.transformPx(32);
+  }
+
+  &--xl {
+    width: f.transformPx(48);
+  }
+}
+
+.hidden {
+  visibility: hidden;
+}

@@ -1,0 +1,28 @@
+@use "./functions" as f;
+
+$fw-light: 300;
+$fw-regular: 400;
+$fw-md: 500;
+$fw-semibold: 600;
+$fw-black: 900;
+
+$c-primary: #10b981;
+$c-primary-dark: #0b9567;
+$c-primary-light: #d1fae5;
+$c-secondary: #f59e0b;
+
+$c-black: #1b1c57;
+$c-white: #fff;
+$c-grey-1: #e0e3eb;
+$c-grey-2: #888b97;
+$c-grey-3: #626687;
+$c-grey-4: #f0f3fd;
+
+$c-danger: #ef4444;
+$c-danger-light: #fee2e2;
+$c-info: #1d4ed8;
+$c-info-light: #dbeafe;
+
+$shadow-xsm: 0px 8px 32px 0px #0c153717;
+$shadow-sm: 0px 9px 32px 0px #595cdb1a;
+$shadow-md: 0px 11px 48px 0px #3333330f;

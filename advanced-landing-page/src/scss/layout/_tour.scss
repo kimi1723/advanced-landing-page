@@ -1,0 +1,120 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/functions" as f;
+@use "../abstracts/mixins" as mix;
+
+.tour {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: f.transformPx(144);
+  padding: f.transformPx(124);
+
+  &__gradient {
+    @include mix.radialGradient(#fffa82, #ff9882, right center, 80px);
+    top: -25%;
+    right: 0;
+    width: 539px;
+    height: 802px;
+    border-radius: 100% 0 25% 50%;
+  }
+
+  &__content {
+    align-self: end;
+  }
+
+  &__annotation {
+    margin-left: f.transformPx(-40);
+  }
+
+  &__heading {
+    margin-top: f.transformPx(12);
+  }
+
+  &__desc {
+    margin-top: f.transformPx(16);
+    max-width: f.transformPx(413);
+    color: var.$c-grey-2;
+  }
+
+  &__heading-detail {
+    margin: f.transformPx(24) 0;
+    font-size: f.transformPx(16);
+    font-weight: var.$fw-semibold;
+    color: var.$c-black;
+  }
+
+  &__details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: f.transformPx(32);
+    gap: f.transformPx(16);
+  }
+
+  &__detail {
+    display: flex;
+    align-items: center;
+    gap: f.transformPx(16);
+  }
+
+  &__owner {
+    padding-top: f.transformPx(32);
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid var.$c-grey-1;
+  }
+
+  &__owner-icon {
+    width: f.transformPx(56);
+  }
+
+  &__media {
+    position: relative;
+    padding-left: f.transfrompX(48);
+  }
+
+  &:has(&__video-btn) &__video {
+    display: none;
+  }
+
+  &__video-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__video-btn:hover &__play-img,
+  &__video-btn:focus &__play-img {
+    opacity: 0.75;
+  }
+
+  &__video-img {
+    position: absolute;
+    top: 0;
+    left: f.transformPx(48);
+    width: calc(100% - f.transformPx(48));
+    height: 100%;
+    z-index: -1;
+  }
+
+  &__play-img {
+    transition: opacity 0.3s;
+  }
+
+  &__imgs-container {
+    position: absolute;
+    bottom: f.transformPx(-43);
+    left: 0;
+    display: grid;
+    grid-template-columns: f.transformPx(296) repeat(2, f.transformPx(96));
+    align-items: end;
+    gap: f.transformPx(10);
+  }
+
+  &__img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+}

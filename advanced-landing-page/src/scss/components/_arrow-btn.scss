@@ -1,0 +1,51 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/functions" as f;
+
+.arrow-btn {
+  padding: f.transformPx(12);
+  border: 1px solid var.$c-primary;
+  border-radius: 50%;
+  transition: background-color 0.3s, translate 0.3s;
+
+  &--left {
+    margin-right: f.transformPx(16);
+
+    & .icon {
+      rotate: 180deg;
+    }
+  }
+
+  & .icon {
+    display: block;
+  }
+
+  & .icon:last-of-type {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: var.$c-primary-light;
+  }
+
+  &:active {
+    translate: 0 3px;
+  }
+
+  &--active {
+    background-color: var.$c-primary;
+
+    & .icon:first-of-type {
+      display: none;
+    }
+
+    & .icon:last-of-type {
+      display: block;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: var.$c-primary-dark;
+    }
+  }
+}
