@@ -1,5 +1,5 @@
 const addSpinner = (spinner: HTMLElement, parent: HTMLElement) => () => {
-  spinner.classList.add("loader");
+  spinner.classList.add("spinner");
   parent.appendChild(spinner);
 };
 
