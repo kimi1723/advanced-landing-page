@@ -38,8 +38,8 @@
   }
 
   &__img {
-    height: 376px;
-    width: 382px;
+    min-height: f.transformPx(376);
+    width: f.transformPx(382);
     object-fit: cover;
     border-radius: 24px;
   }
@@ -78,5 +78,3 @@
     color: var.$c-grey-3;
   }
 }
-
-// TODO: ADD HOVER/FOCUS ON PROPERTY, SLIDER

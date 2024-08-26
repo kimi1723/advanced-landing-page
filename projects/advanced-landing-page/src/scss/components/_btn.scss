@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: f.transformPx(8);
   padding: f.transformPx(12) f.transformPx(24);
   font-size: f.transformPx(14);
   font-weight: var.$fw-semibold;

@@ -64,12 +64,12 @@
   }
 
   &__owner-icon {
-    width: 56px;
+    width: f.transformPx(56);
   }
 
   &__media {
     position: relative;
-    padding-left: 48px;
+    padding-left: f.transfrompX(48);
   }
 
   &:has(&__video-btn) &__video {
@@ -92,8 +92,8 @@
   &__video-img {
     position: absolute;
     top: 0;
-    left: 48px;
-    width: calc(100% - 48px);
+    left: f.transformPx(48);
+    width: calc(100% - f.transformPx(48));
     height: 100%;
     z-index: -1;
   }
@@ -104,10 +104,10 @@
 
   &__imgs-container {
     position: absolute;
-    bottom: -43px;
+    bottom: f.transformPx(-43);
     left: 0;
     display: grid;
-    grid-template-columns: 296px repeat(2, 96px);
+    grid-template-columns: f.transformPx(296) repeat(2, f.transformPx(96));
     align-items: end;
     gap: f.transformPx(10);
   }
