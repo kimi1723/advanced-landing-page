@@ -3,7 +3,7 @@
 
 .property {
   display: block;
-  transition: translate 0.3s, scale 0.3s;
+  transition: translate 0.3s ease-out, scale 0.3s;
 
   &-article {
     display: flex;

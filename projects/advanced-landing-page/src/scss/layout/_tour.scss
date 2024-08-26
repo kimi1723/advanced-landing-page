@@ -10,12 +10,12 @@
   padding: f.transformPx(124);
 
   &__gradient {
-    @include mix.radialGradient(#fffa82, #ff9882, right center, 70px);
+    @include mix.radialGradient(#fffa82, #ff9882, right center, 80px);
     top: -25%;
-    right: -5%;
+    right: 0;
     width: 539px;
     height: 802px;
-    border-radius: 50% 0 50% 50%;
+    border-radius: 100% 0 25% 50%;
   }
 
   &__content {
@@ -115,5 +115,6 @@
   &__img {
     width: 100%;
     border-radius: 8px;
+    object-fit: cover;
   }
 }

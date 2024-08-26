@@ -22,7 +22,7 @@ const videoHandler = async () => {
     playIcon.remove();
     showSpinner();
 
-    await Promise.race([handleLoad(iframe), timeout(5)]);
+    await Promise.race([handleLoad(iframe), timeout(15)]);
 
     playBtn.remove();
   } catch (err) {

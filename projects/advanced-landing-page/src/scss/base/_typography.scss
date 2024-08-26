@@ -26,6 +26,7 @@
 
 .heading {
   text-transform: capitalize;
+  color: var.$c-black;
 
   &--primary {
     font-size: f.transformPx(40);
@@ -64,5 +65,6 @@
 
   &--sm {
     font-size: f.transformPx(12);
+    line-height: f.transformPx(15);
   }
 }

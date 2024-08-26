@@ -23,15 +23,6 @@ $c-danger-light: #fee2e2;
 $c-info: #1d4ed8;
 $c-info-light: #dbeafe;
 
+$shadow-xsm: 0px 8px 32px 0px #0c153717;
 $shadow-sm: 0px 9px 32px 0px #595cdb1a;
 $shadow-md: 0px 11px 48px 0px #3333330f;
-
-$default-letter-spacing: 0.36px;
-$default-section-padding: f.getClamp(16, 40);
-
-$card-radius: 32px;
-$card-clamped-radius: f.getClamp(24, 32);
-
-$bp-lg: 62em;
-$bp-md: 48em;
-$bp-sm: 35.5em;

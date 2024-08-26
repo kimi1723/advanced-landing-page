@@ -16,8 +16,15 @@ const listVisibilityHandler = async () =>
       : setTimeout(() => res(propertyList.classList.add("hidden")), 300);
   });
 
-const documentListener = (target: HTMLElement) => {
-  if (!isVisible || target.closest(".nav__item-btn") === propertyBtn) return;
+const documentListener = (e: Event) => {
+  const target = e.target;
+
+  if (
+    !isVisible ||
+    !(target instanceof HTMLElement) ||
+    target.closest(".nav__item-btn") === propertyBtn
+  )
+    return;
 
   listVisibilityHandler();
 };
@@ -40,7 +47,5 @@ export const handlePropertyList = async () => {
   const handler = await propertyListHandler();
   propertyBtn.addEventListener("click", handler);
 
-  document.addEventListener("click", ({ target }: Event) =>
-    documentListener(target as HTMLElement)
-  );
+  document.addEventListener("click", documentListener);
 };
