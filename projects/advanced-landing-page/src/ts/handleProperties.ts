@@ -27,6 +27,5 @@ const handleCarousel = (e: Event) => {
   });
 };
 
-export const handleProperties = () => {
+export const handleProperties = () =>
   arrowBtns.forEach((btn) => btn.addEventListener("click", handleCarousel));
-};

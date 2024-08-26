@@ -1,4 +1,5 @@
 <section class="tour">
+  <div class="tour__gradient"></div>
   <div class="tour__content">
     <load
       src="../components/annotation.html"
@@ -61,5 +62,34 @@
     </div>
   </div>
 
-  <div class="tour__media"></div>
+  <div class="tour__media" aria-label="Play tour video">
+    <button class="tour__video-btn">
+      <img
+        src="../../../public/img/tour/video.png"
+        alt=""
+        class="tour__video-img"
+      />
+      <svg class="tour__play-img icon icon--xl">
+        <use xlink:href="../../../public/img/sprite.svg#play"></use>
+      </svg>
+    </button>
+
+    <div class="tour__imgs-container">
+      <img
+        src="../../../public/img/tour/1.png"
+        alt="A nice green sofa"
+        class="tour__img"
+      />
+      <img
+        src="../../../public/img/tour/2.png"
+        alt="Close up of a wall with images"
+        class="tour__img"
+      />
+      <img
+        src="../../../public/img/tour/3.png"
+        alt="Close up of a restroom"
+        class="tour__img"
+      />
+    </div>
+  </div>
 </section>

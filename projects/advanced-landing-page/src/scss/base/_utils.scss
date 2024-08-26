@@ -14,6 +14,10 @@
   &--md {
     width: f.transformPx(32);
   }
+
+  &--xl {
+    width: f.transformPx(48);
+  }
 }
 
 .hidden {
