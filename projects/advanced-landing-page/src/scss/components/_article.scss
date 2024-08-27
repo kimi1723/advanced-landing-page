@@ -22,10 +22,6 @@
     color: var.$c-black;
   }
 
-  &:not(:last-child) {
-    margin-bottom: f.transformPx(32);
-  }
-
   &__img {
     width: f.transformPx(200);
     height: f.transformPx(148);
@@ -54,7 +50,9 @@
   &__title {
     margin: f.transformPx(12) 0;
     transition: color 0.3s;
+  }
 
+  &__title {
     &:hover,
     &:focus {
       color: var.$c-primary-dark;
