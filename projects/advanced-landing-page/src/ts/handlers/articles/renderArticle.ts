@@ -2,10 +2,12 @@ export const renderArticle = (
   article: DocumentFragment | Node,
   articlesContainer: HTMLDivElement
 ) => {
-  const btnElement = document.createElement("button");
+  const btnEl = document.createElement("button");
+  const liEl = document.createElement("li");
 
-  btnElement.classList.add("article-btn");
-  btnElement.appendChild(article);
+  btnEl.classList.add("article-btn");
+  btnEl.appendChild(article);
+  liEl.appendChild(btnEl);
 
-  return articlesContainer.appendChild(btnElement);
+  return articlesContainer.appendChild(liEl);
 };

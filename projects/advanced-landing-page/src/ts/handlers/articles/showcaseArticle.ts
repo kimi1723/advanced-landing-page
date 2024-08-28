@@ -7,9 +7,9 @@ export const showcaseArticle = (
   ) as HTMLDivElement;
 
   e.preventDefault();
-
-  const btn = e.currentTarget as HTMLButtonElement;
-  const article = btn.querySelector(".article") as HTMLElement;
+  const li = e.currentTarget as HTMLLIElement;
+  const btn = li.querySelector(".article-btn") as HTMLButtonElement;
+  const article = li.querySelector(".article") as HTMLElement;
   const articleLink = article.querySelector(
     ".article__link"
   ) as HTMLAnchorElement;
@@ -21,7 +21,7 @@ export const showcaseArticle = (
 
   showcaseArticleContainer.appendChild(article);
 
-  if (!articleToHide) return btn.remove();
+  if (!articleToHide) return li.remove();
 
   const articleLinkToHide = articleToHide.querySelector(
     ".article__link"
@@ -30,5 +30,6 @@ export const showcaseArticle = (
   articleToHide.classList.remove("article--big");
   articleLinkToHide.setAttribute("href", "");
   btn.appendChild(articleToHide);
-  articlesContainer.prepend(btn);
+  li.appendChild(btn);
+  articlesContainer.prepend(li);
 };
