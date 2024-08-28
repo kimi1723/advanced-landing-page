@@ -3,6 +3,7 @@ import { ArticleData, articleElement } from "../../types";
 export const setContent = (elements: articleElement[], data: ArticleData) =>
   elements.forEach(([elName, el]) => {
     if (!el) return;
+    console.log(elName, el);
 
     const value = data[elName as keyof ArticleData];
 

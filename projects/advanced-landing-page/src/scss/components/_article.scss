@@ -1,16 +1,33 @@
 @use "../abstracts/variables" as var;
 @use "../abstracts/functions" as f;
 
-// TODO: article view considering its a button now, which breaks styles
-
 .article {
   display: flex;
   align-items: center;
   gap: f.transformPx(32);
-  transition: scale 0.3s, translate 0.3s;
+
+  &-btn {
+    transition-property: color, scale, translate;
+    transition-duration: 0.3s;
+
+    &:hover {
+      scale: 0.975;
+    }
+
+    &:active {
+      translate: 0 3px;
+    }
+  }
+
+  &-btn:hover &__title,
+  &-btn:focus &__title {
+    color: var.$c-primary-dark;
+    scale: 1.025;
+  }
 
   &--big {
     flex-direction: column;
+    transition: scale 0.3s, translate 0.3s;
   }
 
   &--big &__img {
@@ -22,6 +39,23 @@
     font-size: f.transformPx(24);
     line-height: f.transformPx(30);
     color: var.$c-black;
+
+    &:hover,
+    &:focus {
+      color: var.$c-primary-dark;
+    }
+  }
+
+  &--big:has(&__title:hover) {
+    scale: 1.025;
+  }
+
+  &--big:has(&__title:active) {
+    translate: 0 3px;
+  }
+
+  &--big &__desc {
+    display: block;
   }
 
   &__img {
@@ -36,12 +70,11 @@
     align-items: center;
   }
 
-  &__author-avatar {
+  &__author-img {
     border-radius: 50%;
   }
 
-  &__author-title,
-  &__title {
+  &__author-title {
     color: var.$c-dark-blue;
   }
 
@@ -51,25 +84,13 @@
 
   &__title {
     margin: f.transformPx(12) 0;
-    transition: color 0.3s;
-  }
-
-  &__title {
-    &:hover,
-    &:focus {
-      color: var.$c-primary-dark;
-    }
-  }
-
-  &:has(&__title:hover) {
-    scale: 1.025;
-  }
-
-  &:has(&__title:active) {
-    translate: 0 3px;
+    text-align: left;
+    color: var.$c-black;
+    transition: color 0.3s, scale 0.3s;
   }
 
   &__desc {
+    display: none;
     margin-bottom: f.transformPx(16);
     color: var.$c-grey-3;
   }
