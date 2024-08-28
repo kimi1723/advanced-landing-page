@@ -7,6 +7,7 @@
       name="name"
       id="name"
       class="join-us-form__input"
+      maxlength="100"
       required
     />
   </div>
@@ -20,6 +21,7 @@
       id="surname"
       class="join-us-form__input"
       required
+      maxlength="100"
     />
   </div>
 
@@ -60,7 +62,15 @@
       class="join-us-form__input join-us-form__textarea"
       placeholder="Message"
       rows="6"
+      required
+      minlength="10"
+      maxlength="600"
     ></textarea>
+    <p class="join-us-form__textarea-count">
+      <span class="join-us-form__textarea-count--current">0</span>/<span
+        class="join-us-form__textarea-count--max"
+      ></span>
+    </p>
   </div>
 
   <div class="join-us-form__consent-block">
@@ -75,6 +85,7 @@
       required
       class="join-us-form__consent-checkbox"
     />
+    <span class="join-us-form__consent-checkbox-span"></span>
   </div>
 
   <load

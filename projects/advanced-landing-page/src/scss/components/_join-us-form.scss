@@ -10,10 +10,12 @@
   box-shadow: var.$shadow-xsm;
 
   &__block {
+    position: relative;
     display: grid;
     grid-template-columns: f.transformPx(89) 1fr;
     align-items: center;
     gap: f.transformPx(16);
+    z-index: 1;
   }
 
   &__block:has(&__textarea) {
@@ -32,6 +34,8 @@
     padding: f.transformPx(16) f.transformPx(24);
     border: 1px solid var.$c-grey-1;
     border-radius: 28px;
+    outline: none;
+    transition: border-color 0.3s;
 
     &,
     &::placeholder {
@@ -39,19 +43,41 @@
       font-weight: var.$fw-md;
       color: var.$c-grey-2;
     }
+
+    &:hover {
+      border-color: var.$c-primary;
+    }
+
+    &:focus {
+      border-color: var.$c-primary-dark;
+    }
   }
 
   &__select {
     appearance: none;
-    cursor: pointer;
     background-image: url("/img/svg/arrow-down-dark.svg");
     background-repeat: no-repeat;
     background-position: calc(100% - f.transformPx(24));
+    cursor: pointer;
   }
 
   &__option {
-    color: green !important;
-    background-color: red !important;
+  }
+
+  &__block:has(&__textarea-count--danger) > &__textarea {
+    border-color: var.$c-danger;
+  }
+
+  &__textarea-count {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    pointer-events: none;
+    user-select: none;
+
+    &--danger {
+      color: var.$c-danger;
+    }
   }
 
   &__consent-block {
@@ -67,11 +93,57 @@
   }
 
   &__consent-checkbox {
+    opacity: 0;
+    position: absolute;
     aspect-ratio: 1 / 1;
     width: f.transformPx(24);
-    order: -1;
     border: 1px solid var.$c-primary;
+    outline: none;
     cursor: pointer;
+
+    &:hover,
+    &:focus {
+      scale: 1.2;
+    }
+
+    &:active {
+      translate: 0 3px;
+    }
+  }
+
+  &__consent-checkbox-span {
+    display: block;
+    position: relative;
+    aspect-ratio: 1 / 1;
+    flex: 1 0 f.transformPx(24);
+    order: -1;
+    border: f.transformPx(1) solid var.$c-primary-dark;
+    border-radius: f.transformPx(4);
+    background-repeat: no-repeat;
+    background-size: f.transformPx(16);
+    background-position: center;
+    transition-property: background-color, scale, translate;
+    transition-duration: 0.3s;
+  }
+
+  &__consent-checkbox:hover + &__consent-checkbox-span,
+  &__consent-checkbox:focus + &__consent-checkbox-span {
+    background-color: var.$c-primary-light;
+    scale: 1.2;
+  }
+
+  &__consent-checkbox:active + &__consent-checkbox-span {
+    translate: 0 3px;
+  }
+
+  &__consent-checkbox:checked + &__consent-checkbox-span {
+    background-color: var.$c-primary;
+    background-image: url("/img/svg/check.svg");
+  }
+
+  &__consent-checkbox:checked:hover + &__consent-checkbox-span,
+  &__consent-checkbox:checked:focus + &__consent-checkbox-span {
+    background-color: var.$c-primary-dark;
   }
 
   &__submit-btn {
