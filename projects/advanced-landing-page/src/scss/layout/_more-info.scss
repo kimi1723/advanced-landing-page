@@ -1,9 +1,19 @@
 @use "../abstracts/functions" as f;
 @use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
 
 .more-info {
+  position: relative;
   padding: f.transformPx(109) f.transformPx(124);
 
+  &__gradient {
+    @include mix.radialGradient(#82ffe8, #c8ff82, top, 60px);
+    top: -55px;
+    left: -170px;
+    height: 695px;
+    width: 522px;
+    border-radius: 0 25% 25% 0;
+  }
   &__title {
     margin: f.transformPx(6) 0 f.transformPx(16);
     text-align: center;

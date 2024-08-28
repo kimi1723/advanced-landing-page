@@ -1,0 +1,82 @@
+@use "../abstracts/functions" as f;
+@use "../abstracts/variables" as var;
+
+.join-us-form {
+  display: flex;
+  flex-direction: column;
+  gap: f.transformPx(28);
+  padding: f.transformPx(40);
+  border-radius: 8px;
+  box-shadow: var.$shadow-xsm;
+
+  &__block {
+    display: grid;
+    grid-template-columns: f.transformPx(89) 1fr;
+    align-items: center;
+    gap: f.transformPx(16);
+  }
+
+  &__block:has(&__textarea) {
+    align-items: start;
+  }
+
+  &__label {
+    font-size: f.transformPx(14);
+    font-weight: var.$fw-md;
+    color: var.$c-black;
+    cursor: pointer;
+  }
+
+  &__input {
+    width: 100%;
+    padding: f.transformPx(16) f.transformPx(24);
+    border: 1px solid var.$c-grey-1;
+    border-radius: 28px;
+
+    &,
+    &::placeholder {
+      font-size: f.transformPx(14);
+      font-weight: var.$fw-md;
+      color: var.$c-grey-2;
+    }
+  }
+
+  &__select {
+    appearance: none;
+    cursor: pointer;
+    background-image: url("/img/svg/arrow-down-dark.svg");
+    background-repeat: no-repeat;
+    background-position: calc(100% - f.transformPx(24));
+  }
+
+  &__option {
+    color: green !important;
+    background-color: red !important;
+  }
+
+  &__consent-block {
+    display: flex;
+    align-items: flex-start;
+    gap: f.transformPx(8);
+    margin-left: f.transformPx(105);
+  }
+
+  &__consent-label {
+    color: var.$c-grey-3;
+    cursor: pointer;
+  }
+
+  &__consent-checkbox {
+    aspect-ratio: 1 / 1;
+    width: f.transformPx(24);
+    order: -1;
+    border: 1px solid var.$c-primary;
+    cursor: pointer;
+  }
+
+  &__submit-btn {
+    align-self: center;
+  }
+}
+
+// TODO: style checkbox and options, messages char count
