@@ -1,26 +1,30 @@
-<a class="property" href="#">
-  <article class="property-article">
-    <div class="property__img-block">
-      <img src="{=$imgSrc}" alt="{=$imgAlt}" class="property__img" />
+<li class="property">
+  <a  href="#">
+    <article class="property-article">
+      <div class="property__img-block">
+        <img src="{=$imgSrc}" alt="{=$imgAlt}" class="property__img" />
 
-      <p class="label label--md property__label property__label--{=$labelType}">
-        <img src="{=$iconSrc}" alt="" class="icon icon--xsm" />
-        {=$labelText}
-      </p>
-    </div>
+        <p
+          class="label label--md property__label property__label--{=$labelType}"
+        >
+          <img src="{=$iconSrc}" alt="" class="icon icon--xsm" />
+          {=$labelText}
+        </p>
+      </div>
 
-    <div class="">
-      <h3 class="heading heading--tertiary">{=$title}</h3>
-      <h4 class="heading heading--quaternary text--md property__price">
-        $ {=$price}
-      </h4>
-    </div>
+      <div class="">
+        <h3 class="heading heading--tertiary">{=$title}</h3>
+        <h4 class="heading heading--quaternary text--md property__price">
+          $ {=$price}
+        </h4>
+      </div>
 
-    <load
-      src="/src/html/components/author.html"
-      imgSrc="{=$authorImgSrc}"
-      subtitle="{=$authorTitle}"
-      text="{=$authorLocation}"
-    />
-  </article>
-</a>
+      <load
+        src="/src/html/components/author.html"
+        imgSrc="{=$authorImgSrc}"
+        subtitle="{=$authorTitle}"
+        text="{=$authorLocation}"
+      />
+    </article>
+  </a>
+</li>

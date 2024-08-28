@@ -11,6 +11,10 @@
   font-size: f.transformPx(16);
   line-height: f.transformPx(24);
 
+  &--light {
+    font-weight: var.$fw-light;
+  }
+
   &--md {
     font-weight: var.$fw-md;
   }

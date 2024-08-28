@@ -6,6 +6,7 @@ export const renderArticle = (
   const liEl = document.createElement("li");
 
   btnEl.classList.add("article-btn");
+  btnEl.ariaLabel = "Showcase the article";
   btnEl.appendChild(article);
   liEl.appendChild(btnEl);
 
