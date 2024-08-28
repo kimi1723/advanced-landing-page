@@ -21,7 +21,6 @@
 
   &__articles {
     display: grid;
-    flex-direction: column;
     gap: f.transformPx(32);
     overflow-y: scroll;
     max-height: calc((f.transformPx(32) + f.transformPx(148)) * 3.5);

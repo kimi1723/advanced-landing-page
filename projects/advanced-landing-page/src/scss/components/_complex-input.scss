@@ -1,7 +1,7 @@
 @use "../abstracts/variables" as var;
 @use "../abstracts/functions" as f;
 
-.search-location {
+.complex-input {
   position: relative;
   display: flex;
   align-items: center;
@@ -38,6 +38,13 @@
 
   &__btn {
     margin-left: auto;
+
+    &-no-icon {
+      svg,
+      img {
+        display: none;
+      }
+    }
   }
 
   &__icon,

@@ -1,0 +1,29 @@
+<form action="#" class="complex-input">
+  <div class="complex-input__box">
+    <svg class="icon icon--sm complex-input__icon">
+      <use xlink:href="{=$svgSrc}"></use>
+    </svg>
+
+    <label for="{=$id}" class="complex-input__label label text--md"
+      >{=$label}</label
+    >
+
+    <load
+      src="./buttons/btn-svg.html"
+      text="{=$btnText}"
+      class="complex-input__btn complex-input__btn-{=$btnIcon}"
+      type="primary"
+      svgSrc="{=$btnIconSrc}"
+      svgClass="icon icon--sm"
+    />
+  </div>
+
+  <input
+    type="{=$type}"
+    name="{=$name}"
+    id="{=$id}"
+    class="complex-input__input label text--md"
+    placeholder=""
+    required
+  />
+</form>
