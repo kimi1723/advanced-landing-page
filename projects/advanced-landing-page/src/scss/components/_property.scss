@@ -82,4 +82,8 @@
     margin-top: f.transformPx(8);
     color: var.$c-grey-3;
   }
+
+  &--hidden {
+    display: none;
+  }
 }

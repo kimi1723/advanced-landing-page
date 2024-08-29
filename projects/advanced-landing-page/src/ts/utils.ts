@@ -43,16 +43,11 @@ export const handleTimeoutToogle =
 
     return new Promise((res) => {
       isToggled = !el.classList.toggle(toggleClass);
-      const containsClass = el.classList.contains(containClass);
 
-      if (containsClass) {
-        el.classList.remove(containClass);
-        res(isToggled);
-      }
+      el.classList.contains(containClass)
+        ? el.classList.remove(containClass)
+        : setTimeout(() => el.classList.add(containClass), t * 1000);
 
-      if (!containsClass) {
-        setTimeout(() => el.classList.add(containClass), t * 1000);
-        res(isToggled);
-      }
+      res(isToggled);
     });
   };
