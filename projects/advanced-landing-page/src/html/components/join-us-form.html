@@ -35,9 +35,13 @@
         aria-expanded="false"
       >
         Select one
+        <svg class="icon icon--sm join-us-form__icon">
+          <use xlink:href="/img/sprite.svg#arrow-down-dark"></use>
+        </svg>
       </p>
       <ul
         class="join-us-form__custom-options join-us-form__custom-options--hidden hidden"
+        role="listbox"
       ></ul>
 
       <select
@@ -45,25 +49,8 @@
         id="education"
         class="join-us-form__select sr-only"
         required
-      >
-        <option value="" class="join-us-form__option">Select one</option>
-        <option value="high-school" class="join-us-form__option">
-          High school
-        </option>
-        <option value="technical-school" class="join-us-form__option">
-          Technical school
-        </option>
-        <option value="associate" class="join-us-form__option">
-          Associate's deegre
-        </option>
-        <option value="bachelor" class="join-us-form__option">
-          Bachelor's deegre
-        </option>
-        <option value="master" class="join-us-form__option">
-          Master's deegre
-        </option>
-        <option value="phd" class="join-us-form__option">PhD's deegre</option>
-      </select>
+        value=""
+      ></select>
     </div>
   </div>
 

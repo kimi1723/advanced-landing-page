@@ -1,26 +1,19 @@
 import { formOptions } from "../../data";
 
-const select = document.querySelector(
+const customSelect = document.querySelector(
   ".join-us-form__custom-select"
 ) as HTMLParagraphElement;
 const optionsList = document.querySelector(
   ".join-us-form__custom-options"
 ) as HTMLUListElement;
+const nativeSelect = document.querySelector(
+  ".join-us-form__select"
+) as HTMLSelectElement;
 
 const optionClassName = "join-us-form__custom-option";
 const selectedOptionClassName = `${optionClassName}--selected`;
 
 let isVisible = false;
-
-const loadOptions = () =>
-  formOptions.forEach(({ text }) => {
-    const li = document.createElement("li");
-
-    li.textContent = text;
-    li.classList.add(optionClassName);
-
-    optionsList.appendChild(li);
-  });
 
 const toggleOptionsVisibility = async () => {
   new Promise((res) => {
@@ -35,22 +28,27 @@ const toggleOptionsVisibility = async () => {
 };
 
 const selectOption = (target: HTMLElement) => {
-  if (!target.classList.contains(optionClassName)) return;
+  if (!target.classList.contains(optionClassName) || !target.dataset.option)
+    return;
 
-  const activeOption = optionsList.querySelector(`.${selectedOptionClassName}`);
+  const activeCustomOption = optionsList.querySelector(
+    `.${selectedOptionClassName}`
+  );
 
-  activeOption?.classList.remove(selectedOptionClassName);
+  activeCustomOption?.classList.remove(selectedOptionClassName);
   target.classList.add(selectedOptionClassName);
+  nativeSelect.value = target.dataset.option;
 
-  select.textContent = target.textContent;
+  customSelect.textContent = target.textContent;
 };
 
 const documentListener = (e: Event) => {
   const target = e.target;
 
-  if (!isVisible || !(target instanceof HTMLElement) || target === select)
+  if (!isVisible || !(target instanceof HTMLElement) || target === customSelect)
     return;
 
+  console.log("run");
   toggleOptionsVisibility();
   selectOption(target);
 };
@@ -69,11 +67,26 @@ const optionsListHandler = async () => {
   };
 };
 
+const loadOptions = () =>
+  formOptions.forEach(({ value, text }) => {
+    const li = document.createElement("li");
+    const option = document.createElement("option");
+
+    option.setAttribute("value", value);
+    li.dataset.option = value;
+    li.textContent = text;
+    li.classList.add(optionClassName);
+
+    nativeSelect.appendChild(option);
+    optionsList.appendChild(li);
+    nativeSelect.value = "";
+  });
+
 export const handleSelect = async () => {
   loadOptions();
 
   const handler = await optionsListHandler();
-  select.addEventListener("click", handler);
+  customSelect.addEventListener("click", handler);
 
   document.addEventListener("click", documentListener);
 };

@@ -53,15 +53,78 @@
     }
   }
 
-  &__select {
-    appearance: none;
-    background-image: url("/img/svg/arrow-down-dark.svg");
-    background-repeat: no-repeat;
-    background-position: calc(100% - f.transformPx(24));
+  &__block:has(&__custom-select) {
+    z-index: 10;
+  }
+
+  &__custom-select-container {
+    position: relative;
+  }
+
+  &__custom-select-container:not(:has(&__custom-options--hidden))
+    &__custom-select {
+    border-color: var.$c-primary transparent transparent;
+  }
+
+  &__icon {
+    transition: rotate 0.3s;
+  }
+
+  &__custom-select-container:not(:has(&__custom-options--hidden)) &__icon {
+    rotate: 180deg;
+  }
+
+  &__custom-select {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 10;
     cursor: pointer;
   }
 
-  &__option {
+  &__custom-options {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: f.transformPx(52);
+    background-color: var.$c-white;
+    border: 1px solid var.$c-primary;
+    border-radius: 28px;
+    max-height: 500px;
+    transition: max-height 0.3s;
+
+    &--hidden {
+      max-height: 0;
+      overflow: hidden;
+    }
+  }
+
+  &__custom-option {
+    padding: f.transformPx(16) f.transformPx(24);
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+    cursor: pointer;
+
+    &:last-child {
+      border-radius: 0 0 28px 28px;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: var.$c-primary-light;
+    }
+
+    &--selected {
+      background-color: var.$c-primary;
+
+      &:hover,
+      &:focus {
+        background-color: var.$c-primary-dark;
+      }
+    }
   }
 
   &__block:has(&__textarea-count--danger) > &__textarea {
@@ -149,69 +212,5 @@
 
   &__submit-btn {
     align-self: center;
-  }
-}
-
-.join-us-form {
-  &__block:has(&__custom-select) {
-    z-index: 10;
-  }
-
-  &__custom-select-container {
-    position: relative;
-  }
-
-  &__custom-select-container:not(:has(&__custom-options--hidden))
-    &__custom-select {
-    border-bottom-color: transparent;
-    border-left-color: transparent;
-    border-right-color: transparent;
-    transition: border-color 0s;
-  }
-
-  &__custom-select {
-    position: relative;
-    z-index: 10;
-    cursor: pointer;
-  }
-
-  &__custom-options {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding-top: f.transformPx(52);
-    background-color: var.$c-white;
-    border: 1px solid var.$c-primary;
-    border-radius: 28px;
-    max-height: 500px;
-    transition: max-height 0.3s;
-
-    &--hidden {
-      max-height: 0;
-      overflow: hidden;
-    }
-  }
-
-  &__custom-option {
-    padding: f.transformPx(16) f.transformPx(24);
-    display: flex;
-    align-items: center;
-    transition: background-color 0.3s;
-    cursor: pointer;
-
-    &--selected {
-      background-color: var.$c-primary;
-    }
-
-    &:last-child {
-      border-radius: 0 0 28px 28px;
-    }
-
-    &:hover,
-    &:focus {
-      background-color: var.$c-primary-light;
-      border-color: var.$c-primary-light;
-    }
   }
 }
