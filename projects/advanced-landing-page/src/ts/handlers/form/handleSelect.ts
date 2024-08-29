@@ -2,7 +2,7 @@ import { formOptions } from "../../data";
 
 const customSelect = document.querySelector(
   ".join-us-form__custom-select"
-) as HTMLParagraphElement;
+) as HTMLButtonElement;
 const optionsList = document.querySelector(
   ".join-us-form__custom-options"
 ) as HTMLUListElement;
@@ -25,11 +25,16 @@ const toggleOptionsVisibility = async () => {
       ? res(optionsList.classList.remove("hidden"))
       : setTimeout(() => res(optionsList.classList.add("hidden")), 300);
   });
+
+  const isExpanded = customSelect.ariaExpanded === "false";
+
+  customSelect.ariaExpanded = isExpanded.toString();
 };
 
 const selectOption = (target: HTMLElement) => {
-  if (!target.classList.contains(optionClassName) || !target.dataset.option)
-    return;
+  const item = target.closest("li");
+
+  if (!item?.hasAttribute("data-option")) return;
 
   const activeCustomOption = optionsList.querySelector(
     `.${selectedOptionClassName}`
@@ -37,8 +42,8 @@ const selectOption = (target: HTMLElement) => {
 
   activeCustomOption?.classList.remove(selectedOptionClassName);
   target.classList.add(selectedOptionClassName);
-  nativeSelect.value = target.dataset.option;
 
+  nativeSelect.value = item.dataset.option as string;
   customSelect.textContent = target.textContent;
 };
 
@@ -48,7 +53,6 @@ const documentListener = (e: Event) => {
   if (!isVisible || !(target instanceof HTMLElement) || target === customSelect)
     return;
 
-  console.log("run");
   toggleOptionsVisibility();
   selectOption(target);
 };
@@ -70,16 +74,19 @@ const optionsListHandler = async () => {
 const loadOptions = () =>
   formOptions.forEach(({ value, text }) => {
     const li = document.createElement("li");
+    const btn = document.createElement("button");
     const option = document.createElement("option");
 
     option.setAttribute("value", value);
-    li.dataset.option = value;
-    li.textContent = text;
-    li.classList.add(optionClassName);
+    btn.setAttribute("type", "button");
+    li.setAttribute("data-option", value);
+    btn.textContent = text;
+    btn.classList.add(optionClassName);
 
     nativeSelect.appendChild(option);
-    optionsList.appendChild(li);
     nativeSelect.value = "";
+    li.appendChild(btn);
+    optionsList.appendChild(li);
   });
 
 export const handleSelect = async () => {

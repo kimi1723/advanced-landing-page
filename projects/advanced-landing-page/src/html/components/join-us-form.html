@@ -29,16 +29,17 @@
     <label for="education" class="join-us-form__label">Education</label>
 
     <div class="join-us-form__custom-select-container">
-      <p
+      <button
         class="join-us-form__custom-select join-us-form__input"
         aria-haspopup="listbox"
         aria-expanded="false"
+        type="button"
       >
         Select one
         <svg class="icon icon--sm join-us-form__icon">
           <use xlink:href="/img/sprite.svg#arrow-down-dark"></use>
         </svg>
-      </p>
+      </button>
       <ul
         class="join-us-form__custom-options join-us-form__custom-options--hidden hidden"
         role="listbox"
@@ -46,8 +47,8 @@
 
       <select
         name="education"
+        class="join-us-form__select sr-only hidden"
         id="education"
-        class="join-us-form__select sr-only"
         required
         value=""
       ></select>
@@ -66,7 +67,7 @@
       minlength="10"
       maxlength="600"
     ></textarea>
-    <p class="join-us-form__textarea-count">
+    <p class="join-us-form__textarea-count label label--sm">
       <span class="join-us-form__textarea-count--current">0</span>/<span
         class="join-us-form__textarea-count--max"
       ></span>

@@ -29,6 +29,13 @@
     cursor: pointer;
   }
 
+  &__input,
+  &__input::placeholder,
+  &__custom-option {
+    font-size: f.transformPx(14);
+    font-weight: var.$fw-md;
+    color: var.$c-grey-2;
+  }
   &__input {
     width: 100%;
     padding: f.transformPx(16) f.transformPx(24);
@@ -36,13 +43,6 @@
     border-radius: 28px;
     outline: none;
     transition: border-color 0.3s;
-
-    &,
-    &::placeholder {
-      font-size: f.transformPx(14);
-      font-weight: var.$fw-md;
-      color: var.$c-grey-2;
-    }
 
     &:hover {
       border-color: var.$c-primary;
@@ -67,6 +67,7 @@
   }
 
   &__icon {
+    margin: -3px;
     transition: rotate 0.3s;
   }
 
@@ -99,18 +100,20 @@
       max-height: 0;
       overflow: hidden;
     }
+
+    & > :last-child > button {
+      border-radius: 0 0 28px 28px;
+    }
   }
 
   &__custom-option {
     padding: f.transformPx(16) f.transformPx(24);
     display: flex;
     align-items: center;
-    transition: background-color 0.3s;
+    width: 100%;
+    outline: none;
+    transition: background-color 0.3s, color 0.3s;
     cursor: pointer;
-
-    &:last-child {
-      border-radius: 0 0 28px 28px;
-    }
 
     &:hover,
     &:focus {
@@ -118,6 +121,7 @@
     }
 
     &--selected {
+      color: var.$c-white;
       background-color: var.$c-primary;
 
       &:hover,
@@ -167,7 +171,7 @@
 
     &:hover,
     &:focus {
-      scale: 1.2;
+      scale: 1.1;
     }
 
     &:active {
@@ -193,7 +197,7 @@
   &__consent-checkbox:hover + &__consent-checkbox-span,
   &__consent-checkbox:focus + &__consent-checkbox-span {
     background-color: var.$c-primary-light;
-    scale: 1.2;
+    scale: 1.1;
   }
 
   &__consent-checkbox:active + &__consent-checkbox-span {

@@ -15,7 +15,7 @@
   &--primary {
     color: var.$c-white;
     background-color: var.$c-primary;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, translate 0.3s;
 
     &:hover,
     &:focus {
