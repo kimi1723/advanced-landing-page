@@ -185,3 +185,30 @@ export const articleElementClasses = [
   "reading-time",
   "timestamp",
 ];
+
+export const formOptions = [
+  {
+    value: "high-school",
+    text: "High school",
+  },
+  {
+    value: "technical-school",
+    text: "Technical school",
+  },
+  {
+    value: "associate",
+    text: "Associate's deegre",
+  },
+  {
+    value: "bachelor",
+    text: "Bachelor's deegre",
+  },
+  {
+    value: "master",
+    text: "Master's deegre",
+  },
+  {
+    value: "phd",
+    text: "PhD's deegre",
+  },
+];

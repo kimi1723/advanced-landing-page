@@ -74,6 +74,7 @@
     bottom: 16px;
     pointer-events: none;
     user-select: none;
+    text-shadow: 1px 1px 3px #fff;
 
     &--danger {
       color: var.$c-danger;
@@ -151,4 +152,66 @@
   }
 }
 
-// TODO: style checkbox and options, messages char count
+.join-us-form {
+  &__block:has(&__custom-select) {
+    z-index: 10;
+  }
+
+  &__custom-select-container {
+    position: relative;
+  }
+
+  &__custom-select-container:not(:has(&__custom-options--hidden))
+    &__custom-select {
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    transition: border-color 0s;
+  }
+
+  &__custom-select {
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+  }
+
+  &__custom-options {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: f.transformPx(52);
+    background-color: var.$c-white;
+    border: 1px solid var.$c-primary;
+    border-radius: 28px;
+    max-height: 500px;
+    transition: max-height 0.3s;
+
+    &--hidden {
+      max-height: 0;
+      overflow: hidden;
+    }
+  }
+
+  &__custom-option {
+    padding: f.transformPx(16) f.transformPx(24);
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+    cursor: pointer;
+
+    &--selected {
+      background-color: var.$c-primary;
+    }
+
+    &:last-child {
+      border-radius: 0 0 28px 28px;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: var.$c-primary-light;
+      border-color: var.$c-primary-light;
+    }
+  }
+}
