@@ -1,12 +1,12 @@
-import articleImg1 from "/img/articles/1.png";
-import articleImg2 from "/img/articles/2.png";
-import articleImg3 from "/img/articles/3.png";
-import articleImg4 from "/img/articles/4.png";
+// import articleImg1 from "./img/articles/1.png";
+// import articleImg2 from "/img/articles/2.png";
+// import articleImg3 from "/img/articles/3.png";
+// import articleImg4 from "/img/articles/4.png";
 
-import avatar9 from "/img/avatars/avatar-9.png";
-import avatar10 from "/img/avatars/avatar-10.png";
-import avatar11 from "/img/avatars/avatar-11.png";
-import avatar12 from "/img/avatars/avatar-12.png";
+// import avatar9 from "/img/avatars/avatar-9.png";
+// import avatar10 from "/img/avatars/avatar-10.png";
+// import avatar11 from "/img/avatars/avatar-11.png";
+// import avatar12 from "/img/avatars/avatar-12.png";
 
 export const videoData = {
   src: "https://www.youtube.com/embed/xvYvq9NZX84?si=TiK4kNQ_h_0uIeSt?autoplay=1",
@@ -24,11 +24,11 @@ export const articlesData = [
   {
     link: { href: "#" },
     img: {
-      src: articleImg1,
+      src: "./img/articles/1.png",
       alt: "amazign modern hause",
     },
     authorImg: {
-      src: avatar12,
+      src: "./img/avatars/avatar-12.png",
       alt: "Cameron Williamson",
     },
     authorTitle: "Cameron Williamson",
@@ -43,11 +43,11 @@ export const articlesData = [
   {
     link: { href: "#" },
     img: {
-      src: articleImg2,
+      src: "./img/articles/2.png",
       alt: "Great looking living room connected with a kitchen with a big brown sofa and a lot of space",
     },
     authorImg: {
-      src: avatar9,
+      src: "./img/avatars/avatar-9.png",
       alt: "Diane Russell",
     },
     authorTitle: "Diane Russell",
@@ -62,11 +62,11 @@ export const articlesData = [
   {
     link: { href: "#" },
     img: {
-      src: articleImg3,
+      src: "./img/articles/3.png",
       alt: "GNice oldschool small hause",
     },
     authorImg: {
-      src: avatar10,
+      src: "./img/avatars/avatar-10.png",
       alt: "Courtney Henry",
     },
     authorTitle: "Courtney Henry",
@@ -81,11 +81,11 @@ export const articlesData = [
   {
     link: { href: "#" },
     img: {
-      src: articleImg4,
+      src: "./img/articles/4.png",
       alt: "Nice light hause with palmas in background",
     },
     authorImg: {
-      src: avatar11,
+      src: "./img/avatars/avatar-11.png",
       alt: "Darlene Robertson",
     },
     authorTitle: "Darlene Robertson",
@@ -100,11 +100,11 @@ export const articlesData = [
   {
     link: { href: "#" },
     img: {
-      src: articleImg1,
+      src: "./img/articles/1.png",
       alt: "amazign modern hause",
     },
     authorImg: {
-      src: avatar12,
+      src: "./img/avatars/avatar-12.png",
       alt: "Cameron Williamson",
     },
     authorTitle: "Cameron Williamson",
@@ -119,11 +119,11 @@ export const articlesData = [
   {
     link: { href: "#" },
     img: {
-      src: articleImg2,
+      src: "./img/articles/2.png",
       alt: "Great looking living room connected with a kitchen with a big brown sofa and a lot of space",
     },
     authorImg: {
-      src: avatar9,
+      src: "./img/avatars/avatar-9.png",
       alt: "Diane Russell",
     },
     authorTitle: "Diane Russell",
@@ -138,11 +138,11 @@ export const articlesData = [
   {
     link: { href: "#" },
     img: {
-      src: articleImg3,
+      src: "./img/articles/3.png",
       alt: "GNice oldschool small hause",
     },
     authorImg: {
-      src: avatar10,
+      src: "./img/avatars/avatar-10.png",
       alt: "Courtney Henry",
     },
     authorTitle: "Courtney Henry",
@@ -157,11 +157,11 @@ export const articlesData = [
   {
     link: { href: "#" },
     img: {
-      src: articleImg4,
+      src: "./img/articles/4.png",
       alt: "Nice light hause with palmas in background",
     },
     authorImg: {
-      src: avatar11,
+      src: "./img/avatars/avatar-11.png",
       alt: "Darlene Robertson",
     },
     authorTitle: "Darlene Robertson",

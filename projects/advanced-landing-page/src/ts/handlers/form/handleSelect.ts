@@ -1,4 +1,5 @@
 import { formOptions } from "../../data";
+import { handleSingleAtTime, handleTimeoutToogle } from "../../utils";
 
 const customSelect = document.querySelector(
   ".join-us-form__custom-select"
@@ -15,20 +16,19 @@ const selectedOptionClassName = `${optionClassName}--selected`;
 
 let isVisible = false;
 
-const toggleOptionsVisibility = async () => {
-  new Promise((res) => {
-    isVisible = !optionsList.classList.toggle(
-      "join-us-form__custom-options--hidden"
-    );
-
-    optionsList.classList.contains("hidden")
-      ? res(optionsList.classList.remove("hidden"))
-      : setTimeout(() => res(optionsList.classList.add("hidden")), 300);
+const toogleOptionsVisibility = async () => {
+  const handler = handleTimeoutToogle({
+    el: optionsList,
+    toggleClass: "join-us-form__custom-options--hidden",
+    containClass: "hidden",
   });
 
-  const isExpanded = customSelect.ariaExpanded === "false";
+  return (async () => {
+    const isExpanded = customSelect.ariaExpanded === "false";
+    customSelect.ariaExpanded = isExpanded.toString();
 
-  customSelect.ariaExpanded = isExpanded.toString();
+    return await handler();
+  })();
 };
 
 const selectOption = (target: HTMLElement) => {
@@ -47,28 +47,14 @@ const selectOption = (target: HTMLElement) => {
   customSelect.textContent = target.textContent;
 };
 
-const documentListener = (e: Event) => {
+const documentListener = async (e: Event) => {
   const target = e.target;
 
   if (!isVisible || !(target instanceof HTMLElement) || target === customSelect)
     return;
 
-  toggleOptionsVisibility();
+  isVisible = (await toogleOptionsVisibility()) as boolean;
   selectOption(target);
-};
-
-const optionsListHandler = async () => {
-  let isRunning = false;
-
-  return async () => {
-    if (isRunning) return;
-
-    isRunning = true;
-
-    await toggleOptionsVisibility();
-
-    isRunning = false;
-  };
 };
 
 const loadOptions = () =>
@@ -92,8 +78,12 @@ const loadOptions = () =>
 export const handleSelect = async () => {
   loadOptions();
 
-  const handler = await optionsListHandler();
-  customSelect.addEventListener("click", handler);
+  const handler = await handleSingleAtTime(toogleOptionsVisibility);
+
+  customSelect.addEventListener(
+    "click",
+    async () => (isVisible = (await handler()) as boolean)
+  );
 
   document.addEventListener("click", documentListener);
 };

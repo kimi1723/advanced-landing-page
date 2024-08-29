@@ -1,3 +1,5 @@
+import { HandleTimeoutToggle } from "./types";
+
 export const timeout = (time: number) =>
   new Promise((_, rej) =>
     setTimeout(
@@ -17,3 +19,40 @@ export const toCamelCase = (str: string, charToReplace: string) =>
     )
     .filter((char) => char !== charToReplace)
     .join("");
+
+export const handleSingleAtTime = async (cb: Function) => {
+  let isRunning = false;
+
+  return async () =>
+    new Promise(async (res) => {
+      if (isRunning) return;
+
+      isRunning = true;
+      const response = await cb();
+
+      isRunning = false;
+
+      res(response);
+    });
+};
+
+export const handleTimeoutToogle =
+  ({ el, toggleClass, containClass, t = 0.3 }: HandleTimeoutToggle) =>
+  async () => {
+    let isToggled = false;
+
+    return new Promise((res) => {
+      isToggled = !el.classList.toggle(toggleClass);
+      const containsClass = el.classList.contains(containClass);
+
+      if (containsClass) {
+        el.classList.remove(containClass);
+        res(isToggled);
+      }
+
+      if (!containsClass) {
+        setTimeout(() => el.classList.add(containClass), t * 1000);
+        res(isToggled);
+      }
+    });
+  };

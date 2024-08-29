@@ -1,3 +1,5 @@
+import { handleSingleAtTime, handleTimeoutToogle } from "../../utils";
+
 const propertyList = document.querySelector(
   ".property-list"
 ) as HTMLUListElement;
@@ -7,16 +9,13 @@ const propertyBtn = document.querySelector(
 
 let isVisible = false;
 
-const listVisibilityHandler = async () =>
-  new Promise((res) => {
-    isVisible = !propertyList.classList.toggle("property-list--hidden");
+const listVisiblityHandler = handleTimeoutToogle({
+  el: propertyList,
+  toggleClass: "property-list--hidden",
+  containClass: "hidden",
+});
 
-    propertyList.classList.contains("hidden")
-      ? res(propertyList.classList.remove("hidden"))
-      : setTimeout(() => res(propertyList.classList.add("hidden")), 300);
-  });
-
-const documentListener = (e: Event) => {
+const documentListener = async (e: Event) => {
   const target = e.target;
 
   if (
@@ -26,26 +25,16 @@ const documentListener = (e: Event) => {
   )
     return;
 
-  listVisibilityHandler();
-};
-
-const propertyListHandler = async () => {
-  let isRunning = false;
-
-  return async () => {
-    if (isRunning) return;
-
-    isRunning = true;
-
-    await listVisibilityHandler();
-
-    isRunning = false;
-  };
+  isVisible = (await listVisiblityHandler()) as boolean;
 };
 
 export const handlePropertyList = async () => {
-  const handler = await propertyListHandler();
-  propertyBtn.addEventListener("click", handler);
+  const handler = await handleSingleAtTime(listVisiblityHandler);
+
+  propertyBtn.addEventListener(
+    "click",
+    async () => (isVisible = (await handler()) as boolean)
+  );
 
   document.addEventListener("click", documentListener);
 };

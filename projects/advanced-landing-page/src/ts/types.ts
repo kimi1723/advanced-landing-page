@@ -21,3 +21,10 @@ export interface ArticleData {
 }
 
 export type articleElement = [string, HTMLElement | null];
+
+export interface HandleTimeoutToggle {
+  el: HTMLElement;
+  toggleClass: string;
+  containClass: string;
+  t?: number;
+}
