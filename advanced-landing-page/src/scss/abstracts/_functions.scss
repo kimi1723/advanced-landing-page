@@ -1,5 +1,0 @@
-@function transformPx($px, $unit: rem) {
-  $calculatedRem: calc($px / 16);
-
-  @return $calculatedRem + $unit;
-}
