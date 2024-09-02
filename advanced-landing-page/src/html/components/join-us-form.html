@@ -1,0 +1,98 @@
+<form action="#" class="join-us-form">
+  <div class="join-us-form__block">
+    <label for="name" class="join-us-form__label">Name</label>
+    <input
+      type="text"
+      placeholder="Your name"
+      name="name"
+      id="name"
+      class="join-us-form__input"
+      maxlength="100"
+      required
+    />
+  </div>
+
+  <div class="join-us-form__block">
+    <label for="surname" class="join-us-form__label">Surname</label>
+    <input
+      type="text"
+      placeholder="Your surname"
+      name="surname"
+      id="surname"
+      class="join-us-form__input"
+      required
+      maxlength="100"
+    />
+  </div>
+
+  <div class="join-us-form__block">
+    <label for="education" class="join-us-form__label">Education</label>
+
+    <div class="join-us-form__custom-select-container">
+      <button
+        class="join-us-form__custom-select join-us-form__input"
+        aria-haspopup="listbox"
+        aria-expanded="false"
+        type="button"
+      >
+        Select one
+        <svg class="icon icon--sm join-us-form__icon">
+          <use xlink:href="/img/sprite.svg#arrow-down-dark"></use>
+        </svg>
+      </button>
+      <ul
+        class="join-us-form__custom-options join-us-form__custom-options--hidden hidden"
+        role="listbox"
+      ></ul>
+
+      <select
+        name="education"
+        class="join-us-form__select sr-only hidden"
+        id="education"
+        required
+        value=""
+      ></select>
+    </div>
+  </div>
+
+  <div class="join-us-form__block">
+    <label for="message" class="join-us-form__label">Message</label>
+    <textarea
+      name="message"
+      id="message"
+      class="join-us-form__input join-us-form__textarea"
+      placeholder="Message"
+      rows="6"
+      required
+      minlength="10"
+      maxlength="600"
+    ></textarea>
+    <p class="join-us-form__textarea-count label label--sm">
+      <span class="join-us-form__textarea-count--current">0</span>/<span
+        class="join-us-form__textarea-count--max"
+      ></span>
+    </p>
+  </div>
+
+  <div class="join-us-form__consent-block">
+    <label for="consent" class="join-us-form__consent-label label"
+      >I give consent to the processing of my personal data given in the contact
+      form above under the terms and conditions of Grid Dynamics Privacy
+      Policy.</label
+    >
+    <input
+      id="consent"
+      type="checkbox"
+      required
+      class="join-us-form__consent-checkbox"
+    />
+    <span class="join-us-form__consent-checkbox-span"></span>
+  </div>
+
+  <load
+    src="../components/buttons/btn.html"
+    type="primary"
+    text="Join Us"
+    class="join-us-form__submit-btn"
+  />
+</form>

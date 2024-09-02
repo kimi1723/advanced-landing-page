@@ -1,0 +1,77 @@
+@use "../abstracts/functions" as f;
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+.footer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 f.transformPx(124) f.transformPx(105);
+
+  &__aside {
+    display: flex;
+    flex-direction: column;
+    gap: f.transformPx(24);
+    max-width: f.transformPx(376);
+
+    &-logo {
+      width: 115px;
+    }
+
+    &-icons {
+      display: flex;
+      gap: f.transformPx(24);
+    }
+
+    &-icon {
+      border: 3px solid transparent;
+      border-radius: 50%;
+      transition: border-color 0.3s, translate 0.3s;
+
+      &:hover,
+      &:focus {
+        border-color: rgba(var.$c-primary, 0.5);
+      }
+
+      &:active {
+        translate: 0 2px;
+      }
+    }
+  }
+
+  &__contents {
+    display: flex;
+    gap: f.transformPx(32);
+  }
+
+  &__content-title {
+    margin-bottom: f.transformPx(24);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: f.transformPx(16);
+    min-width: f.transformPx(172);
+  }
+
+  &__content-item {
+    transition: color 0.3s;
+
+    &:hover,
+    &:focus {
+      color: var.$c-primary;
+    }
+  }
+
+  &__gradient {
+    @include mix.radialGradient(#82bbff, #b9ff82, bottom right);
+    opacity: 0.75;
+    position: absolute;
+    bottom: -69px;
+    right: -105px;
+    width: 740px;
+    height: 503px;
+  }
+}

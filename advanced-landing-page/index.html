@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="icon" href="./favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hounter</title>
+
+    <link rel="stylesheet" href="./src/main.scss" />
+    <script type="module" src="./src/main.ts" defer></script>
+
+    <load src="src/html/templates/article.html" />
+  </head>
+  <body>
+    <div class="app">
+      <load src="src/html/layout/header.html" />
+
+      <main>
+        <load src="src/html/layout/recommendations.html" />
+        <load src="src/html/layout/tour.html" />
+        <load src="src/html/layout/reviews.html" />
+        <load src="src/html/layout/more-info.html" />
+        <load src="src/html/layout/newsletter.html" />
+        <load src="src/html/layout/join-us.html" />
+      </main>
+
+      <load src="src/html/layout/footer.html" />
+
+      <load src="src/html/components/notification.html" />
+      <load src="src/html/components/cookie-banner.html" />
+    </div>
+  </body>
+</html>

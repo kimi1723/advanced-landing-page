@@ -1,0 +1,71 @@
+@use "../abstracts/functions" as f;
+@use "../abstracts/variables" as var;
+
+.property {
+  transition: translate 0.3s ease-out, scale 0.3s;
+
+  &-article {
+    display: flex;
+    flex-direction: column;
+    gap: f.transformPx(24);
+    transition: translate 0.3s;
+
+    &:active {
+      translate: 0 5px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    scale: 1.05;
+  }
+
+  &__img-block {
+    position: relative;
+    margin-right: f.transformPx(32);
+  }
+
+  &__img {
+    height: f.transformPx(376);
+    width: f.transformPx(382);
+    object-fit: cover;
+    border-radius: 24px;
+  }
+
+  &__label {
+    display: flex;
+    position: absolute;
+    left: f.transformPx(16);
+    bottom: f.transformPx(16);
+    padding: f.transformPx(8) f.transformPx(16);
+    border-radius: 32px;
+
+    & .icon {
+      margin-right: f.transformPx(8);
+    }
+
+    &--danger {
+      color: var.$c-danger;
+      background-color: var.$c-danger-light;
+    }
+
+    &--info {
+      color: var.$c-info;
+      background-color: var.$c-info-light;
+    }
+
+    &--primary {
+      color: var.$c-primary-dark;
+      background: var.$c-primary-light;
+    }
+  }
+
+  &__price {
+    margin-top: f.transformPx(8);
+    color: var.$c-grey-3;
+  }
+
+  &--hidden {
+    display: none;
+  }
+}

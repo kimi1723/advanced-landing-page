@@ -1,0 +1,28 @@
+@use "../abstracts/functions" as f;
+@use "../abstracts/variables" as var;
+
+.recommendations {
+  padding: f.transformPx(120) f.transformPx(83);
+  overflow: hidden;
+
+  &__content {
+    margin-top: f.transformPx(8);
+    margin-left: f.transformPx(41);
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__filters {
+    display: flex;
+    gap: f.transformPx(27);
+  }
+
+  &__properties {
+    position: relative;
+    display: flex;
+    margin-top: f.transformPx(36);
+  }
+}

@@ -1,0 +1,56 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/functions" as f;
+
+.complex-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: var.$c-white;
+  border-radius: 28px;
+
+  &:focus-within &__label,
+  &:has(&__input:not(:placeholder-shown)) &__label {
+    translate: 0 225%;
+  }
+
+  &__input {
+    position: relative;
+    padding: f.transformPx(19) f.transformPx(64);
+    width: 100%;
+    color: var.$c-grey-2;
+    background-color: transparent;
+    border: 1px solid var.$c-grey-1;
+    border-radius: 28px;
+    outline: none;
+  }
+
+  &__box {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: f.transformPx(16);
+    padding: f.transformPx(4) f.transformPx(4) f.transformPx(4)
+      f.transformPx(24);
+    width: 100%;
+  }
+
+  &__label {
+    transition: translate 0.3s;
+  }
+
+  &__btn {
+    margin-left: auto;
+
+    &-no-icon {
+      svg,
+      img {
+        display: none;
+      }
+    }
+  }
+
+  &__icon,
+  &__btn {
+    z-index: 1;
+  }
+}

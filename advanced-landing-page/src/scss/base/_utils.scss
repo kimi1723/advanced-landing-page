@@ -1,0 +1,37 @@
+@use "../abstracts/functions" as f;
+
+.icon {
+  aspect-ratio: 1 / 1;
+
+  &--xsm {
+    width: f.transformPx(16);
+  }
+
+  &--sm {
+    width: f.transformPx(24);
+  }
+
+  &--md {
+    width: f.transformPx(32);
+  }
+
+  &--xl {
+    width: f.transformPx(48);
+  }
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

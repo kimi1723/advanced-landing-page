@@ -1,0 +1,220 @@
+@use "../abstracts/functions" as f;
+@use "../abstracts/variables" as var;
+
+.join-us-form {
+  display: flex;
+  flex-direction: column;
+  gap: f.transformPx(28);
+  padding: f.transformPx(40);
+  border-radius: 8px;
+  box-shadow: var.$shadow-xsm;
+
+  &__block {
+    position: relative;
+    display: grid;
+    grid-template-columns: f.transformPx(89) 1fr;
+    align-items: center;
+    gap: f.transformPx(16);
+    z-index: 1;
+  }
+
+  &__block:has(&__textarea) {
+    align-items: start;
+  }
+
+  &__label {
+    font-size: f.transformPx(14);
+    font-weight: var.$fw-md;
+    color: var.$c-black;
+    cursor: pointer;
+  }
+
+  &__input,
+  &__input::placeholder,
+  &__custom-option {
+    font-size: f.transformPx(14);
+    font-weight: var.$fw-md;
+    color: var.$c-grey-2;
+  }
+  &__input {
+    width: 100%;
+    padding: f.transformPx(16) f.transformPx(24);
+    border: 1px solid var.$c-grey-1;
+    border-radius: 28px;
+    outline: none;
+    transition: border-color 0.3s;
+
+    &:hover {
+      border-color: var.$c-primary;
+    }
+
+    &:focus {
+      border-color: var.$c-primary-dark;
+    }
+  }
+
+  &__block:has(&__custom-select) {
+    z-index: 10;
+  }
+
+  &__custom-select-container {
+    position: relative;
+  }
+
+  &__custom-select-container:not(:has(&__custom-options--hidden))
+    &__custom-select {
+    border-color: var.$c-primary transparent transparent;
+  }
+
+  &__icon {
+    margin: -3px;
+    transition: rotate 0.3s;
+  }
+
+  &__custom-select-container:not(:has(&__custom-options--hidden)) &__icon {
+    rotate: 180deg;
+  }
+
+  &__custom-select {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+  }
+
+  &__custom-options {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: f.transformPx(52);
+    background-color: var.$c-white;
+    border: 1px solid var.$c-primary;
+    border-radius: 28px;
+    max-height: 500px;
+    transition: max-height 0.3s;
+
+    &--hidden {
+      max-height: 0;
+      overflow: hidden;
+    }
+
+    & > :last-child > button {
+      border-radius: 0 0 28px 28px;
+    }
+  }
+
+  &__custom-option {
+    padding: f.transformPx(16) f.transformPx(24);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    outline: none;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: var.$c-primary-light;
+    }
+
+    &--selected {
+      color: var.$c-white;
+      background-color: var.$c-primary;
+
+      &:hover,
+      &:focus {
+        background-color: var.$c-primary-dark;
+      }
+    }
+  }
+
+  &__block:has(&__textarea-count--danger) > &__textarea {
+    border-color: var.$c-danger;
+  }
+
+  &__textarea-count {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    pointer-events: none;
+    user-select: none;
+    text-shadow: 1px 1px 3px #fff;
+
+    &--danger {
+      color: var.$c-danger;
+    }
+  }
+
+  &__consent-block {
+    display: flex;
+    align-items: flex-start;
+    gap: f.transformPx(8);
+    margin-left: f.transformPx(105);
+  }
+
+  &__consent-label {
+    color: var.$c-grey-3;
+    cursor: pointer;
+  }
+
+  &__consent-checkbox {
+    opacity: 0;
+    position: absolute;
+    aspect-ratio: 1 / 1;
+    width: f.transformPx(24);
+    border: 1px solid var.$c-primary;
+    outline: none;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      scale: 1.1;
+    }
+
+    &:active {
+      translate: 0 3px;
+    }
+  }
+
+  &__consent-checkbox-span {
+    display: block;
+    position: relative;
+    aspect-ratio: 1 / 1;
+    flex: 1 0 f.transformPx(24);
+    order: -1;
+    border: f.transformPx(1) solid var.$c-primary-dark;
+    border-radius: f.transformPx(4);
+    background-repeat: no-repeat;
+    background-size: f.transformPx(16);
+    background-position: center;
+    transition-property: background-color, scale, translate;
+    transition-duration: 0.3s;
+  }
+
+  &__consent-checkbox:hover + &__consent-checkbox-span,
+  &__consent-checkbox:focus + &__consent-checkbox-span {
+    background-color: var.$c-primary-light;
+    scale: 1.1;
+  }
+
+  &__consent-checkbox:active + &__consent-checkbox-span {
+    translate: 0 3px;
+  }
+
+  &__consent-checkbox:checked + &__consent-checkbox-span {
+    background-color: var.$c-primary;
+    background-image: url("/img/svg/check.svg");
+  }
+
+  &__consent-checkbox:checked:hover + &__consent-checkbox-span,
+  &__consent-checkbox:checked:focus + &__consent-checkbox-span {
+    background-color: var.$c-primary-dark;
+  }
+
+  &__submit-btn {
+    align-self: center;
+  }
+}

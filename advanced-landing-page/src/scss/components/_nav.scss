@@ -1,0 +1,104 @@
+@use "../abstracts/functions" as f;
+@use "../abstracts/variables" as var;
+
+.nav {
+  margin-left: auto;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: f.transformPx(24);
+    font-size: f.transformPx(14);
+    font-weight: var.$fw-semibold;
+    text-align: center;
+  }
+
+  &__item {
+    position: relative;
+    color: var.$c-white;
+  }
+
+  &__item > :first-child {
+    display: block;
+    padding: f.transformPx(8) f.transformPx(16);
+    background-color: rgba(var.$c-white, 0.1);
+    border: 1px var.$c-white solid;
+    border-radius: 100px;
+    min-width: 102px;
+    transition: background-color 0.3s;
+
+    &:hover,
+    &:focus {
+      background-color: var.$c-primary-dark;
+    }
+  }
+
+  &__show-property-btn-icon {
+    transition: rotate 0.3s;
+  }
+
+  &:not(:has(.property-list--hidden)) &__show-property-btn-icon {
+    rotate: -180deg;
+  }
+
+  &__item &__show-property-btn {
+    display: flex;
+    align-items: center;
+    gap: f.transformPx(8);
+    color: var.$c-grey-4;
+    transition: color 0.3s;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: inherit;
+    }
+  }
+}
+
+.property-list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: f.transformPx(36);
+  width: max-content;
+  max-width: 150%;
+  max-height: 400px;
+  color: var.$c-white;
+  background-color: var.$c-primary-dark;
+  border: 1px solid var.$c-white;
+  border-radius: 16px;
+  overflow-wrap: break-word;
+  transition: max-height 0.3s, font-size 0.3s;
+  z-index: -1;
+
+  &__item:first-child &__link {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+  }
+
+  &__item:last-child &__link {
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+  }
+
+  &__item {
+    text-align: left;
+  }
+
+  &__link {
+    display: block;
+    padding: f.transformPx(16);
+    transition: background-color 0.3s;
+
+    &:hover,
+    &:focus {
+      background-color: var.$c-primary;
+    }
+  }
+
+  &--hidden {
+    max-height: 0;
+    font-size: 0;
+  }
+}
