@@ -23,12 +23,12 @@ export const toCamelCase = (str: string, charToReplace: string) =>
 export const handleSingleAtTime = async (cb: Function) => {
   let isRunning = false;
 
-  return async () =>
+  return async (...args: any[]) =>
     new Promise(async (res) => {
       if (isRunning) return;
 
       isRunning = true;
-      const response = await cb();
+      const response = await cb(...args);
 
       isRunning = false;
 

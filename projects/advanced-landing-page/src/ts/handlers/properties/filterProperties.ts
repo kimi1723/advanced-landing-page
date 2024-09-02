@@ -1,20 +1,32 @@
-const btnsContainer = document.querySelector(
-  ".recommendations__filters"
-) as HTMLUListElement;
+import { translateProperties } from "./translateProperties";
 
-const filterHandler = (
+export const filterProperties = (
   e: Event,
-  allProperties: HTMLCollectionOf<HTMLLIElement>
+  properties: HTMLCollectionOf<HTMLLIElement>
 ) => {
   const target = e.target;
 
   if (!target) return;
 
-  const {
-    dataset: { filter },
-  } = (target as HTMLButtonElement).closest("li") as HTMLLIElement;
+  const filterEl = (target as HTMLButtonElement).closest("li") as HTMLLIElement;
+  const { filter } = filterEl.dataset;
 
-  [...allProperties].forEach((p) => {
+  const parentEl = e.currentTarget as HTMLUListElement;
+  const filterElements = parentEl.querySelectorAll("li");
+  filterElements.forEach((el) => {
+    const filterBtn = filterEl.querySelector("button") as HTMLButtonElement;
+
+    if (el !== filterEl) {
+      const toRemove = el.querySelector("button") as HTMLButtonElement;
+      toRemove.classList.remove("btn--primary-dark");
+      toRemove.classList.add("btn--primary-light");
+    } else {
+      filterBtn.classList.add("btn--primary-dark");
+      filterBtn.classList.remove("btn--primary-light");
+    }
+  });
+
+  [...properties].forEach((p) => {
     const types = p.dataset.types;
 
     if (!types || !filter) return;
@@ -25,9 +37,6 @@ const filterHandler = (
       ? li.classList.remove("property--hidden")
       : li.classList.add("property--hidden");
   });
-};
 
-export const filterProperties = (properties: HTMLCollectionOf<HTMLLIElement>) =>
-  btnsContainer.addEventListener("click", (e: Event) =>
-    filterHandler(e, properties)
-  );
+  translateProperties(e, properties, true);
+};

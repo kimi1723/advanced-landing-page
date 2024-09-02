@@ -33,7 +33,6 @@
             icon-placement="before"
           />
         </li>
-
         <li data-filter="apartment">
           <load
             src="../components/buttons/btn-img.html"
@@ -47,7 +46,15 @@
       </ul>
 
       <div class="recommendations__arrows">
-        <load src="../components/buttons/arrow-btn.html" type="left" />
+        <button class="arrow-btn arrow-btn--left" data-dir="left" disabled>
+          <svg class="icon icon--sm">
+            <use xlink:href="/img/sprite.svg#arrow-green"></use>
+          </svg>
+          <svg class="icon icon--sm">
+            <use xlink:href="/img/sprite.svg#arrow"></use>
+          </svg>
+        </button>
+
         <load
           src="../components/buttons/arrow-btn.html"
           type="right"
@@ -111,6 +118,20 @@
         authorTitle="Jenny Wilson"
         authorLocation="Preston Rd. Inglewood, Maine 98380"
         types="house"
+      />
+
+      <load
+        src="../components/property.html"
+        imgSrc="/img/properties/1.png"
+        iconSrc="/img/svg/fire-danger.svg"
+        labelText="Popular"
+        labelType="danger"
+        title="Roselands House"
+        price="35.000.000"
+        authorImgSrc="/img/avatars/avatar-6.png"
+        authorTitle="Dianne Russell"
+        authorLocation="Manchester, Kentucky"
+        types="house apartment"
       />
     </ul>
   </div>

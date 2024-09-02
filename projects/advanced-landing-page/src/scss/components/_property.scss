@@ -2,7 +2,6 @@
 @use "../abstracts/variables" as var;
 
 .property {
-  display: block;
   transition: translate 0.3s ease-out, scale 0.3s;
 
   &-article {
@@ -21,22 +20,6 @@
     scale: 1.05;
   }
 
-  &:first-child {
-    width: max-content;
-  }
-
-  &:not(:first-child) {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
-  @for $i from 1 through 4 {
-    &:nth-child(#{$i}) {
-      translate: calc(100% * ($i - 1));
-    }
-  }
-
   &__img-block {
     position: relative;
     margin-right: f.transformPx(32);
@@ -51,7 +34,6 @@
 
   &__label {
     display: flex;
-    width: max-content;
     position: absolute;
     left: f.transformPx(16);
     bottom: f.transformPx(16);

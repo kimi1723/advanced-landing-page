@@ -1,39 +1,22 @@
 import { filterProperties } from "./filterProperties";
+import { translateProperties } from "./translateProperties";
 
+const btnsContainer = document.querySelector(
+  ".recommendations__filters"
+) as HTMLUListElement;
 const allProperties = document.getElementsByClassName(
   "property"
 ) as HTMLCollectionOf<HTMLLIElement>;
+const arrowBtns = document.getElementsByClassName(
+  "arrow-btn"
+) as HTMLCollectionOf<HTMLButtonElement>;
 
-// const arrowBtns = document.querySelectorAll(
-//   ".arrow-btn"
-// ) as NodeListOf<HTMLButtonElement>;
-// const properties = document.getElementsByClassName(
-//   "property"
-// ) as HTMLCollectionOf<HTMLAnchorElement>;
+export const handleProperties = async () => {
+  btnsContainer.addEventListener("click", (e) => {
+    filterProperties(e, allProperties);
+  });
 
-// const calcTranslate = (val: number, dir: string | undefined) =>
-//   dir === undefined ? val : dir === "right" ? val - 100 : val + 100;
-
-// const handleCarousel = (e: Event) => {
-//   const arrow = e.currentTarget as HTMLButtonElement;
-
-//   if (!arrow.classList.contains("arrow-btn--active")) return;
-
-//   const { dir } = arrow.dataset;
-//   const [inactiveArrow] = [...arrowBtns].filter((arr) => arr !== arrow);
-
-//   arrow.classList.remove("arrow-btn--active");
-//   inactiveArrow.classList.add("arrow-btn--active");
-
-//   [...properties].forEach((p) => {
-//     const currTranslateVal = +window.getComputedStyle(p).translate.slice(0, -1);
-//     const newTranslateVal = calcTranslate(currTranslateVal, dir) + "%";
-
-//     p.style.translate = newTranslateVal;
-//   });
-// };
-
-export const handleProperties = () => {
-  filterProperties(allProperties);
-  // arrowBtns.forEach((btn) => btn.addEventListener("click", handleCarousel));
+  [...arrowBtns].forEach(async (btn) => {
+    btn.addEventListener("click", (e) => translateProperties(e, allProperties));
+  });
 };
