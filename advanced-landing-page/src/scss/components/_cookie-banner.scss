@@ -26,4 +26,17 @@
   &--invisible {
     opacity: 0;
   }
+
+  &__close-btn {
+    transition: scale 0.3s, translate 0.3s;
+
+    &:hover,
+    &:focus {
+      scale: 1.1;
+    }
+
+    &:active {
+      translate: 0 3px;
+    }
+  }
 }

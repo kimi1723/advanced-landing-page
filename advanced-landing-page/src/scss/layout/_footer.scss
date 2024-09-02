@@ -7,6 +7,7 @@
   display: flex;
   justify-content: space-between;
   padding: 0 f.transformPx(124) f.transformPx(105);
+  // overflow: hidden;
 
   &__aside {
     display: flex;
@@ -26,15 +27,15 @@
     &-icon {
       border: 3px solid transparent;
       border-radius: 50%;
-      transition: border-color 0.3s, translate 0.3s;
+      transition: scale 0.3s, translate 0.3s;
 
       &:hover,
       &:focus {
-        border-color: rgba(var.$c-primary, 0.5);
+        scale: 1.1;
       }
 
       &:active {
-        translate: 0 2px;
+        translate: 0 3px;
       }
     }
   }
@@ -57,20 +58,20 @@
   }
 
   &__content-item {
-    transition: color 0.3s;
+    transition: color 0.3s, scale 0.3s;
 
     &:hover,
     &:focus {
       color: var.$c-primary;
+      scale: 1.05;
     }
   }
 
   &__gradient {
-    @include mix.radialGradient(#82bbff, #b9ff82, bottom right);
+    @include mix.radialGradient(#82bbff, #b9ff82, bottom right, 50px);
     opacity: 0.75;
-    position: absolute;
-    bottom: -69px;
-    right: -105px;
+    bottom: 0;
+    right: 0;
     width: 740px;
     height: 503px;
   }

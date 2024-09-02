@@ -135,6 +135,10 @@
     border-color: var.$c-danger;
   }
 
+  &__textarea {
+    resize: vertical;
+  }
+
   &__textarea-count {
     position: absolute;
     right: 16px;
