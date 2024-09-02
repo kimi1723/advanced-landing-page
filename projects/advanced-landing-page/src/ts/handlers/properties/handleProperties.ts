@@ -16,7 +16,7 @@ export const handleProperties = async () => {
     filterProperties(e, allProperties);
   });
 
-  [...arrowBtns].forEach(async (btn) => {
-    btn.addEventListener("click", (e) => translateProperties(e, allProperties));
-  });
+  [...arrowBtns].forEach(async (btn) =>
+    btn.addEventListener("click", (e) => translateProperties(e, allProperties))
+  );
 };

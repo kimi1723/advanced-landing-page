@@ -10,9 +10,9 @@ export const filterProperties = (
 
   const filterEl = (target as HTMLButtonElement).closest("li") as HTMLLIElement;
   const { filter } = filterEl.dataset;
-
   const parentEl = e.currentTarget as HTMLUListElement;
   const filterElements = parentEl.querySelectorAll("li");
+
   filterElements.forEach((el) => {
     const filterBtn = filterEl.querySelector("button") as HTMLButtonElement;
 

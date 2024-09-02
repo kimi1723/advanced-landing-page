@@ -28,3 +28,8 @@ export interface HandleTimeoutToggle {
   containClass: string;
   t?: number;
 }
+
+export interface UpdateArrows {
+  noOfProperties: number;
+  newTranslateVal: number;
+}

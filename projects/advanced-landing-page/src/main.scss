@@ -18,6 +18,7 @@
 @use "./scss/components/complex-input";
 @use "./scss/components/would-you-join";
 @use "./scss/components/join-us-form";
+@use "./scss/components/cookie-banner";
 
 @use "./scss/layout/header";
 @use "./scss/layout/recommendations";
@@ -26,3 +27,4 @@
 @use "./scss/layout/more-info";
 @use "./scss/layout/newsletter";
 @use "./scss/layout/join-us";
+@use "./scss/layout/footer";

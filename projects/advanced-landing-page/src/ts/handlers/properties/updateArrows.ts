@@ -1,9 +1,6 @@
-const propertiesPerView = 3;
+import { UpdateArrows } from "../../types";
 
-interface UpdateArrows {
-  noOfProperties: number;
-  newTranslateVal: number;
-}
+const propertiesPerView = 3;
 
 const arrActiveClass = "arrow-btn--active";
 
