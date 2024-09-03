@@ -26,7 +26,7 @@ export const handleNotification = ({ type, msg }: Notification) => {
     notificationContentDiv.classList.add("notification__error");
   }
 
-  notificationDiv.appendChild(notificationContentDiv);
+  notificationDiv.append(notificationContentDiv);
 
   closeNotificationBtn.addEventListener(
     "click",

@@ -69,10 +69,10 @@ const loadOptions = () =>
     btn.textContent = text;
     btn.classList.add(optionClassName);
 
-    nativeSelect.appendChild(option);
+    nativeSelect.append(option);
     nativeSelect.value = "";
-    li.appendChild(btn);
-    optionsList.appendChild(li);
+    li.append(btn);
+    optionsList.append(li);
   });
 
 export const handleSelect = async () => {

@@ -19,7 +19,7 @@ export const showcaseArticle = (
   article.classList.add("article--big");
   articleLink.setAttribute("href", articleLinkUrl);
 
-  showcaseArticleContainer.appendChild(article);
+  showcaseArticleContainer.append(article);
 
   if (!articleToHide) return li.remove();
 
@@ -29,7 +29,7 @@ export const showcaseArticle = (
 
   articleToHide.classList.remove("article--big");
   articleLinkToHide.setAttribute("href", "");
-  btn.appendChild(articleToHide);
-  li.appendChild(btn);
+  btn.append(articleToHide);
+  li.append(btn);
   articlesContainer.prepend(li);
 };
