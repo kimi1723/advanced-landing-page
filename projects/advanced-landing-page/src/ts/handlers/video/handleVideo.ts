@@ -16,7 +16,7 @@ const videoHandler = async () => {
     iframe.setAttribute(attr, val.toString())
   );
 
-  videoContainer.appendChild(iframe);
+  videoContainer.append(iframe);
 
   try {
     playIcon.remove();
@@ -30,7 +30,7 @@ const videoHandler = async () => {
 
     iframe.remove();
     hideSpinner();
-    playBtn.appendChild(playIcon);
+    playBtn.append(playIcon);
     handleNotification({ type: "error", msg: err });
   }
 };
