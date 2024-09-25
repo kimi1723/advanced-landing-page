@@ -1,10 +1,12 @@
 @use "../abstracts/variables" as var;
 @use "../abstracts/functions" as f;
 
-.search-location {
+.complex-input {
   position: relative;
   display: flex;
   align-items: center;
+  background-color: var.$c-white;
+  border-radius: 28px;
 
   &:focus-within &__label,
   &:has(&__input:not(:placeholder-shown)) &__label {
@@ -14,11 +16,11 @@
   &__input {
     position: relative;
     padding: f.transformPx(19) f.transformPx(64);
-    border-radius: f.transformPx(28);
     width: 100%;
-    border: 1px solid var.$c-grey-1;
-    background-color: transparent;
     color: var.$c-grey-2;
+    background-color: transparent;
+    border: 1px solid var.$c-grey-1;
+    border-radius: 28px;
     outline: none;
   }
 
@@ -38,6 +40,13 @@
 
   &__btn {
     margin-left: auto;
+
+    &-no-icon {
+      svg,
+      img {
+        display: none;
+      }
+    }
   }
 
   &__icon,

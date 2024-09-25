@@ -1,0 +1,55 @@
+@use "../abstracts/functions" as f;
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+.would-you-join {
+  display: flex;
+  flex-direction: column;
+  gap: f.transformPx(24);
+  padding: f.transformPx(40);
+  text-align: center;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: var.$shadow-xsm;
+
+  &__list {
+    list-style-type: none;
+  }
+
+  &__item {
+    position: relative;
+    padding: f.transformPx(24) 0;
+    min-width: f.transformPx(398);
+    color: var.$c-grey-3;
+
+    &:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      width: f.transformPx(40);
+      height: 2px;
+      background-color: var.$c-primary;
+      translate: -50%;
+    }
+  }
+
+  &__img-box {
+    position: relative;
+  }
+
+  &__img {
+    width: 261px;
+    height: 206px;
+  }
+
+  &__img-gradient {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+
+    @include mix.radialGradient(#82bbff, #b9ff82, right, 50px);
+  }
+}

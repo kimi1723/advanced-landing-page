@@ -3,6 +3,7 @@
 
 :root {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -15,8 +16,9 @@
 *::after {
   box-sizing: inherit;
   font-size: inherit;
-  line-height: inherit;
   color: inherit;
+  line-height: inherit;
+  font-family: inherit;
 }
 
 .app {
@@ -26,7 +28,7 @@
 }
 
 ul {
-  list-style: none;
+  list-style-type: none;
 }
 
 a {

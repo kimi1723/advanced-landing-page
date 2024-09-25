@@ -1,5 +1,5 @@
-@use "../abstracts/variables" as var;
-@use "../abstracts/functions" as f;
+@use "../../abstracts/variables" as var;
+@use "../../abstracts/functions" as f;
 
 .arrow-btn {
   padding: f.transformPx(12);

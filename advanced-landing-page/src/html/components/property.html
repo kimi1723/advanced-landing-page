@@ -1,13 +1,16 @@
-<a class="property" href="#">
-  <article class="property-article">
-    <div class="property__img-block">
-      <img src="{=$imgSrc}" alt="{=$imgAlt}" class="property__img" />
+<li class="property" data-types="{=$types}">
+  <a href="#">
+    <article class="property-article">
+      <div class="property__img-block">
+        <img src="{=$imgSrc}" alt="{=$imgAlt}" class="property__img" />
 
-      <p class="label label--md property__label property__label--{=$labelType}">
-        <img src="{=$iconSrc}" alt="" class="icon icon--xsm" />
-        {=$labelText}
-      </p>
-    </div>
+        <p
+          class="label label--md property__label property__label--{=$labelType}"
+        >
+          <img src="{=$iconSrc}" alt="" class="icon icon--xsm" />
+          {=$labelText}
+        </p>
+      </div>
 
     <div>
       <h3 class="heading heading--tertiary">{=$title}</h3>
@@ -16,11 +19,12 @@
       </h4>
     </div>
 
-    <load
-      src="/src/html/components/author.html"
-      imgSrc="{=$authorImgSrc}"
-      subtitle="{=$authorTitle}"
-      text="{=$authorLocation}"
-    />
-  </article>
-</a>
+      <load
+        src="/src/html/components/author.html"
+        imgSrc="{=$authorImgSrc}"
+        subtitle="{=$authorTitle}"
+        text="{=$authorLocation}"
+      />
+    </article>
+  </a>
+</li>

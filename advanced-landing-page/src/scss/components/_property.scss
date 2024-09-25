@@ -2,34 +2,22 @@
 @use "../abstracts/variables" as var;
 
 .property {
-  display: block;
   transition: translate 0.3s ease-out, scale 0.3s;
 
   &-article {
     display: flex;
     flex-direction: column;
     gap: f.transformPx(24);
+    transition: translate 0.3s;
+
+    &:active {
+      translate: 0 5px;
+    }
   }
 
   &:hover,
   &:focus {
     scale: 1.05;
-  }
-
-  &:first-child {
-    width: max-content;
-  }
-
-  &:not(:first-child) {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
-  @for $i from 1 through 4 {
-    &:nth-child(#{$i}) {
-      translate: calc(100% * ($i - 1));
-    }
   }
 
   &__img-block {
@@ -38,7 +26,7 @@
   }
 
   &__img {
-    min-height: f.transformPx(376);
+    height: f.transformPx(376);
     width: f.transformPx(382);
     object-fit: cover;
     border-radius: 24px;
@@ -46,7 +34,6 @@
 
   &__label {
     display: flex;
-    width: max-content;
     position: absolute;
     left: f.transformPx(16);
     bottom: f.transformPx(16);
@@ -76,5 +63,9 @@
   &__price {
     margin-top: f.transformPx(8);
     color: var.$c-grey-3;
+  }
+
+  &--hidden {
+    display: none;
   }
 }

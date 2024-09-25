@@ -1,11 +1,7 @@
 <header class="header">
   <div class="header__gradient"></div>
   <div class="header__navbar">
-    <img
-      src="../../../public/img/logo.png"
-      alt=""
-      class="header__navbar-logo"
-    />
+    <img src="/img/logo.png" alt="" class="header__navbar-logo" />
     <load src="/src/html/components/nav.html" />
   </div>
 
@@ -19,8 +15,16 @@
       it will be easier for you
     </p>
 
-    <load src="/src/html/components/search-location.html" />
-
+    <load
+      src="/src/html/components/complex-input.html"
+      svgSrc="/img/sprite.svg#location-pin"
+      btnIconSrc="/img/sprite.svg#arrow"
+      label="Search for the location you want!"
+      type="text"
+      btnText="Search"
+      name="search"
+      id="search"
+    />
     <load src="../components/partnership.html" />
   </div>
 
@@ -31,17 +35,17 @@
         <li class="header__slider-box">
           <div class="header__slider-box--grouped">
             <img
-              src="../../../public/img/avatars/avatar-1.png"
+              src="/img/avatars/avatar-1.png"
               alt=""
               class="header__slider-img header__slider-img--grouped"
             />
             <img
-              src="../../../public/img/avatars/avatar-2.png"
+              src="/img/avatars/avatar-2.png"
               alt=""
               class="header__slider-img header__slider-img--grouped"
             />
             <img
-              src="../../../public/img/avatars/avatar-3.png"
+              src="/img/avatars/avatar-3.png"
               alt=""
               class="header__slider-img header__slider-img--grouped"
             />
@@ -58,33 +62,33 @@
         <load
           src="../components/header-slider-box.html"
           subtitle="56 Houses"
-          imgSrc="../../../public/img/avatars/avatar-4.png"
+          imgSrc="/img/avatars/avatar-4.png"
           text="Sold Monthly"
         />
 
         <load
           src="../components/header-slider-box.html"
           subtitle="4K+"
-          imgSrc="../../../public/img/avatars/avatar-5.png"
+          imgSrc="/img/avatars/avatar-5.png"
           text="People Looking for New Homes"
         />
       </ul>
 
-      <ul class="auto-slider__block">
+      <ul class="auto-slider__block" aria-hidden="true">
         <li class="header__slider-box">
           <div class="header__slider-box--grouped">
             <img
-              src="../../../public/img/avatars/avatar-1.png"
+              src="/img/avatars/avatar-1.png"
               alt=""
               class="header__slider-img header__slider-img--grouped"
             />
             <img
-              src="../../../public/img/avatars/avatar-2.png"
+              src="/img/avatars/avatar-2.png"
               alt=""
               class="header__slider-img header__slider-img--grouped"
             />
             <img
-              src="../../../public/img/avatars/avatar-3.png"
+              src="/img/avatars/avatar-3.png"
               alt=""
               class="header__slider-img header__slider-img--grouped"
             />
@@ -101,14 +105,14 @@
         <load
           src="../components/header-slider-box.html"
           subtitle="56 Houses"
-          imgSrc="../../../public/img/avatars/avatar-4.png"
+          imgSrc="/img/avatars/avatar-4.png"
           text="Sold Monthly"
         />
 
         <load
           src="../components/header-slider-box.html"
           subtitle="4K+"
-          imgSrc="../../../public/img/avatars/avatar-5.png"
+          imgSrc="/img/avatars/avatar-5.png"
           text="People Looking for New Homes"
         />
       </ul>
