@@ -1,6 +1,6 @@
 const addSpinner = (spinner: HTMLElement, parent: HTMLElement) => () => {
   spinner.classList.add("spinner");
-  parent.append(spinner);
+  parent.appendChild(spinner);
 };
 
 const removeSpinner = (spinner: HTMLElement, parent: HTMLElement) => () =>

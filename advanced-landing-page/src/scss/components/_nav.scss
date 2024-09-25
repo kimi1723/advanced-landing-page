@@ -60,9 +60,9 @@
   position: absolute;
   top: 0;
   left: 0;
-  margin-top: f.transformPx(36);
-  width: max-content;
-  max-width: 150%;
+  margin: -1px;
+  padding-top: 36px;
+  width: 100%;
   max-height: 400px;
   color: var.$c-white;
   background-color: var.$c-primary-dark;
@@ -71,11 +71,6 @@
   overflow-wrap: break-word;
   transition: max-height 0.3s, font-size 0.3s;
   z-index: -1;
-
-  &__item:first-child &__link {
-    border-top-left-radius: 16px;
-    border-top-right-radius: 16px;
-  }
 
   &__item:last-child &__link {
     border-bottom-left-radius: 16px;
@@ -88,7 +83,7 @@
 
   &__link {
     display: block;
-    padding: f.transformPx(16);
+    padding: f.transformPx(8) f.transformPx(16);
     transition: background-color 0.3s;
 
     &:hover,

@@ -1,8 +1,0 @@
-@use "../abstracts/functions" as f;
-
-.join-us {
-  display: flex;
-  gap: f.transformPx(32);
-  padding: 0 f.transformPx(124);
-  margin-bottom: f.transformPx(120);
-}

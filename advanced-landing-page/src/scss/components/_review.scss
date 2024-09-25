@@ -15,12 +15,8 @@
 
   @for $i from 1 through 3 {
     &:nth-child(#{$i}) {
-      background-image: url("/img/reviews/#{$i}.png");
+      background-image: url("../../../public/img/reviews/#{$i}.png");
     }
-  }
-
-  &--active &__content {
-    box-shadow: var.$shadow-xsm;
   }
 
   &:not(&--active) {
@@ -49,6 +45,7 @@
     padding: f.transformPx(32);
     background-color: var.$c-white;
     border-radius: 16px;
+    box-shadow: var.$shadow-xsm;
     transition: box-shadow 0.3s, scale 0.3s;
   }
 

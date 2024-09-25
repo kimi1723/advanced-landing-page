@@ -11,10 +11,6 @@
   font-size: f.transformPx(16);
   line-height: f.transformPx(24);
 
-  &--light {
-    font-weight: var.$fw-light;
-  }
-
   &--md {
     font-weight: var.$fw-md;
   }
@@ -55,7 +51,6 @@
 
 .subtitle {
   font-size: f.transformPx(18);
-  line-height: f.transformPx(24);
   font-weight: var.$fw-md;
 }
 

@@ -1,7 +1,7 @@
-import { videoData } from "../../data";
-import { handleNotification } from "../../handlers/notification/handleNotification";
-import { handleSpinner } from "../../handlers/spinner/handleSpinner";
-import { timeout, handleLoad } from "../../utils";
+import { videoData } from "./data";
+import { handleNotification } from "./handleNotification";
+import { handleSpinner } from "./handleSpinner";
+import { timeout, handleLoad } from "./utils";
 
 const playBtn = document.querySelector(".tour__video-btn") as HTMLButtonElement;
 const videoContainer = document.querySelector(".tour__media") as HTMLDivElement;
@@ -16,7 +16,7 @@ const videoHandler = async () => {
     iframe.setAttribute(attr, val.toString())
   );
 
-  videoContainer.append(iframe);
+  videoContainer.appendChild(iframe);
 
   try {
     playIcon.remove();
@@ -30,7 +30,7 @@ const videoHandler = async () => {
 
     iframe.remove();
     hideSpinner();
-    playBtn.append(playIcon);
+    playBtn.appendChild(playIcon);
     handleNotification({ type: "error", msg: err });
   }
 };
